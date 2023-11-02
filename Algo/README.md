@@ -1,3 +1,3 @@
-1 . Algorithmie
+1. Algorithmie
     * Java
     * Pseudo_code

@@ -1,3 +1,3 @@
-1 . Objet
+1. Objet
     * Diagramme_UML
     * Java

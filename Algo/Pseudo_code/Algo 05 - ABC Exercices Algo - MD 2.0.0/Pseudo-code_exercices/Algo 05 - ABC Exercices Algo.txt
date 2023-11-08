@@ -1,3 +1,8 @@
+				 _______________
+				|		|
+				|   PARTIE I	|
+				|_______________|
+
 -----------------------------------------------------------------------------------------
 EXERCICE 1.1 : CALCUL DE LA MOYENNE DE 2 NOMBRES
 -----------------------------------------------------------------------------------------
@@ -124,3 +129,238 @@ b <-- tempA
 
 Ecrire "La valeur de a est : ", a
 Ecrire "La valeur de b est : ", b
+
+				 _______________
+				|		|
+				|   PARTIE II	|
+				|_______________|
+
+-----------------------------------------------------------------------------------------
+EXERCICE 2.1 : COMPARAISON DE NOMBRES
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombreA :	type integer
+majorite :	type integer
+
+/* MAIN */
+
+majorite <-- 18
+Ecrire "Saisir votre âge (en années): "
+Lire nombreA
+
+Si majorite < 0 Alors
+	Ecrire "Vous n'êtes pas encore né"
+Sinon Si majorite ≥ 18 Alors
+	Ecrire "Vous êtes majeur"
+Sinon
+	"Vous êtes mineur"
+Fin Si
+
+-----------------------------------------------------------------------------------------
+EXERCICE 2.2 : TRI DE NOMBRES
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombreA :	type integer
+nombreB : 	type integer
+nombreValide : 	type boolean
+
+/* MAIN */
+
+nombreValide <-- "faux"
+
+tant Que (nombreValide = "faux")
+	Ecrire "Saisir un premier nombre entier : "
+	Lire nombreA
+	Ecrire "Saisir un deuxième nombre entier : "
+	Lire nombreB
+	Si nombreA = nombreB Alors
+		Ecrire "Vous devez saisir deux nombres entier différents"
+	Sinon
+		nombreValide <-- "vrai"
+Fin Tant Que
+
+Si nombreA < nombreB Alors
+	Ecrire "L'ordre croissant des deux nombres entiers est : ", nombreA, nombreB
+Sinon
+	Ecrire "L'ordre croissant des deux nombres entiers est : ", nombreB, nombreA
+Fin Si
+
+-----------------------------------------------------------------------------------------
+EXERCICE 2.3 : TRI DE NOMBRES++
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombreA :	type double
+nombreB : 	type double
+nombreC : 	type double
+
+nombre1 :	type double
+nombre2 : 	type double
+nombre3 : 	type double
+
+nombreValide : 	type boolean
+
+/* MAIN */
+
+nombreValide <-- "faux"
+
+tant Que (nombreValide = "faux")
+	Ecrire "Saisir un premier nombre réel double précision : "
+	Lire nombreA
+	Ecrire "Saisir un deuxième nombre réel double précision : "
+	Lire nombreB
+	Ecrire "Saisir un troisième nombre réel double précision : "
+	Lire nombreC
+	Si nombreA = nombreB Ou nombreA = nombreC Ou nombreB = nombreC Alors
+		Ecrire "Vous devez saisir trois nombres réel double précision différents"
+	Sinon
+		nombreValide <-- "vrai"
+Fin Tant Que
+
+Si nombreA < nombreB Alors
+	nombre1 <-- nombreA
+	nombre2 <-- nombreB
+Sinon
+	nombre1 <-- nombreB
+	nombre2 <-- nombreA
+Fin Si
+
+Si nombreC > nombre2 Alors
+	nombre3 <-- nombreC
+
+Sinon Si nombreC < nombre1 Alors
+	nombre3 <-- nombre2
+	nombre2 <-- nombre1
+	nombre1 <-- nombreC
+
+Sinon Si nombreC > nombre1 Et nombreC < nombre2 Alors
+	nombre3 <-- nombre2
+	nombre2 <-- nombreC
+Fin Si	
+	
+Ecrire "L'ordre croissant des trois nombres réel double précision est : ", nombre1, nombre2, nombre3
+
+-----------------------------------------------------------------------------------------
+EXERCICE 2.4 : ANNEE BISSEXTILE
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+annee :		type entier
+
+bissextile : 	type boolean
+
+/* MAIN */
+
+Ecrire "Saisir une année : "
+Lire annee
+
+Si annee % 4 > 0 Alors
+	bissextile <-- "faux"
+Sinon Si annee % 4 = 0 Alors
+	Si annee % 100 = 0 Et annee % 400 > 0 Alors
+	bissextile <-- "false"
+Sinon
+	bissextile <-- "vrai"
+Fin Si
+
+Si bissextile = "vrai" Alors
+	Ecrire "L'année saisie est bissextile"
+Sinon
+	Ecrire "L'année saisie n'est pas bissextile"
+Fin Si
+
+-----------------------------------------------------------------------------------------
+EXERCICE 2.5 : RECHERCHE DES DIVISEURS D’UN NOMBRE
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombre :	type entier
+diviseur :	type entier
+resultat :	type entier
+
+/* MAIN */
+
+Ecrire "Saisir un nombre entier : "
+Lire nombre
+
+Ecrire "Les diviseurs du nombre ", nombre, " sont : "
+
+Pour diviseur = 2 à nombre-1
+	Faire resultat <-- nombre % diviseur
+	Si resultat = 0 Alors
+		Ecrire diviseur
+	Fin Si
+Fin Pour
+
+-----------------------------------------------------------------------------------------
+EXERCICE 2.6 : NOMBRE PREMIER
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombre :	type entier
+diviseur :	type entier
+resultat :	type entier
+
+nombrePremier :	type boolean
+
+/* MAIN */
+
+nombrePremier <-- "vraie"
+
+Ecrire "Saisir un nombre entier : "
+Lire nombre
+
+Pour diviseur = 2 à nombre-1
+	Faire Faire
+		resultat <-- nombre % diviseur
+		Si resultat = 0 Alors
+			nombrePremier = "faux"
+		Fin Si
+	      Tant Que (nombrePremier = "vraie")
+Fin Pour
+
+Si nombrePremier = "faux" Alors
+	Ecrire "Le nombre ", nombre, " n'est pas un nombre premier ! Mais il doit se sentir moins seul :D"
+Sinon
+	Ecrire "Le nombre ", nombre, " est un nombre premier ! Félicitations !!!"
+Fin Si
+
+-----------------------------------------------------------------------------------------
+EXERCICE 2.7 : CONVERSION KILOMETRES → MILES
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+kilometres :	type double
+KMS_TO_MILES :	type double (const)
+resultat :	type double
+quitter :	type boolean
+
+/* MAIN */
+
+
+KMS_TO_MILES <-- 1.609
+quitter <-- "faux"
+
+Faire
+	Faire
+		Ecrire "Saisir une valeur en kilomètres : "
+		Lire kilometres
+		Si kilometres = "q" Alors
+			quitter <-- "vrai"
+		Fin Si
+	Tant Que (kilometres < 0.01 Ou kilometres > 1 000 000 Et quitter = "faux") 
+
+	Si quitter = "faux" Alors
+		resultat <-- kilometres*KMS_TO_MILES
+		Ecrire "La conversion de ", kilometres, " kms en miles est : ", resultat
+	Fin Si 
+Tant Que (quitter = "faux") 

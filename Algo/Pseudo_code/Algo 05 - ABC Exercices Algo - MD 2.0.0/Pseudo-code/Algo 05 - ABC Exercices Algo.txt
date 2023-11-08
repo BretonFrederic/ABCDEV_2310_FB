@@ -118,7 +118,7 @@ Lire interet
 Ecrire "Veuillez saisir le nombre d'années de placement de la somme : "
 Lire nombreAnnees
 
-interetReel <-- (interet/100)*sommePlacee
+interetReel <-- (interet/100
 
 interetSimple <-- sommePlacee * ( 1 + nombreAnnees * interetReel)
 interetCompose <-- sommePlacee * ( 1 + interetReel)^nombreAnnees

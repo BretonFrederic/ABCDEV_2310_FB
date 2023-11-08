@@ -64,38 +64,7 @@ aireSecteurCirculaire <-- (π*rayonR^2*angleA)/360
 Ecrire "L'aire du secteur circulaire est : ", aireSecteurCirculaire
 
 -----------------------------------------------------------------------------------------
-EXERCICE 1.4a : CALCUL D’INTERETS
------------------------------------------------------------------------------------------
-
-/* VARIABLES */
-
-sommePlacee
-interet
-nombreAnnees
-interetSimple
-interetCompose
-
-/* MAIN */
-
-Ecrire "Veuillez saisir la somme placée sur un compte : "
-Lire sommePlacee
-
-Ecrire "Veuillez saisir l'intérêt offert par la banque : "
-Lire interet
-
-Ecrire "Veuillez saisir le nombre d'années de placement de la somme : "
-Lire nombreAnnees
-
-interetSimple <-- sommePlacee * ( 1 + nombreAnnees * interet )
-interetCompose <-- sommePlacee * ( 1 + interet )^nombreAnnees
-
-Ecrire "Valeur acquise par la somme de ", sommePlacee,  ", placée pendant ", nombreAnnees, " année(s) : "
-
-Ecrire "	.  avec un intérêt simple : ", interetSimple
-Ecrire "	.  avec un intérêt composé : ", interetCompose
-
------------------------------------------------------------------------------------------
-EXERCICE 1.4b : CALCUL D’INTERETS
+EXERCICE 1.4 : CALCUL D’INTERETS
 -----------------------------------------------------------------------------------------
 
 /* VARIABLES */
@@ -118,7 +87,7 @@ Lire interet
 Ecrire "Veuillez saisir le nombre d'années de placement de la somme : "
 Lire nombreAnnees
 
-interetReel <-- (interet/100
+interetReel <-- interet/100
 
 interetSimple <-- sommePlacee * ( 1 + nombreAnnees * interetReel)
 interetCompose <-- sommePlacee * ( 1 + interetReel)^nombreAnnees

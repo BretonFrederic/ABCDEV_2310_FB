@@ -163,7 +163,7 @@ Faire
 		"Vous êtes mineur"
 	Fin Si
 
-	Ecrire "Saisir q pour quitter"
+	Ecrire "Saisir q pour quitter ou une autre touche pour continuer"
 	Lire choix
 
 	Si choix = "q" Alors

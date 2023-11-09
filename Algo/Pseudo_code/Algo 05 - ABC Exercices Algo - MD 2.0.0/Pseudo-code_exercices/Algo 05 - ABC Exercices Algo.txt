@@ -141,7 +141,7 @@ EXERCICE 2.1 : COMPARAISON DE NOMBRES
 
 /* VARIABLES */
 
-nombreA :	type integer
+age :		type integer
 majorite :	type integer
 choix :		type String
 quitter :	type boolean
@@ -153,11 +153,11 @@ quitter <-- "faux"
 
 Faire
 	Ecrire "Saisir votre âge (en années): "
-	Lire nombreA
+	Lire age
 
-	Si nombreA < 0 Alors
+	Si age < 0 Alors
 		Ecrire "Vous n'êtes pas encore né"
-	Sinon Si nombreA ≥ majorite Alors
+	Sinon Si age ≥ majorite Alors
 		Ecrire "Vous êtes majeur"
 	Sinon
 		"Vous êtes mineur"

@@ -143,36 +143,21 @@ EXERCICE 2.1 : COMPARAISON DE NOMBRES
 
 age :		type integer
 majorite :	type integer
-choix :		type String
-quitter :	type boolean
 
 /* MAIN */
 
 majorite <-- 18
-quitter <-- "faux"
 
-Faire
-	Ecrire "Saisir votre âge (en années): "
-	Lire age
+Ecrire "Saisir votre âge (en années): "
+Lire age
 
-	Si age < 0 Alors
-		Ecrire "Vous n'êtes pas encore né"
-	Sinon Si age ≥ majorite Alors
-		Ecrire "Vous êtes majeur"
-	Sinon
-		"Vous êtes mineur"
-	Fin Si
-
-	Ecrire "Saisir q pour quitter ou une autre touche pour continuer"
-	Lire choix
-
-	Si choix = "q" Alors
-		quitter <-- "vrai"
-	Sinon
-		quitter <-- "faux"
-	Fin Si
-Tant Que (quitter = "faux")
-
+Si age < 0 Alors
+	Ecrire "Vous n'êtes pas encore né"
+Sinon Si age ≥ majorite Alors
+	Ecrire "Vous êtes majeur"
+Sinon
+	"Vous êtes mineur"
+Fin Si
 
 -----------------------------------------------------------------------------------------
 EXERCICE 2.2 : TRI DE NOMBRES

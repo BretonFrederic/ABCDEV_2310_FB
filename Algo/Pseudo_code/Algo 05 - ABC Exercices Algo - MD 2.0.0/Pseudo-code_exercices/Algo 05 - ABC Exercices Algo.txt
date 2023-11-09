@@ -204,24 +204,14 @@ nombre1 :	type double
 nombre2 : 	type double
 nombre3 : 	type double
 
-nombreValide : 	type boolean
-
 /* MAIN */
 
-nombreValide <-- "faux"
-
-tant Que (nombreValide = "faux")
 	Ecrire "Saisir un premier nombre réel double précision : "
 	Lire nombreA
 	Ecrire "Saisir un deuxième nombre réel double précision : "
 	Lire nombreB
 	Ecrire "Saisir un troisième nombre réel double précision : "
 	Lire nombreC
-	Si nombreA = nombreB Ou nombreA = nombreC Ou nombreB = nombreC Alors
-		Ecrire "Vous devez saisir trois nombres réel double précision différents"
-	Sinon
-		nombreValide <-- "vrai"
-Fin Tant Que
 
 Si nombreA < nombreB Alors
 	nombre1 <-- nombreA

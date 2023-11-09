@@ -3,9 +3,9 @@
     <description courant="AFFICHER &quot; &lt; &quot;" texte=""/>
     <extension extnom="inactif"/>
     <fonction fctetat="inactif" fctcode=""/>
-    <F2 F2etat="inactif" F2para="" F2lignes="" F2defaut=""/>
+    <F2 F2defaut="" F2para="" F2etat="inactif" F2lignes=""/>
     <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
-    <param arrondiAuto="vrai" maxBoucle="500000" totalAffichages="1000" epaisseurPoint="2" nbDecimales="8" epaisseurLigne="2" totalBoucles="5000000"/>
+    <param arrondiAuto="vrai" totalAffichages="1000" maxBoucle="500000" epaisseurLigne="2" epaisseurPoint="2" nbDecimales="8" totalBoucles="5000000"/>
     <item algoitem="FONCTIONS_UTILISEES" code="200#declarationfonctions"/>
     <item algoitem="VARIABLES" code="100#declarationsvariables">
         <item algoitem="nombreA EST_DU_TYPE NOMBRE" code="1#NOMBRE#nombreA"/>

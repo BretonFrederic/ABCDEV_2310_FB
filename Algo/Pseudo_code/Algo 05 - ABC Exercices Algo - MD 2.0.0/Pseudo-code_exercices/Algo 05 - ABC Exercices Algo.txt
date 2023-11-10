@@ -13,7 +13,7 @@ nombre1
 nombre2
 moyenne
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 Ecrire "Veuillez saisir un premier nombre : "
 Lire nombre1
@@ -25,6 +25,8 @@ moyenne <-- (nombre1 + nombre2)/2
 
 Ecrire "La moyenne de ", nombre1, " et ", nombre2, " est : ", moyenne
 
+/* FIN DE PROGRAMME */
+
 -----------------------------------------------------------------------------------------
 EXERCICE 1.2 : CALCUL DE L’AIRE ET DU VOLUME D’UNE SPHERE
 -----------------------------------------------------------------------------------------
@@ -35,7 +37,7 @@ rayonR
 aireSphere
 volumeSphere
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 Ecrire "Veuillez saisir le rayon R : "
 Lire rayonR
@@ -45,6 +47,8 @@ volumeSphere <-- (4*π*rayonR^3)/3
 
 Ecrire "L'aire de la Sphere est : ", aireSphere
 Ecrire "Le volume de la Sphere est : ", volumeSphere
+
+/* FIN DE PROGRAMME */
 
 -----------------------------------------------------------------------------------------
 EXERCICE 1.3 : CALCUL DE LA SURFACE D’UN SECTEUR CIRCULAIRE
@@ -56,7 +60,7 @@ rayonR
 angleA
 aireSecteurCirculaire
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 Ecrire "Veuillez saisir le rayon R : "
 Lire rayonR
@@ -67,6 +71,8 @@ Lire angleA
 aireSecteurCirculaire <-- (π*rayonR^2*angleA)/360
 
 Ecrire "L'aire du secteur circulaire est : ", aireSecteurCirculaire
+
+/* FIN DE PROGRAMME */
 
 -----------------------------------------------------------------------------------------
 EXERCICE 1.4 : CALCUL D’INTERETS
@@ -81,7 +87,7 @@ nombreAnnees
 interetSimple
 interetCompose
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 Ecrire "Veuillez saisir la somme placée sur un compte : "
 Lire sommePlacee
@@ -102,6 +108,8 @@ Ecrire "Valeur acquise par la somme de ", sommePlacee,  ", placée pendant ", no
 Ecrire "	.  avec un intérêt simple : ", interetSimple
 Ecrire "	.  avec un intérêt composé : ", interetCompose
 
+/* FIN DE PROGRAMME */
+
 -----------------------------------------------------------------------------------------
 EXERCICE 1.5 : INVERSION DE 2 VALEURS
 -----------------------------------------------------------------------------------------
@@ -112,7 +120,7 @@ a
 b
 tempA
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 Ecrire "Veuillez saisir le nombre a : "
 Lire a
@@ -130,6 +138,9 @@ b <-- tempA
 Ecrire "La valeur de a est : ", a
 Ecrire "La valeur de b est : ", b
 
+/* FIN DE PROGRAMME */
+
+
 				 _______________
 				|		|
 				|   PARTIE II	|
@@ -142,9 +153,12 @@ EXERCICE 2.1 : COMPARAISON DE NOMBRES
 /* VARIABLES */
 
 age :		type integer
+
+/* CONSTANTE */
+
 majorite :	type integer
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 majorite <-- 18
 
@@ -153,11 +167,13 @@ Lire age
 
 Si age < 0 Alors
 	Ecrire "Vous n'êtes pas encore né"
-Sinon Si age ≥ majorite Alors
+Sinon Si age >= majorite Alors
 	Ecrire "Vous êtes majeur"
 Sinon
 	"Vous êtes mineur"
 Fin Si
+
+/* FIN DE PROGRAMME */
 
 -----------------------------------------------------------------------------------------
 EXERCICE 2.2 : TRI DE NOMBRES
@@ -169,7 +185,7 @@ nombreA :	type integer
 nombreB : 	type integer
 nombreValide : 	type boolean
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 nombreValide <-- "faux"
 
@@ -190,6 +206,7 @@ Sinon
 	Ecrire "L'ordre croissant des deux nombres entiers est : ", nombreB, nombreA
 Fin Si
 
+/* FIN DE PROGRAMME */
 -----------------------------------------------------------------------------------------
 EXERCICE 2.3 : TRI DE NOMBRES++
 -----------------------------------------------------------------------------------------
@@ -204,7 +221,7 @@ nombre1 :	type double
 nombre2 : 	type double
 nombre3 : 	type double
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 	Ecrire "Saisir un premier nombre réel double précision : "
 	Lire nombreA
@@ -236,6 +253,7 @@ Fin Si
 	
 Ecrire "L'ordre croissant des trois nombres réel double précision est : ", nombre1, nombre2, nombre3
 
+/* FIN DE PROGRAMME */
 -----------------------------------------------------------------------------------------
 EXERCICE 2.4 : ANNEE BISSEXTILE
 -----------------------------------------------------------------------------------------
@@ -248,7 +266,7 @@ anneeMod100 :	type reel
 anneeMod400 :	type reel
 bissextile : 	type boolean
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 Ecrire "Saisir une année : "
 Lire annee
@@ -284,6 +302,7 @@ Sinon
 	Ecrire "L'année saisie n'est pas bissextile"
 Fin Si
 
+/* FIN DE PROGRAMME */
 -----------------------------------------------------------------------------------------
 EXERCICE 2.5 : RECHERCHE DES DIVISEURS D’UN NOMBRE
 -----------------------------------------------------------------------------------------
@@ -294,7 +313,7 @@ nombre :	type entier
 diviseur :	type entier
 resultat :	type entier
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 Ecrire "Saisir un nombre entier : "
 Lire nombre
@@ -308,6 +327,7 @@ Pour diviseur = 2 à nombre-1
 	Fin Si
 Fin Pour
 
+/* FIN DE PROGRAMME */
 -----------------------------------------------------------------------------------------
 EXERCICE 2.6 : NOMBRE PREMIER
 -----------------------------------------------------------------------------------------
@@ -320,7 +340,7 @@ resultat :	type entier
 
 nombrePremier :	type boolean
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 nombrePremier <-- "vraie"
 
@@ -342,6 +362,7 @@ Sinon
 	Ecrire "Le nombre ", nombre, " est un nombre premier ! Félicitations !!!"
 Fin Si
 
+/* FIN DE PROGRAMME */
 -----------------------------------------------------------------------------------------
 EXERCICE 2.7 : CONVERSION KILOMETRES → MILES
 -----------------------------------------------------------------------------------------
@@ -353,7 +374,7 @@ KMS_TO_MILES :	type double (const)
 resultat :	type double
 quitter :	type boolean
 
-/* MAIN */
+/* DEBUT DE PROGRAMME */
 
 
 KMS_TO_MILES <-- 1.609
@@ -373,3 +394,5 @@ Faire
 		Ecrire "La conversion de ", kilometres, " kms en miles est : ", resultat
 	Fin Si 
 Tant Que (quitter = "faux") 
+
+/* FIN DE PROGRAMME */

@@ -243,7 +243,9 @@ EXERCICE 2.4 : ANNEE BISSEXTILE
 /* VARIABLES */
 
 annee :		type entier
-
+anneeMod4 :	type reel
+anneeMod100 :	type reel
+anneeMod400 :	type reel
 bissextile : 	type boolean
 
 /* MAIN */
@@ -251,10 +253,26 @@ bissextile : 	type boolean
 Ecrire "Saisir une année : "
 Lire annee
 
-Si annee % 4 > 0 Alors
+anneeMod4 <-- annee%4
+anneeMod100 <-- annee%100
+anneeMod400 <-- annee%400
+
+Tant Que (anneeMod4>1)
+	anneeMod4 <-- anneeMod4/2
+Faire
+
+Tant Que (anneeMod100>1)
+	anneeMod100 <-- anneeMod100/2
+Faire
+
+Tant Que (anneeMod400>1)
+	anneeMod400 <-- anneeMod400/2
+Faire
+
+Si anneeMod4 > 0 Alors
 	bissextile <-- "faux"
-Sinon Si annee % 4 = 0 Alors
-	Si annee % 100 = 0 Et annee % 400 > 0 Alors
+Sinon Si anneeMod4 = 0 Alors
+	Si anneeMod100 = 0 Et anneeMod400 > 0 Alors
 	bissextile <-- "false"
 Sinon
 	bissextile <-- "vrai"

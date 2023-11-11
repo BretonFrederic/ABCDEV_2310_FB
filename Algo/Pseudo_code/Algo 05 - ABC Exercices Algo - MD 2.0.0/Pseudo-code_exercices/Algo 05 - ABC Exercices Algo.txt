@@ -9,9 +9,9 @@ EXERCICE 1.1 : CALCUL DE LA MOYENNE DE 2 NOMBRES
 
 /* VARIABLES */
 
-nombre1
-nombre2
-moyenne
+nombre1 :	ENTIER
+nombre2 :	ENTIER
+moyenne :	REEL
 
 /* DEBUT DE PROGRAMME */
 
@@ -33,9 +33,9 @@ EXERCICE 1.2 : CALCUL DE L’AIRE ET DU VOLUME D’UNE SPHERE
 
 /* VARIABLES */
 
-rayonR
-aireSphere
-volumeSphere
+rayonR :	REEL
+aireSphere :	REEL
+volumeSphere :	REEL
 
 /* DEBUT DE PROGRAMME */
 
@@ -56,9 +56,9 @@ EXERCICE 1.3 : CALCUL DE LA SURFACE D’UN SECTEUR CIRCULAIRE
 
 /* VARIABLES */
 
-rayonR
-angleA
-aireSecteurCirculaire
+rayonR :		REEL
+angleA :		REEL
+aireSecteurCirculaire :	REEL
 
 /* DEBUT DE PROGRAMME */
 
@@ -80,12 +80,12 @@ EXERCICE 1.4 : CALCUL D’INTERETS
 
 /* VARIABLES */
 
-sommePlacee
-interet
-interetReel
-nombreAnnees
-interetSimple
-interetCompose
+sommePlacee :	REEL
+interet :	REEL
+interetReel :	REEL
+nombreAnnees :	ENTIER
+interetSimple :	REEL
+interetCompose :REEL
 
 /* DEBUT DE PROGRAMME */
 
@@ -116,9 +116,9 @@ EXERCICE 1.5 : INVERSION DE 2 VALEURS
 
 /* VARIABLES */
 
-a
-b
-tempA
+a :	ENTIER
+b :	ENTIER
+tempA :	ENTIER
 
 /* DEBUT DE PROGRAMME */
 
@@ -152,11 +152,11 @@ EXERCICE 2.1 : COMPARAISON DE NOMBRES
 
 /* VARIABLES */
 
-age :		type integer
+age :		ENTIER
 
 /* CONSTANTE */
 
-majorite :	type integer
+majorite :	ENTIER
 
 /* DEBUT DE PROGRAMME */
 
@@ -181,9 +181,9 @@ EXERCICE 2.2 : TRI DE NOMBRES
 
 /* VARIABLES */
 
-nombreA :	type integer
-nombreB : 	type integer
-nombreValide : 	type boolean
+nombreA :	ENTIER
+nombreB : 	ENTIER
+nombreValide : 	BOOLEEN
 
 /* DEBUT DE PROGRAMME */
 
@@ -260,11 +260,10 @@ EXERCICE 2.4 : ANNEE BISSEXTILE
 
 /* VARIABLES */
 
-annee :		type entier
-anneeMod4 :	type reel
-anneeMod100 :	type reel
-anneeMod400 :	type reel
-bissextile : 	type boolean
+annee :		ENTIER
+anneeMod4 :	REEL
+anneeMod100 :	REEL
+anneeMod400 :	REEL
 
 /* DEBUT DE PROGRAMME */
 
@@ -275,43 +274,30 @@ anneeMod4 <-- annee%4
 anneeMod100 <-- annee%100
 anneeMod400 <-- annee%400
 
-Tant Que (anneeMod4>1)
-	anneeMod4 <-- anneeMod4/2
-Faire
-
-Tant Que (anneeMod100>1)
-	anneeMod100 <-- anneeMod100/2
-Faire
-
-Tant Que (anneeMod400>1)
-	anneeMod400 <-- anneeMod400/2
-Faire
-
 Si anneeMod4 > 0 Alors
-	bissextile <-- "faux"
-Sinon Si anneeMod4 = 0 Alors
-	Si anneeMod100 = 0 Et anneeMod400 > 0 Alors
-	bissextile <-- "false"
-Sinon
-	bissextile <-- "vrai"
+	Ecrire "L'année n'est pas bissextile"
 Fin Si
 
-Si bissextile = "vrai" Alors
-	Ecrire "L'année saisie est bissextile"
-Sinon
-	Ecrire "L'année saisie n'est pas bissextile"
+Si anneeMod4 = 0 Alors
+	Si anneeMod100 = 0 Et anneeMod400 > 0 Alors
+		Ecrire "L'année n'est pas bissextile"
+	Sinon
+		Ecrire "L'année est bissextile"
+	Fin Si
 Fin Si
 
 /* FIN DE PROGRAMME */
+
 -----------------------------------------------------------------------------------------
 EXERCICE 2.5 : RECHERCHE DES DIVISEURS D’UN NOMBRE
 -----------------------------------------------------------------------------------------
 
 /* VARIABLES */
 
-nombre :	type entier
-diviseur :	type entier
-resultat :	type entier
+nombre :		ENTIER
+diviseur :		ENTIER
+resultat :		ENTIER
+nombreDeDiviseurs :	ENTIER
 
 /* DEBUT DE PROGRAMME */
 
@@ -320,79 +306,93 @@ Lire nombre
 
 Ecrire "Les diviseurs du nombre ", nombre, " sont : "
 
-Pour diviseur = 2 à nombre-1
-	Faire resultat <-- nombre % diviseur
+Pour diviseur = 2 à nombre-1 Faire
+	resultat <-- nombre % diviseur
 	Si resultat = 0 Alors
 		Ecrire diviseur
+		nombreDeDiviseurs = nombreDeDiviseurs + 1
 	Fin Si
 Fin Pour
 
+Si nombreDeDiviseurs = 0 Alors
+	Ecrire " ce nombre n'a pas d'autres diviseurs que 1 est lui-même."
+Fin Si
+
 /* FIN DE PROGRAMME */
+
 -----------------------------------------------------------------------------------------
 EXERCICE 2.6 : NOMBRE PREMIER
 -----------------------------------------------------------------------------------------
 
 /* VARIABLES */
 
-nombre :	type entier
-diviseur :	type entier
-resultat :	type entier
-
-nombrePremier :	type boolean
+nombre :		ENTIER
+diviseur :		ENTIER
+resultat :		ENTIER
+nombreDeDiviseurs :	ENTIER
 
 /* DEBUT DE PROGRAMME */
-
-nombrePremier <-- "vraie"
 
 Ecrire "Saisir un nombre entier : "
 Lire nombre
 
-Pour diviseur = 2 à nombre-1
-	Faire Faire
-		resultat <-- nombre % diviseur
-		Si resultat = 0 Alors
-			nombrePremier = "faux"
-		Fin Si
-	      Tant Que (nombrePremier = "vraie")
+Ecrire "Le nombre ", nombre,"
+
+Pour diviseur = 2 à nombre-1 Faire
+	resultat <-- nombre % diviseur
+	Si resultat = 0 Alors
+		nombreDeDiviseurs = nombreDeDiviseurs + 1
+	Fin Si
 Fin Pour
 
-Si nombrePremier = "faux" Alors
-	Ecrire "Le nombre ", nombre, " n'est pas un nombre premier ! Mais il doit se sentir moins seul :D"
+Si nombreDeDiviseurs = 0 Alors
+	Ecrire " est un nombre premier."
 Sinon
-	Ecrire "Le nombre ", nombre, " est un nombre premier ! Félicitations !!!"
+	Ecrire " n'est pas un nombre premier."
 Fin Si
 
 /* FIN DE PROGRAMME */
+
 -----------------------------------------------------------------------------------------
 EXERCICE 2.7 : CONVERSION KILOMETRES → MILES
 -----------------------------------------------------------------------------------------
 
 /* VARIABLES */
 
-kilometres :	type double
-KMS_TO_MILES :	type double (const)
-resultat :	type double
-quitter :	type boolean
+kilometres :	DOUBLE
+valeurSaisie :	CHAINE
+position :	ENTIER
+resultatMiles :	DOUBLE
+quitter :	BOOLEEN
+
+/* CONSTANTES */
+
+KMS_TO_MILES :	DOUBLE
 
 /* DEBUT DE PROGRAMME */
-
 
 KMS_TO_MILES <-- 1.609
 quitter <-- "faux"
 
 Faire
-	Faire
-		Ecrire "Saisir une valeur en kilomètres : "
-		Lire kilometres
-		Si kilometres = "q" Alors
-			quitter <-- "vrai"
-		Fin Si
-	Tant Que (kilometres < 0.01 Ou kilometres > 1 000 000 Et quitter = "faux") 
+	Ecrire "Saisir une valeur en kilomètres comprise entre 0.01 et 1 000 000 ou q pour quitter : "
+	Lire valeurSaisie
 
-	Si quitter = "faux" Alors
-		resultat <-- kilometres*KMS_TO_MILES
-		Ecrire "La conversion de ", kilometres, " kms en miles est : ", resultat
-	Fin Si 
-Tant Que (quitter = "faux") 
+	Si valeurSaisie = "q" Alors
+		quitter <-- "vrai"
+	Sinon
+		Pour position = Longueur(valeurSaisie[Max]) à 0 Faire
+			kilometres = kilometres + (valeurSaisie[position])d^position
+		Fin Pour
+	Fin Si
+
+Tant Que (kilometres < 0.01 Ou kilometres > 1000000 ET quitter = "faux")
+
+Si quitter = "faux" Alors
+	resultatMiles <-- kilometres/KMS_TO_MILES
+	Ecrire "La conversion de la valeur saisie est : ", resultatMiles
+Sinon
+	Ecrire "Fin du programme."		
+Fin Si
 
 /* FIN DE PROGRAMME */

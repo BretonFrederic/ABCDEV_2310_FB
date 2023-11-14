@@ -382,7 +382,7 @@ Faire
 		quitter <-- "vrai"
 	Sinon
 		Pour position = Longueur(valeurSaisie[Max]) à 0 Faire
-			kilometres = kilometres + (valeurSaisie[position])d^position
+			kilometres = kilometres + stringToInt(valeurSaisie[position])^position
 		Fin Pour
 	Fin Si
 

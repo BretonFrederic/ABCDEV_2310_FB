@@ -1,0 +1,21 @@
+/* VARIABLE */
+
+nombreUtilisateur	ENTIER
+
+/* DEBUT DU PROGRAMME */
+
+Ecrire "Saisir un nombre : "
+Lire nombreUtilisateur
+
+Si nombreUtilisateur = 0 Alors
+	Ecrire "vous avez saisie le nombre 0 qui est ni positif ni négatif"
+Sinon Si nombreUtilisateur > 0 Alors
+	Ecrire "Le nombre saisie est positif"
+Sinon Si nombreUtilisateur < 0 Alors
+	Ecrire "Le nombre saisie est négatif"
+Fin Si
+
+/* FIN PROGRAMME */
+
+Ecrire un algorithme qui demande un nombre à l’utilisateur, et l’informe ensuite si ce nombre est positif ou négatif (on inclut 
+cette fois le traitement du cas où le nombre vaut zéro).

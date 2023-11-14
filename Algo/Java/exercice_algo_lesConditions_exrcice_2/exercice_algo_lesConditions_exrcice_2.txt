@@ -1,0 +1,23 @@
+/* VARIABLES */
+
+nombreUtilisateur1	ENTIER
+nombreUtilisateur2	ENTIER
+
+/* DEBUT PROGRAMME */
+
+Ecrire "Saisir un premier nombre : "
+Lire nombreUtilisateur1
+Ecrire "Saisir un second nombre : "
+Lire nombreUtilisateur2
+
+Si nombreUtilisateur1 > 0 ET nombreUtilisateur2 < 0 Alors
+	Ecrire "Le produit de ces 2 nombres est négatif"
+Sinon Si nombreUtilisateur1 < 0 ET nombreUtilisateur2 > 0 Alors
+	Ecrire "Le produit de ces 2 nombres est négatif"
+Sinon Si nombreUtilisateur1 < 0 ET nombreUtilisateur2 < 0 Alors
+	Ecrire "Le produit de ces 2 nombres est positif"
+Sinon Si nombreUtilisateur1 > 0 ET nombreUtilisateur2 > 0 Alors
+	Ecrire "Le produit de ces 2 nombres est positif"
+Fin Si
+
+/* FIN PROGRAMME */

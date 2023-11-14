@@ -1,17 +1,18 @@
 
-VARIABLES
+/* VARIABLES */
 
 nombreUtilisateur 
 
-DEBUT DE PROGRAMME
+/* DEBUT DE PROGRAMME */
 
 Ecrire "Saisir un nombre : "
 Lire nombreUtilisateur 
 
 Si ce nombreUtilisateur > 0 Alors
 	Ecrire "Ce nombre est positif"
-Sinon
+Sinon Si
 	Ecrire "Ce nombre est négatif"
 Fin Si
 
+/* FIN DE PROGRAMME */
 -------------------------------------------------------------------

@@ -1,0 +1,20 @@
+/* VARIABLES */
+
+ageEnfant	ENTIER
+
+/* DEBUT PRoGRAMME */
+
+Ecrire "Saisir l'âge d'un enfant : "
+Lire ageEnfant
+
+SI ageEnfant >= 6 ET ageEnfant <= 7 ALORS
+	Ecrire "L'enfant est un Poussin"
+SINON SI ageEnfant >= 8 ET ageEnfant <= 9 ALORS
+	Ecrire "L'enfant est un Pupille"
+SINON SI ageEnfant >= 10 ET ageEnfant <= 11 ALORS
+	Ecrire "L'enfant est un Minime"
+SINON SI ageEnfant >= 12 ALORS
+	Ecrire "L'enfant est un Cadet"
+FIN SI
+
+/* FIN PROGRAMME */

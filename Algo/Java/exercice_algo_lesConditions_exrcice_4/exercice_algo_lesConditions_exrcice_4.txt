@@ -1,0 +1,22 @@
+/* VARIABLES */
+
+heure			ENTIER
+minute			ENTIER
+
+/* DEBUT PROGRAMME */
+
+Ecrire "Saisir l'heure : "
+Lire heure
+Ecrire "Saisir minutes : "
+Lire minute
+
+SI minute == 59 ALORS
+	minute = 0
+	heure = heure + 1
+SINON SI minute < 59 ALORS
+	minute = minute + 1
+FIN SI
+
+Ecrire "Dans une minute, il sera ", heure, " heures ", minute
+
+/* FIN PROGRAMME */

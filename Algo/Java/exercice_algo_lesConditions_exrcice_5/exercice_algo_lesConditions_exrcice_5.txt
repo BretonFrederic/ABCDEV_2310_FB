@@ -8,11 +8,11 @@ Ecrire "Saisir le nombre de photocopie(s) que vous souhaitez : "
 Lire photocopie
 
 Pour i de 0 à photocopie faire
-	Si i <= 10 Alors
+	Si i < 10 Alors
 		facture = facture + 0.1
-	Sinon Si i >= 11 ET i <= 20 Alors
+	Sinon Si i > 9 ET i < 20 Alors
 		facture = facture + 0.09
-	Sinon Si i > 20 Alors
+	Sinon Si i > 19 Alors
 		facture = facture + 0.08
 	Fin Si
 Fin Pour

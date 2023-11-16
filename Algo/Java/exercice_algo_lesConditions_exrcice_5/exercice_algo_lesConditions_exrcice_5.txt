@@ -1,0 +1,28 @@
+/* VARIABLES */
+
+photocopie	ENTIER
+
+/* DEBUT PROGRAMME */
+
+Ecrire "Saisir le nombre de photocopie(s) que vous souhaitez : "
+Lire photocopie
+
+Pour i de 0 à photocopie faire
+	Si i <= 10 Alors
+		facture = facture + 0.1
+	Sinon Si i >= 11 ET i <= 20 Alors
+		facture = facture + 0.09
+	Sinon Si i > 20 Alors
+		facture = facture + 0.08
+	Fin Si
+Fin Pour
+
+Ecrire "Le montant de la facture pour ", photocopie(s), " est de :", facture, " Euro(s) "
+
+/* FIN PROGRAMME */
+
+
+
+Un magasin de reprographie facture 0,10 € les dix premières photocopies, 0,09 € les vingt suivantes et 0,08 
+€ au-delà. Ecrivez un algorithme qui demande à l’utilisateur le nombre de photocopies effectuées et qui 
+affiche la facture correspondante.

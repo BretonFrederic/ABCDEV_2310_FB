@@ -1,6 +1,8 @@
 /* VARIABLES */
 
 photocopie	ENTIER
+i		ENTIER
+facture		DOUBLE
 
 /* DEBUT PROGRAMME */
 
@@ -8,7 +10,7 @@ Ecrire "Saisir le nombre de photocopie(s) que vous souhaitez : "
 Lire photocopie
 
 Pour i de 0 à photocopie faire
-	Si i < 10 Alors
+	Si i < 9 Alors
 		facture = facture + 0.1
 	Sinon Si i > 9 ET i < 20 Alors
 		facture = facture + 0.09
@@ -17,7 +19,7 @@ Pour i de 0 à photocopie faire
 	Fin Si
 Fin Pour
 
-Ecrire "Le montant de la facture pour ", photocopie(s), " est de :", facture, " Euro(s) "
+Ecrire "Le montant de la facture pour ", photocopie, " photocopie(s) est de : ", facture, " Euro(s) "
 
 /* FIN PROGRAMME */
 

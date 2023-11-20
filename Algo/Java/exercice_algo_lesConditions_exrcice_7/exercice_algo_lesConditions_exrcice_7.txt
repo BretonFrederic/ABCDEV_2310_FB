@@ -1,9 +1,32 @@
 /* VARIABLES */
 
-scoreCandidat1	REEL
-scoreCandidat2	REEL
-scoreCandidat3	REEL
-scoreCandidat4	REEL
+scoreCandidat[3]	REEL
+classement[3]		REEL
+
+/* DEBUT PROGRAMME */
+
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat[0]
+
+crire "Saisir le score du premier candidat : "
+Lire scoreCandidat[1]
+
+crire "Saisir le score du premier candidat : "
+Lire scoreCandidat[2]
+
+crire "Saisir le score du premier candidat : "
+Lire scoreCandidat[3]
+
+Pour i = 0 à 3 Faire
+	Pour j = 0 à 3 Faire
+		Si scoreCandidat[i] < scoreCandidat[j] Alors
+			classement[i] <-- scoreCandidat[i]
+		Fin Si
+	Fin pour
+Fin Pour
+
+
+/* FIN PROGRAMME */
 
 
 Les élections législatives, en Guignolerie Septentrionale, obéissent à la règle suivante :

@@ -1,7 +1,8 @@
 /* VARIABLES */
 
-sexe		CHAINE
-age			ENTIER
+sexe		ENTIER
+sexeString	CHAINE
+age		ENTIER
 impot		BOOLEEEN
 decision	CHAINE
 
@@ -9,37 +10,31 @@ decision	CHAINE
 
 Ecrire "Saisir votre âge : "
 Lire age
-Ecrire "Saisir f si vous êtes une femme ou h si vous êtes un homme : "
+Ecrire "Saisir 1 si vous êtes une femme ou 2 si vous êtes un homme : "
 Lire sexe
 
-Si sexe = "h" ET age > 20 Alors
+Si sexe = 2 Alors
+	sexeString <-- "homme"
+Sinon Si sexe = 1 Alors
+	sexeString <-- "femme"
+Fin Si
+
+Si sexe = 2 ET age > 20 Alors
 	impot = True
-Sinon Si sexe = "f" Alors
+Sinon Si sexe = 1 Alors
 	Si age > 17 ET age < 36 Alors
-	impot = True
+	impot <-- True
 Sinon
-	impot = False
+	impot <-- False
 Fin Si
 
 Si impot = True Alors
-	decision = "êtes"
+	decision <-- "êtes"
 Sinon
-	decision = "n'êtes pas"
+	decision <-- "n'êtes pas"
 Fin Si
 
-Si impot = true Alors
-	decision = "êtes"
-Sinon
-	decision = "n'êtes pas"
-Fin Si
-
-Si sexe = "h" Alors
-	sexe = "homme"
-Sinon Si sexe = "f" Alors
-	sexe = "femme"
-Fin Si
-
-Ecrire "Vous avez ", age, " ans et vous êtes un(e)", sexe, "vous ", decision, " imposable."
+Ecrire "Vous avez ", age, " ans et vous êtes un(e)", sexeString, "vous ", decision, " imposable."
 
 /* FIN PROGRAMME */
 

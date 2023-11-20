@@ -4,8 +4,8 @@ public class MyClass {
     public static void main(String args[]) {
         /* VARIABLES */
         
-        String sexe = "";
-        String sexeFinal = "";
+        int sexe = 0;
+        String sexeString = "";
         int age = 0;
         boolean impot = false;
         String decision = "";
@@ -13,16 +13,22 @@ public class MyClass {
         /* DEBUT PROGRAMME */
         
         Scanner user = new Scanner(System.in);
-        Scanner user1 = new Scanner(System.in);
         
         System.out.println("Saisir votre âge : ");
         age = user.nextInt();
-        System.out.println("Saisir f si vous êtes une femme ou h si vous êtes un homme : ");
-        sexe = user1.nextLine();
+        System.out.println("Saisir 1 si vous êtes une femme ou 2 si vous êtes un homme : ");
+        sexe = user.nextInt();
         
-        if(sexe == "h" && age > 20){
+        if(sexe == 2){
+            System.out.println(sexe);
+            sexeString = " homme";
+        }else if(sexe == 1){
+            sexeString = " femme";
+        }
+        
+        if(sexe == 2 && age > 20){
             impot = true;
-        }else if(sexe == "f"){
+        }else if(sexe == 1){
             if(age > 17 && age < 36){
                 impot = true;
             }
@@ -32,19 +38,11 @@ public class MyClass {
         
         if(impot == true){
             decision = "êtes";
-            
         }else if(impot == false){
             decision = "n'êtes pas";
         }
         
-        if(sexe == "h"){
-            sexeFinal = "homme";
-            
-        }else if(sexe == "f"){
-            sexeFinal = "femme";
-        }
-        
-        System.out.println("Vous avez "+ age + " ans et vous êtes un(e)" + sexeFinal + " vous "+ decision + " imposable.");
+        System.out.println("Vous avez "+ age + " ans et vous êtes un(e)" + sexeString + " vous "+ decision + " imposable.");
         
         /* FIN PROGRAMME */
     }

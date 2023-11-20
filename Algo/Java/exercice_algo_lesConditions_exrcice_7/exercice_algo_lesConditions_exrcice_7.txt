@@ -1,7 +1,6 @@
 /* VARIABLES */
 
 scoreCandidat[3]	REEL
-classement[3]		REEL
 
 /* DEBUT PROGRAMME */
 
@@ -17,17 +16,62 @@ Lire scoreCandidat[2]
 crire "Saisir le score du premier candidat : "
 Lire scoreCandidat[3]
 
-Pour i = 0 à 3 Faire
-	Pour j = 0 à 3 Faire
-		Si scoreCandidat[i] < scoreCandidat[j] Alors
-			classement[i] <-- scoreCandidat[i]
-		Fin Si
-	Fin pour
+Ecrire "ordre croissant : "
+
+Pour i = 0 à Longueur(scoreCandidat) Faire
+	Si scoreCandidat[i] > scoreCandidat[i+1] Alors
+		double temp <-- scoreCandidat[i];
+                scoreCandidat[i] <-- scoreCandidat[i+1];
+                scoreCandidat[i+1] <-- temp;
+	Fin Si
 Fin Pour
+
+Pour i = Longueur(scoreCandidat) à 0 Faire
+	Ecrire "scoreCandidat[i]"
+Fin pour
 
 
 /* FIN PROGRAMME */
 
+---------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class MyClass {
+    public static void main(String args[]) {
+        /* VARIABLES */
+        
+        double[] scoreCandidat = {0,0,0,0};
+        
+        /* DEBUT PROGRAMME */
+        Scanner score = new Scanner(System.in);
+        
+        System.out.println("Saisir le score du candidat 1 : ");
+        scoreCandidat[0] = score.nextDouble();
+        System.out.println("Saisir le score du candidat 2 : ");
+        scoreCandidat[1] = score.nextDouble();
+        System.out.println("Saisir le score du candidat 3 : ");
+        scoreCandidat[2] = score.nextDouble();
+        System.out.println("Saisir le score du candidat 4 : ");
+        scoreCandidat[3] = score.nextDouble();
+        
+        System.out.println("Résultat du premier tour : ");
+        
+        for(int i = 0; i < (scoreCandidat.length-1); i++){
+            if(scoreCandidat[i] > scoreCandidat[i+1]){
+                double temp = scoreCandidat[i];
+                scoreCandidat[i]=scoreCandidat[i+1];
+                scoreCandidat[i+1]=temp;
+            }
+        }
+        
+        for(int i = (scoreCandidat.length-1); i > -1; i--){
+            System.out.println(scoreCandidat[i]);
+        }
+    }
+}
+
+----------------------------------------------------------------------------------
 
 Les élections législatives, en Guignolerie Septentrionale, obéissent à la règle suivante :
 • lorsque l'un des candidats obtient plus de 50% des suffrages, il est élu dès le premier tour.

@@ -1,19 +1,55 @@
 /* VARIABLES */
 
 scoreCandidat[3]	REEL
+meilleurScore		ENTIER
 
 /* DEBUT PROGRAMME */
 
 Ecrire "Saisir le score du premier candidat : "
 Lire scoreCandidat[0]
 
-crire "Saisir le score du premier candidat : "
+Ecrire "Saisir le score du premier candidat : "
 Lire scoreCandidat[1]
 
-crire "Saisir le score du premier candidat : "
+Ecrire "Saisir le score du premier candidat : "
 Lire scoreCandidat[2]
 
-crire "Saisir le score du premier candidat : "
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat[3]
+
+Si scoreCandidat[0] > 50 Alors
+	Ecrire "Le candidat 1 est élu au premier tour"
+Sinon Si scoreCandidat[1] > 50 Ou scoreCandidat[2] > 50 Ou scoreCandidat[3] > 50 Alors
+	Ecrire "Le candidat 1 est battu au premier tour"
+Sinon
+	Pour i = 0 à Longueur(scoreCandidat-1) Faire
+		Si scoreCandidat[0] > scoreCandidat[i+1] Alors
+			meilleurScore++
+		Fin Si
+	Fin Pour
+Fin Si
+
+/* FIN PROGRAMME */
+
+
+--------------------------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+scoreCandidat[3]	REEL
+
+/* DEBUT PROGRAMME */
+
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat[0]
+
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat[1]
+
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat[2]
+
+Ecrire "Saisir le score du premier candidat : "
 Lire scoreCandidat[3]
 
 Ecrire "ordre croissant : "
@@ -42,6 +78,7 @@ public class MyClass {
         /* VARIABLES */
         
         double[] scoreCandidat = {0,0,0,0};
+        double[] numeroCandidat = {1,2,3,4};
         
         /* DEBUT PROGRAMME */
         Scanner score = new Scanner(System.in);
@@ -59,14 +96,21 @@ public class MyClass {
         
         for(int i = 0; i < (scoreCandidat.length-1); i++){
             if(scoreCandidat[i] > scoreCandidat[i+1]){
-                double temp = scoreCandidat[i];
+                double tempScore = scoreCandidat[i];
+                double tempNumero = numeroCandidat[i];
                 scoreCandidat[i]=scoreCandidat[i+1];
-                scoreCandidat[i+1]=temp;
+                numeroCandidat[i]=numeroCandidat[i+1];
+                scoreCandidat[i+1]=tempScore;
+                numeroCandidat[i+1]=tempNumero;
             }
         }
         
         for(int i = (scoreCandidat.length-1); i > -1; i--){
-            System.out.println(scoreCandidat[i]);
+            System.out.println("Le candidat numéro " + numeroCandidat[i] + " a obtenu " + scoreCandidat[i]);
+        }
+        
+        if(scoreCandidat[3] > 50){
+            System.out.println("Le candidat " + numeroCandidat[3] + " est élu au premier tour");
         }
     }
 }

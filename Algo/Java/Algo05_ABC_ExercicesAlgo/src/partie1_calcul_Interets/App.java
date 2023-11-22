@@ -1,4 +1,5 @@
 package partie1_calcul_Interets;
+import java.util.Scanner;
 
 public class App {
 
@@ -46,22 +47,28 @@ public class App {
 		double interetCompose;
 
 		/* DEBUT DE PROGRAMME */
+		
+		Scanner saisie = new Scanner(System.in);
 
 		System.out.println("Veuillez saisir la somme placée sur un compte : ");
-		Lire sommePlacee
+		sommePlacee = saisie.nextDouble();
 
 		System.out.println("Veuillez saisir l'intérêt offert par la banque : ");
-		Lire interet
+		interet = saisie.nextDouble();
 
 		System.out.println("Veuillez saisir le nombre d'années de placement de la somme : ");
-		Lire nombreAnnees
+		nombreAnnees = saisie.nextInt();
+		
+		saisie.close();
 
 		interetReel = interet/100;
 
 		interetSimple = sommePlacee * ( 1 + nombreAnnees * interetReel);
-		interetCompose = sommePlacee * ( 1 + interetReel)^nombreAnnees;
+		interetCompose = sommePlacee * Math.pow(( 1.0 + interetReel),nombreAnnees);
 
-		System.out.println("Valeur acquise par la somme de ", sommePlacee,  ", placée pendant ", nombreAnnees, " année(s) : ");
+		
+		
+		System.out.println("Valeur acquise par la somme de " + sommePlacee +  ", placée pendant " + nombreAnnees + " année(s) : ");
 
 		System.out.println("	.  avec un intérêt simple : " + interetSimple);
 		System.out.println("	.  avec un intérêt composé : " + interetCompose);

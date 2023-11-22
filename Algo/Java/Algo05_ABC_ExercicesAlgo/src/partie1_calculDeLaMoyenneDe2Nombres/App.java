@@ -8,7 +8,7 @@ public class App {
 		
 		int nombre1;
 		int nombre2;
-		int moyenne;
+		double moyenne;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -18,7 +18,7 @@ public class App {
 		System.out.println("Saisir le deuxième nombre : ");
 		nombre2 = sc.nextInt();
 		
-		moyenne = (nombre1 + nombre2)/2;
+		moyenne = (nombre1 + nombre2)/2d;
 		
 		System.out.println("La moyenne de " + nombre1 + " et " + nombre2 + " est " + moyenne );
 		

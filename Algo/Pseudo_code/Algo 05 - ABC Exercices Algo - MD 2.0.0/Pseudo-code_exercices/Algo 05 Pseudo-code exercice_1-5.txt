@@ -1,0 +1,29 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 1.5 : INVERSION DE 2 VALEURS
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+a :	ENTIER
+b :	ENTIER
+tempA :	ENTIER
+
+/* DEBUT DE PROGRAMME */
+
+Ecrire "Veuillez saisir le nombre a : "
+Lire a
+
+Ecrire "Veuillez saisir le nombre b : "
+Lire b
+
+Ecrire "La valeur de a est : ", a
+Ecrire "La valeur de b est : ", b
+
+tempA <-- a
+a <-- b
+b <-- tempA
+
+Ecrire "La valeur de a est : ", a
+Ecrire "La valeur de b est : ", b
+
+/* FIN DE PROGRAMME */

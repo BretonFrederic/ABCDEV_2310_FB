@@ -1,0 +1,28 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 2.1 : COMPARAISON DE NOMBRES
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+age :		ENTIER
+
+/* CONSTANTE */
+
+majorite :	ENTIER
+
+/* DEBUT DE PROGRAMME */
+
+majorite <-- 18
+
+Ecrire "Saisir votre âge (en années): "
+Lire age
+
+Si age < 0 Alors
+	Ecrire "Vous n'êtes pas encore né"
+Sinon Si age >= majorite Alors
+	Ecrire "Vous êtes majeur"
+Sinon
+	"Vous êtes mineur"
+Fin Si
+
+/* FIN DE PROGRAMME */

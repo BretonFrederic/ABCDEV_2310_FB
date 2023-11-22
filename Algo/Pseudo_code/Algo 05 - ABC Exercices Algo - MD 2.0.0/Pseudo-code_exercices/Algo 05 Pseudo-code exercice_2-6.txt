@@ -1,0 +1,32 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 2.6 : NOMBRE PREMIER
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombre :		ENTIER
+diviseur :		ENTIER
+resultat :		ENTIER
+nombreDeDiviseurs :	ENTIER
+
+/* DEBUT DE PROGRAMME */
+
+Ecrire "Saisir un nombre entier : "
+Lire nombre
+
+Ecrire "Le nombre ", nombre,"
+
+Pour diviseur = 2 à nombre-1 Faire
+	resultat <-- nombre % diviseur
+	Si resultat = 0 Alors
+		nombreDeDiviseurs = nombreDeDiviseurs + 1
+	Fin Si
+Fin Pour
+
+Si nombreDeDiviseurs = 0 Alors
+	Ecrire " est un nombre premier."
+Sinon
+	Ecrire " n'est pas un nombre premier."
+Fin Si
+
+/* FIN DE PROGRAMME */

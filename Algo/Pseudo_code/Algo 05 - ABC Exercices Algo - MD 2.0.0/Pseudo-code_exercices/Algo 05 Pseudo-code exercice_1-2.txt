@@ -1,0 +1,22 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 1.2 : CALCUL DE L’AIRE ET DU VOLUME D’UNE SPHERE
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+rayonR :	REEL
+aireSphere :	REEL
+volumeSphere :	REEL
+
+/* DEBUT DE PROGRAMME */
+
+Ecrire "Veuillez saisir le rayon R : "
+Lire rayonR
+
+aireSphere <-- 4*π*rayonR^2
+volumeSphere <-- (4*π*rayonR^3)/3
+
+Ecrire "L'aire de la Sphere est : ", aireSphere
+Ecrire "Le volume de la Sphere est : ", volumeSphere
+
+/* FIN DE PROGRAMME */

@@ -1,0 +1,23 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 1.3 : CALCUL DE LA SURFACE D’UN SECTEUR CIRCULAIRE
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+rayonR :		REEL
+angleA :		REEL
+aireSecteurCirculaire :	REEL
+
+/* DEBUT DE PROGRAMME */
+
+Ecrire "Veuillez saisir le rayon R : "
+Lire rayonR
+
+Ecrire "Veuillez saisir l'angle A : "
+Lire angleA
+
+aireSecteurCirculaire <-- (π*rayonR^2*angleA)/360
+
+Ecrire "L'aire du secteur circulaire est : ", aireSecteurCirculaire
+
+/* FIN DE PROGRAMME */

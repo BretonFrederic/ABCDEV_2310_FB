@@ -1,0 +1,43 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 2.7 : CONVERSION KILOMETRES → MILES
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+kilometres :	DOUBLE
+valeurSaisie :	CHAINE
+position :	ENTIER
+resultatMiles :	DOUBLE
+quitter :	BOOLEEN
+
+/* CONSTANTES */
+
+KMS_TO_MILES :	DOUBLE
+
+/* DEBUT DE PROGRAMME */
+
+KMS_TO_MILES <-- 1.609
+quitter <-- "faux"
+
+Faire
+	Ecrire "Saisir une valeur en kilomètres comprise entre 0.01 et 1 000 000 ou q pour quitter : "
+	Lire valeurSaisie
+
+	Si valeurSaisie = "q" Alors
+		quitter <-- "vrai"
+	Sinon
+		Pour position = Longueur(valeurSaisie[Max]) à 0 Faire
+			kilometres = kilometres + stringToInt(valeurSaisie[position])^position
+		Fin Pour
+	Fin Si
+
+Tant Que (kilometres < 0.01 Ou kilometres > 1000000 ET quitter = "faux")
+
+Si quitter = "faux" Alors
+	resultatMiles <-- kilometres/KMS_TO_MILES
+	Ecrire "La conversion de la valeur saisie est : ", resultatMiles
+Sinon
+	Ecrire "Fin du programme."		
+Fin Si
+
+/* FIN DE PROGRAMME */

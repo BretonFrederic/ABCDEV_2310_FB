@@ -1,0 +1,31 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 2.5 : RECHERCHE DES DIVISEURS D’UN NOMBRE
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombre :		ENTIER
+diviseur :		ENTIER
+resultat :		ENTIER
+nombreDeDiviseurs :	ENTIER
+
+/* DEBUT DE PROGRAMME */
+
+Ecrire "Saisir un nombre entier : "
+Lire nombre
+
+Ecrire "Les diviseurs du nombre ", nombre, " sont : "
+
+Pour diviseur = 2 à nombre-1 Faire
+	resultat <-- nombre % diviseur
+	Si resultat = 0 Alors
+		Ecrire diviseur
+		nombreDeDiviseurs = nombreDeDiviseurs + 1
+	Fin Si
+Fin Pour
+
+Si nombreDeDiviseurs = 0 Alors
+	Ecrire " ce nombre n'a pas d'autres diviseurs que 1 est lui-même."
+Fin Si
+
+/* FIN DE PROGRAMME */

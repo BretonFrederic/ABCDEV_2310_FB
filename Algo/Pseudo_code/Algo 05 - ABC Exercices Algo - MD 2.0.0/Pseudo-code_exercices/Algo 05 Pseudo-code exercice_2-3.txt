@@ -1,0 +1,47 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 2.3 : TRI DE NOMBRES++
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombreA :	type double
+nombreB : 	type double
+nombreC : 	type double
+
+nombre1 :	type double
+nombre2 : 	type double
+nombre3 : 	type double
+
+/* DEBUT DE PROGRAMME */
+
+	Ecrire "Saisir un premier nombre réel double précision : "
+	Lire nombreA
+	Ecrire "Saisir un deuxième nombre réel double précision : "
+	Lire nombreB
+	Ecrire "Saisir un troisième nombre réel double précision : "
+	Lire nombreC
+
+Si nombreA < nombreB Alors
+	nombre1 <-- nombreA
+	nombre2 <-- nombreB
+Sinon
+	nombre1 <-- nombreB
+	nombre2 <-- nombreA
+Fin Si
+
+Si nombreC > nombre2 Alors
+	nombre3 <-- nombreC
+
+Sinon Si nombreC < nombre1 Alors
+	nombre3 <-- nombre2
+	nombre2 <-- nombre1
+	nombre1 <-- nombreC
+
+Sinon Si nombreC > nombre1 Et nombreC < nombre2 Alors
+	nombre3 <-- nombre2
+	nombre2 <-- nombreC
+Fin Si	
+	
+Ecrire "L'ordre croissant des trois nombres réel double précision est : ", nombre1, nombre2, nombre3
+
+/* FIN DE PROGRAMME */

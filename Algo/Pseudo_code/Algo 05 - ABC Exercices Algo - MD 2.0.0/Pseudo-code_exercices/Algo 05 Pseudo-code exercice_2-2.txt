@@ -1,0 +1,32 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 2.2 : TRI DE NOMBRES
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombreA :	ENTIER
+nombreB : 	ENTIER
+nombreValide : 	BOOLEEN
+
+/* DEBUT DE PROGRAMME */
+
+nombreValide <-- "faux"
+
+tant Que (nombreValide = "faux")
+	Ecrire "Saisir un premier nombre entier : "
+	Lire nombreA
+	Ecrire "Saisir un deuxième nombre entier : "
+	Lire nombreB
+	Si nombreA = nombreB Alors
+		Ecrire "Vous devez saisir deux nombres entier différents"
+	Sinon
+		nombreValide <-- "vrai"
+Fin Tant Que
+
+Si nombreA < nombreB Alors
+	Ecrire "L'ordre croissant des deux nombres entiers est : ", nombreA, nombreB
+Sinon
+	Ecrire "L'ordre croissant des deux nombres entiers est : ", nombreB, nombreA
+Fin Si
+
+/* FIN DE PROGRAMME */

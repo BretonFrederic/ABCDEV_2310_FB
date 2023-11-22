@@ -1,0 +1,35 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 1.4 : CALCUL D’INTERETS
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+sommePlacee :	REEL
+interet :	REEL
+interetReel :	REEL
+nombreAnnees :	ENTIER
+interetSimple :	REEL
+interetCompose :REEL
+
+/* DEBUT DE PROGRAMME */
+
+Ecrire "Veuillez saisir la somme placée sur un compte : "
+Lire sommePlacee
+
+Ecrire "Veuillez saisir l'intérêt offert par la banque : "
+Lire interet
+
+Ecrire "Veuillez saisir le nombre d'années de placement de la somme : "
+Lire nombreAnnees
+
+interetReel <-- interet/100
+
+interetSimple <-- sommePlacee * ( 1 + nombreAnnees * interetReel)
+interetCompose <-- sommePlacee * ( 1 + interetReel)^nombreAnnees
+
+Ecrire "Valeur acquise par la somme de ", sommePlacee,  ", placée pendant ", nombreAnnees, " année(s) : "
+
+Ecrire "	.  avec un intérêt simple : ", interetSimple
+Ecrire "	.  avec un intérêt composé : ", interetCompose
+
+/* FIN DE PROGRAMME */

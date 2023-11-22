@@ -1,0 +1,23 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 1.1 : CALCUL DE LA MOYENNE DE 2 NOMBRES
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+nombre1 :	ENTIER
+nombre2 :	ENTIER
+moyenne :	REEL
+
+/* DEBUT DE PROGRAMME */
+
+Ecrire "Veuillez saisir un premier nombre : "
+Lire nombre1
+
+Ecrire "Veuillez saisir un second nombre : "
+Lire nombre2
+
+moyenne <-- (nombre1 + nombre2)/2
+
+Ecrire "La moyenne de ", nombre1, " et ", nombre2, " est : ", moyenne
+
+/* FIN DE PROGRAMME */

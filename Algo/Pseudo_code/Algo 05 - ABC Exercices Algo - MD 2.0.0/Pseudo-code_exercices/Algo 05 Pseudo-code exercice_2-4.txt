@@ -1,0 +1,33 @@
+-----------------------------------------------------------------------------------------
+EXERCICE 2.4 : ANNEE BISSEXTILE
+-----------------------------------------------------------------------------------------
+
+/* VARIABLES */
+
+annee :		ENTIER
+anneeMod4 :	REEL
+anneeMod100 :	REEL
+anneeMod400 :	REEL
+
+/* DEBUT DE PROGRAMME */
+
+Ecrire "Saisir une année : "
+Lire annee
+
+anneeMod4 <-- annee%4
+anneeMod100 <-- annee%100
+anneeMod400 <-- annee%400
+
+Si anneeMod4 > 0 Alors
+	Ecrire "L'année n'est pas bissextile"
+Fin Si
+
+Si anneeMod4 = 0 Alors
+	Si anneeMod100 = 0 Et anneeMod400 > 0 Alors
+		Ecrire "L'année n'est pas bissextile"
+	Sinon
+		Ecrire "L'année est bissextile"
+	Fin Si
+Fin Si
+
+/* FIN DE PROGRAMME */

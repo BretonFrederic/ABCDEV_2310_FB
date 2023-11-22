@@ -8,24 +8,24 @@ public class App {
 		int nombre;
 		int diviseur;
 		int resultat;
-		int nombreDeDiviseurs;
+		int nombreDeDiviseurs = 0;
 
 		/* DEBUT DE PROGRAMME */
 
 		Scanner saisie = new Scanner(System.in);
 		System.out.println("Saisir un nombre entier : ");
 		nombre = saisie.nextInt();
+		saisie.close();
+		System.out.println("Le nombre " + nombre);
 
-		System.out.println("Le nombre ", nombre,");
-
-		Pour (diviseur = 2 à nombre-1) Faire
-			resultat <-- nombre % diviseur;
-			Si (resultat = 0) Alors
+		for(diviseur = 2; diviseur < nombre-1; diviseur++) {
+			resultat = nombre%diviseur;
+			if(resultat == 0) {
 				nombreDeDiviseurs = nombreDeDiviseurs + 1;
-			Fin Si
-		Fin Pour
+			}
+		}
 
-		if(nombreDeDiviseurs = 0) {
+		if(nombreDeDiviseurs == 0) {
 			System.out.println(" est un nombre premier.");
 		}else {
 			System.out.println(" n'est pas un nombre premier.");

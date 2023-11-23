@@ -125,3 +125,68 @@ Vous devez écrire un algorithme qui permette la saisie des scores de quatre can
 algorithme traitera ensuite le candidat numéro 1 (et uniquement lui) : il dira s'il est élu, battu, s'il se trouve 
 en ballottage favorable (il participe au second tour en étant arrivé en tête à l'issue du premier tour) ou 
 défavorable (il participe au second tour sans avoir été en tête au premier tour).
+
+
+/* VARIABLES */
+
+scoreCandidat1		REEL
+scoreCandidat2		REEL
+scoreCandidat3		REEL
+scoreCandidat4		REEL
+
+/* DEBUT PROGRAMME */
+
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat1
+
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat2
+
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat3
+
+Ecrire "Saisir le score du premier candidat : "
+Lire scoreCandidat4
+
+Si
+
+/* FIN PROGRAMME */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

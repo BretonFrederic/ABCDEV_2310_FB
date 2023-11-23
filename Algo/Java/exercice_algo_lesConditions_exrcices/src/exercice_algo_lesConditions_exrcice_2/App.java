@@ -1,7 +1,10 @@
+package exercice_algo_lesConditions_exrcice_2;
 import java.util.Scanner;
 
-public class MyClass {
-    public static void main(String args[]) {
+public class App {
+
+	public static void main(String[] args) {
+		
         int nombreUtilisateur1;
         int nombreUtilisateur2;
         Scanner utilisateur = new Scanner(System.in);
@@ -19,5 +22,7 @@ public class MyClass {
         }else if(nombreUtilisateur1 > 0 && nombreUtilisateur2 > 0){
             System.out.println("Le porduit de ces 2 nombres est positif");
         }
-    }
+        utilisateur.close();
+	}
+
 }

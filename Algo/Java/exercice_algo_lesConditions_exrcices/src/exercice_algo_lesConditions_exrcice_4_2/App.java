@@ -1,8 +1,10 @@
+package exercice_algo_lesConditions_exrcice_4_2;
 import java.util.Scanner;
 
-public class MyClass {
-    public static void main(String args[]) {
-        
+public class App {
+
+	public static void main(String[] args) {
+		
         /* VARIABLES */
         
         int heure;
@@ -34,6 +36,9 @@ public class MyClass {
         
         System.out.println("Dans une minute il sera " + heure + " heure(s) " + minute + " minute(s) et " + seconde + "seconde(s)");
         
+        utilisateur.close();
         /* FIN PROGRAMME */
-    }
+
+	}
+
 }

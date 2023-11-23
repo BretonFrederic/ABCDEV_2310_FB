@@ -1,13 +1,16 @@
+package exercice_algo_lesConditions_exrcice_3;
 import java.util.Scanner;
 
-public class MyClass {
-    public static void main(String args[]) {
-        /* VARIABLES */
+public class App {
+
+	public static void main(String[] args) {
+		
+		/* VARIABLES */
 
         int ageEnfant;
 
         /* DEBUT PRoGRAMME */
-
+        
         Scanner age = new Scanner(System.in);
 
         System.out.println("Saisir l'âge d'un enfant : ");
@@ -22,7 +25,7 @@ public class MyClass {
         }else if(ageEnfant >= 12){
             System.out.println("L'enfant est un Cadet");
         }
+        age.close();
+	}
 
-        /* FIN PROGRAMME */
-    }
 }

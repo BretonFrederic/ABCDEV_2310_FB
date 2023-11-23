@@ -1,12 +1,11 @@
+package exercice_algo_lesConditions_exrcice_5;
 import java.util.Scanner;
 
-public class MyClass {
-    public static void main(String args[]) {
-        /*****************************************************/
-        /* SIGNEZ LA PETITION POUR INTERDIRE LES IMPRIMANTES */
-        /*****************************************************/
-        
-        /* VARIABLES */
+public class App {
+
+	public static void main(String[] args) {
+		
+/* VARIABLES */
         
         int photocopie = 0;
         double facture = 0.0;
@@ -36,7 +35,10 @@ public class MyClass {
         
         System.out.println("Le montant de la facture pour " +  photocopie + " photocopie(s) est de : " + factureFinale + " Euro(s)");
         //System.out.printf("Le montant de la facture pour %d photocopie(s) est de : %.2f Euro(s)\n", photocopie, facture);
+        montant.close();
         
         /* FIN PROGRAMME */
-    }
+
+	}
+
 }

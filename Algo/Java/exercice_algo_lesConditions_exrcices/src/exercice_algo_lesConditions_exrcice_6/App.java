@@ -1,7 +1,10 @@
+package exercice_algo_lesConditions_exrcice_6;
 import java.util.Scanner;
 
-public class MyClass {
-    public static void main(String args[]) {
+public class App {
+
+	public static void main(String[] args) {
+		
         /* VARIABLES */
         
         int sexe = 0;
@@ -44,6 +47,9 @@ public class MyClass {
         
         System.out.println("Vous avez "+ age + " ans et vous êtes un(e)" + sexeString + " vous "+ decision + " imposable.");
         
+        user.close();
         /* FIN PROGRAMME */
-    }
+
+	}
+
 }

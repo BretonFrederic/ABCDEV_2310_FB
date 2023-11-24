@@ -22,23 +22,23 @@ public class App {
 		do {
 			System.out.println("Saisir une valeur en kilomètres comprise entre 0.01 et 1 000 000 ou q pour quitter : ");
 			valeurString = saisie.next();
-
-			if(valeurString.compareTo("q") == 0) {
+			
+			if(valeurString.equals("q")) {
 				quitter = true;
 				//break;
-				System.out.println("test_debug_q");
-			}else if(valeurString.compareTo("q") != 0){
+				System.out.println("Fin du programme.");
+			}else if(!valeurString.equals("q")){
 				kilometres = Double.parseDouble(valeurString);
-				System.out.println("test_debug_no_q");
+				if(kilometres >= 0.01 && kilometres <= 1000000) {
+					resultatMiles = kilometres/KMS_TO_MILES;
+					System.out.println("La conversion de la valeur saisie est : " + resultatMiles);
+					quitter = true;
+					}else if(kilometres < 0.01 && kilometres > 1000000) {
+						System.out.println("Vous avez saisie une valeur hors limite.");
+						quitter = false;
+				}
 			}
-		}while(kilometres < 0.01 || kilometres > 1000000 && quitter == false);
-
-		if(quitter == false) {
-			resultatMiles = kilometres/KMS_TO_MILES;
-			System.out.println("La conversion de la valeur saisie est : " + resultatMiles);
-		}else {
-			System.out.println("Fin du programme.");		
-		}
+		}while(quitter == false);
 		saisie.close();
 		/* FIN DE PROGRAMME */
 	}

@@ -18,24 +18,24 @@ KMS_TO_MILES :	DOUBLE
 /* DEBUT DE PROGRAMME */
 
 KMS_TO_MILES <-- 1.609
-quitter <-- "faux"
+quitter <-- faux
 
 Faire
 	Ecrire "Saisir une valeur en kilomètres comprise entre 0.01 et 1 000 000 ou q pour quitter : "
 	Lire valeurString
 
 	Si valeurString = "q" Alors
-		quitter <-- "vrai"
+		quitter <-- vrai
 		Ecrire "Fin du programme."
 	Sinon Si valeurString != "q" Alors
 		kilometres <-- StringToDouble(valeurString)
 		Si kilometres >= 0.01 Et kilometres <= 1000000 Alors
 			resultatMiles <-- kilometres/KMS_TO_MILES
 			Ecrire "La conversion de la valeur saisie est : ", resultatMiles
-			quitter <-- true;
+			quitter <-- vrai
 		Sinon Si kilometres < 0.01 && kilometres > 1000000 Alors
 			Ecrire "Vous avez saisie une valeur hors limite."
-			quitter <-- false
+			quitter <-- faux
 		Fin Si
 	Fin Si
 

@@ -1,4 +1,4 @@
-package partie_1_ComparaisonDeNombres;
+package partie_2_ComparaisonDeNombres;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package partie_1_conversionKmsMiles;
+package partie_2_conversionKmsMiles;
 import java.util.Scanner;
 
 public class App {

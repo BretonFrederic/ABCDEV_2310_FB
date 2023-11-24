@@ -1,11 +1,8 @@
-package partie_1_diviseursNombre;
-
+package partie_2_nombrePremier;
 import java.util.Scanner;
 
 public class App {
-
 	public static void main(String[] args) {
-		
 		/* VARIABLES */
 
 		int nombre;
@@ -16,27 +13,24 @@ public class App {
 		/* DEBUT DE PROGRAMME */
 
 		Scanner saisie = new Scanner(System.in);
-		
 		System.out.println("Saisir un nombre entier : ");
 		nombre = saisie.nextInt();
-
 		saisie.close();
-		System.out.println("Les diviseurs du nombre " + nombre + " sont : ");
+		System.out.println("Le nombre " + nombre);
 
 		for(diviseur = 2; diviseur < nombre-1; diviseur++) {
 			resultat = nombre%diviseur;
 			if(resultat == 0) {
-				System.out.println(diviseur);
 				nombreDeDiviseurs = nombreDeDiviseurs + 1;
 			}
 		}
 
 		if(nombreDeDiviseurs == 0) {
-			System.out.println(" ce nombre n'a pas d'autres diviseurs que 1 est lui-même.");
+			System.out.println(" est un nombre premier.");
+		}else {
+			System.out.println(" n'est pas un nombre premier.");
 		}
 
 		/* FIN DE PROGRAMME */
-		
 	}
-
 }

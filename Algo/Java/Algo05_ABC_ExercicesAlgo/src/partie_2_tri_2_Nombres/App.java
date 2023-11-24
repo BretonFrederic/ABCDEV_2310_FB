@@ -1,4 +1,4 @@
-package partie_1_tri_2_Nombres;
+package partie_2_tri_2_Nombres;
 
 import java.util.Scanner;
 

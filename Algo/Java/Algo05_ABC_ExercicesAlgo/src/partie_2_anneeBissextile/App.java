@@ -1,4 +1,4 @@
-package partie_1_anneeBissextile;
+package partie_2_anneeBissextile;
 
 import java.util.Scanner;
 

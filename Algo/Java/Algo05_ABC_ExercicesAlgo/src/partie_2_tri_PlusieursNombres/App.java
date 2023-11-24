@@ -1,4 +1,4 @@
-package partie_1_tri_PlusieursNombres;
+package partie_2_tri_PlusieursNombres;
 
 import java.util.Scanner;
 

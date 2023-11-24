@@ -5,10 +5,11 @@ EXERCICE 2.7 : CONVERSION KILOMETRES → MILES
 /* VARIABLES */
 
 kilometres :	DOUBLE
-valeurSaisie :	CHAINE
-position :	ENTIER
+valeurString :	CHAINE
 resultatMiles :	DOUBLE
 quitter :	BOOLEEN
+
+
 
 /* CONSTANTES */
 

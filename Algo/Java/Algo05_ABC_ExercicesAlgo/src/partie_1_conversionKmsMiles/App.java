@@ -31,7 +31,6 @@ public class App {
 			
 			if(valeurString.equals("q")) {
 				quitter = true;
-				//break;
 				System.out.println("Fin du programme.");
 			}else if(!valeurString.equals("q")){
 				kilometres = Double.parseDouble(valeurString);

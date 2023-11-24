@@ -22,23 +22,23 @@ quitter <-- "faux"
 
 Faire
 	Ecrire "Saisir une valeur en kilomètres comprise entre 0.01 et 1 000 000 ou q pour quitter : "
-	Lire valeurSaisie
+	Lire valeurString
 
-	Si valeurSaisie = "q" Alors
+	Si valeurString = "q" Alors
 		quitter <-- "vrai"
-	Sinon
-		Pour position = Longueur(valeurSaisie[Max]) à 0 Faire
-			kilometres = kilometres + stringToInt(valeurSaisie[position])^position
-		Fin Pour
+		Ecrire "Fin du programme."
+	Sinon Si valeurString != "q" Alors
+		kilometres <-- StringToDouble(valeurString)
+		Si kilometres >= 0.01 Et kilometres <= 1000000 Alors
+			resultatMiles <-- kilometres/KMS_TO_MILES
+			Ecrire "La conversion de la valeur saisie est : ", resultatMiles
+			quitter <-- true;
+		Sinon Si kilometres < 0.01 && kilometres > 1000000 Alors
+			Ecrire "Vous avez saisie une valeur hors limite."
+			quitter <-- false
+		Fin Si
 	Fin Si
 
-Tant Que (kilometres < 0.01 Ou kilometres > 1000000 ET quitter = "faux")
-
-Si quitter = "faux" Alors
-	resultatMiles <-- kilometres/KMS_TO_MILES
-	Ecrire "La conversion de la valeur saisie est : ", resultatMiles
-Sinon
-	Ecrire "Fin du programme."		
-Fin Si
+Tant Que (quitter = "faux")
 
 /* FIN DE PROGRAMME */

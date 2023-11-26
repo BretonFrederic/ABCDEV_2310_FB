@@ -10,6 +10,8 @@ public class App {
 		int nombre2;
 		double moyenne;
 		
+		/* DEBUT PROGRAMME */
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Saisir le premier nombre : ");
@@ -23,6 +25,8 @@ public class App {
 		System.out.println("La moyenne de " + nombre1 + " et " + nombre2 + " est " + moyenne );
 		
 		sc.close();
+		
+		/* FIN PROGRAMME */
 	}
 
 }

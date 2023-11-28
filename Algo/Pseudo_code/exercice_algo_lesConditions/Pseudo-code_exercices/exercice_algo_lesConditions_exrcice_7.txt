@@ -1,119 +1,4 @@
-/* VARIABLES */
 
-scoreCandidat[3]	REEL
-meilleurScore		ENTIER
-
-/* DEBUT PROGRAMME */
-
-Ecrire "Saisir le score du premier candidat : "
-Lire scoreCandidat[0]
-
-Ecrire "Saisir le score du premier candidat : "
-Lire scoreCandidat[1]
-
-Ecrire "Saisir le score du premier candidat : "
-Lire scoreCandidat[2]
-
-Ecrire "Saisir le score du premier candidat : "
-Lire scoreCandidat[3]
-
-Si scoreCandidat[0] > 50 Alors
-	Ecrire "Le candidat 1 est élu au premier tour"
-Sinon Si scoreCandidat[1] > 50 Ou scoreCandidat[2] > 50 Ou scoreCandidat[3] > 50 Alors
-	Ecrire "Le candidat 1 est battu au premier tour"
-Sinon
-	Pour i = 0 à Longueur(scoreCandidat-1) Faire
-		Si scoreCandidat[0] > scoreCandidat[i+1] Alors
-			meilleurScore++
-		Fin Si
-	Fin Pour
-Fin Si
-
-/* FIN PROGRAMME */
-
-
---------------------------------------------------------------------------------------------------------
-
-/* VARIABLES */
-
-scoreCandidat[3]	REEL
-
-/* DEBUT PROGRAMME */
-
-Ecrire "Saisir le score du premier candidat : "
-Lire scoreCandidat[0]
-
-Ecrire "Saisir le score du premier candidat : "
-Lire scoreCandidat[1]
-
-Ecrire "Saisir le score du premier candidat : "
-Lire scoreCandidat[2]
-
-Ecrire "Saisir le score du premier candidat : "
-Lire scoreCandidat[3]
-
-Ecrire "ordre croissant : "
-
-Pour i = 0 à Longueur(scoreCandidat) Faire
-	Si scoreCandidat[i] > scoreCandidat[i+1] Alors
-		double temp <-- scoreCandidat[i];
-                scoreCandidat[i] <-- scoreCandidat[i+1];
-                scoreCandidat[i+1] <-- temp;
-	Fin Si
-Fin Pour
-
-Pour i = Longueur(scoreCandidat) à 0 Faire
-	Ecrire "scoreCandidat[i]"
-Fin pour
-
-
-/* FIN PROGRAMME */
-
----------------------------------------------------------------------------------------
-
-import java.util.Scanner;
-
-public class MyClass {
-    public static void main(String args[]) {
-        /* VARIABLES */
-        
-        double[] scoreCandidat = {0,0,0,0};
-        double[] numeroCandidat = {1,2,3,4};
-        
-        /* DEBUT PROGRAMME */
-        Scanner score = new Scanner(System.in);
-        
-        System.out.println("Saisir le score du candidat 1 : ");
-        scoreCandidat[0] = score.nextDouble();
-        System.out.println("Saisir le score du candidat 2 : ");
-        scoreCandidat[1] = score.nextDouble();
-        System.out.println("Saisir le score du candidat 3 : ");
-        scoreCandidat[2] = score.nextDouble();
-        System.out.println("Saisir le score du candidat 4 : ");
-        scoreCandidat[3] = score.nextDouble();
-        
-        System.out.println("Résultat du premier tour : ");
-        
-        for(int i = 0; i < (scoreCandidat.length-1); i++){
-            if(scoreCandidat[i] > scoreCandidat[i+1]){
-                double tempScore = scoreCandidat[i];
-                double tempNumero = numeroCandidat[i];
-                scoreCandidat[i]=scoreCandidat[i+1];
-                numeroCandidat[i]=numeroCandidat[i+1];
-                scoreCandidat[i+1]=tempScore;
-                numeroCandidat[i+1]=tempNumero;
-            }
-        }
-        
-        for(int i = (scoreCandidat.length-1); i > -1; i--){
-            System.out.println("Le candidat numéro " + numeroCandidat[i] + " a obtenu " + scoreCandidat[i]);
-        }
-        
-        if(scoreCandidat[3] > 50){
-            System.out.println("Le candidat " + numeroCandidat[3] + " est élu au premier tour");
-        }
-    }
-}
 
 ----------------------------------------------------------------------------------
 
@@ -148,7 +33,18 @@ Lire scoreCandidat3
 Ecrire "Saisir le score du premier candidat : "
 Lire scoreCandidat4
 
-Si
+Si scoreCandidat1 > 50 Alors
+	Ecrire "il est élu dès le premier tour."
+Sinon Si scoreCandidat1 < 12.5 Alors
+	Ecrire "il est battu dès le premier tour."
+Sinon
+	Si scoreCandidat1 > scoreCandidat2 Et scoreCandidat1 > scoreCandidat3 Et scoreCandidat1 > scoreCandidat4 Alors
+		Ecrire "il se trouve en ballottage favorable"
+	Sinon
+		Ecrire "il se trouve en ballottage défavorable"
+	Fin Si
+Fin Si
+
 
 /* FIN PROGRAMME */
 

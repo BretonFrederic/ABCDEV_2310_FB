@@ -14,6 +14,11 @@ Ouf !
 jour		ENTIER
 mois		ENTIER
 annee		ENTIER
+mois31Jours	ENTIER
+anneeMod4 :	REEL
+anneeMod100 :	REEL
+anneeMod400 :	REEL
+bissextile	BOOLEEN
 
 /* DEBUT PROGRAMME */
 
@@ -24,9 +29,46 @@ Lire mois
 Ecrire "Saisir un numéro d'année : "
 Lire annee
 
-jour min > 0 jour max < 32
+anneeMod4 <-- annee%4
+anneeMod100 <-- annee%100
+anneeMod400 <-- annee%400
 
-mois min > 0 mois max < 13
+Si anneeMod4 = 0 Alors
+	Si anneeMod100 = 0 Et anneeMod400 > 0 Alors
+		bissextile = faux
+	Sinon
+		bissextile = vrai
+	Fin Si
+Fin Si
 
+Si jour > 0 Et jour < 32 Alors
+	Si mois > 0 Et mois < 13 Alors
+		Si jour = 31 Alors
+			Pour mois31Jours = 1 à 7 par pas de 2 Faire
+				Si mois31Jours = mois Alors
+					Ecrire "Date valide"
+				Fin Si
+			Fin Pour
+			Pour mois31Jours = 8 à 12 par pas de 2 Faire
+				Si mois31Jours = mois Alors
+					Ecrire "Date valide"
+				Fin Si
+			Fin Pour
+
+		Sinon Si mois = 2 Alors
+			Si jour > 29 Alors
+				Ecrire "Date invalide."
+			Sinon Si jour = 29 Et bissextile = vrai Ou jour = 28 Et bissextile = faux Alors
+				Ecrire "Date valide."
+			Sinon
+				Ecrire "Date invalide."
+			Fin Si
+		Fin Si
+	Sinon
+		Ecrire "Date invalide."
+	Fin Si
+Sinon
+	Ecrire "Date invalide."
+Fin Si
 
 /* FIN PROGRAMME */

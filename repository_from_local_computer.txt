@@ -1,0 +1,38 @@
+/* RAPPEL */
+
+-rappel des commandes :
+	ls (afficher les dossiers et fichiers dans le répertoire courant)
+	cd nomdudossier (saisir les premières lettres du dossier, appuyer sur tab pour utiliser 	l'auto-complétion)
+	cd .. (revenir dans le répertoire parent)
+
+/* DEBUT */
+
+-créer un dossier sur votre pc qui vous servira de dépôt local
+
+-sauvegarder votre travail à l'intérieur(pseudo-code, organigramme, code java ou autres langages)
+
+-créer un new repository sur votre github, bouton en haut à droite avec l'icone +
+
+-remplir uniquement le formulaire "repository name" et valider
+
+-ouvrir git bash
+
+-rendez-vous dans le dossier qui vous sert de dépôt local sur pc (voir rappel commandes git bash)
+
+-initialiser dans git bash le dépôt local avec la commande, git init
+
+-ajouter le dossier et son contenu à git, git add .
+
+-capturer l'état du projet actuel dans git, git commit -m "my first commit"
+
+-indiquer à git l'adresse du repository dans lequel ajouter le dépôt local, exemple :
+
+	git remote add origin https://github.com/FBretonABCDEV/nom_de_mon_repository.git
+
+-vous pouvez retrouver VOTRE lien sur la page web de création de votre repository 
+
+-créer une copie de votre dépôt local dans votre repository qui devient l'original avec la     
+ commande, git push -u origin master
+
+
+/* FIN */

@@ -1,0 +1,31 @@
+EXERCICE 3.1 : JEU DE LA FOURCHETTE
+L'ordinateur « choisit » aléatoirement un nombre mystère (entier compris entre 0 et 100). Le joueur essaie de le deviner. 
+Lors de chaque essai, l'ordinateur affiche la « fourchette » dans laquelle se trouve le nombre qu'il a choisi. 
+Le choix du nombre mystère sera simulé par génération d'un nombre aléatoire : N <-- RANDOM(0,100).
+Lorsque l'utilisateur a trouvé le nombre mystère, le programme affiche "Bravo vous avez trouvé en X essais".
+
+
+/* VARIABLES */
+
+nombreMystère		ENTIER
+nombreJoueur		ENTIER
+nombreEssai		ENTIER
+
+/* DEBUT PROGRAMME */
+
+nombre mystère <-- RANDOM(0,100)
+
+Faire
+	Ecrire "Saisir un nombre entier entrre 0 et 100 : "
+	Lire nombreJoueur
+	nombreEssai++
+	Si nombreJoueur = nombreMystere Alors
+		Ecrire "Bravo, vous avez trouvez le nombre mystère en ", essai, "essai(s)."
+	Sinon Si nombreJoueur < nombreMystere Alors
+		Ecrire "Le nombre mystère est compris entre ", nombreJoueur, " est ", 100
+	Sinon Si nombreJoueur > nombreMystere Alors
+		Ecrire "Le nombre mystère est compris entre ", nombreJoueur, " est ", 0
+	Fin Si
+Tant Que nombreJoueur != nombreMystere
+
+/* FIN PROGRAMME */

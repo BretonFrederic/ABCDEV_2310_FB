@@ -24,12 +24,27 @@ S = 1		dernier 	     1
 /* VARIABLES */
 
 magasin		ENTIER
-somme		ENTIER
+sommeDepart	ENTIER
+depense		REEL
 
 /* DEBUT PROGRAMME */
 
-Tant Que somme > 1 Faire
-	
+magasin <-- 1
+
+Ecrire "Saisir une somme de départ : "
+Lire sommeDepart
+
+depense <-- (sommeDepart)d
+
+Si depense < 1 Alors
+	Ecrire "Vous devez saisir une somme supérieure à 1"
+Fin Si
+
+Tant Que depense > 1 Faire
+	depense = depense / 2 - 1
+	magasin = magasin + 1
 Fin Tant Que
+
+Ecrire "Barnabé a fait ses courses dans ", magasin ,"magasin(s)."
 
 /* FIN PROGRAMME */

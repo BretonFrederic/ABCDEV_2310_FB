@@ -21,6 +21,7 @@ public class App {
 		System.out.println("Veuillez saisir le nombre b : ");
 		b = saisie.nextInt();
 
+		System.out.println("Valeurs avant inversion.");
 		System.out.println("La valeur de a est : " + a);
 		System.out.println("La valeur de b est : " + b);
 
@@ -28,6 +29,7 @@ public class App {
 		a = b;
 		b = tempA;
 
+		System.out.println("Valeurs après inversion.");
 		System.out.println("La valeur de a est : " + a);
 		System.out.println("La valeur de b est : " + b);
 		

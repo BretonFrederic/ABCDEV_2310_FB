@@ -1,0 +1,27 @@
+EXERCICE 3.2 : BARNABE FAIT SES COURSES
+Barnabé fait ses courses dans plusieurs magasins.
+Dans chacun, il dépense 1 € de plus que la moitié de ce qu’il possédait en entrant. 
+Dans le dernier magasin, il dépense le solde.
+Barnabé dépense au moins 1 € dans chaque magasin.
+Soit S un nombre entier représentant la somme dont il disposait au départ (S > 1 euro). 
+Représenter l’algorithme permettant de trouver le nombre de magasins dans lesquels il a acheté.
+
+PLUSIEURS MAGASINS
+DEPENSE 1 € DE + DE LA MOITIE DE LA SOMME POSSEDER EN ENTRANT
+DERNIER MAGASIN DEPENSE LE SOLDE
+DEPENSE AU MOINS 1 € DANS CHAQUE MAGASIN
+S SOMME AU DEPART NOMBRE ENTIER S > 1 €
+
+somme = ((somme / 2) + 1) * nombreMagasins + reste
+x = (x / 2 +1 ) * y - (x - (x / 2 +1 ) * y)
+
+/* VARIABLES */
+
+magasin		ENTIER
+somme		ENTIER
+
+/* DEBUT PROGRAMME */
+
+
+
+/* FIN PROGRAMME */

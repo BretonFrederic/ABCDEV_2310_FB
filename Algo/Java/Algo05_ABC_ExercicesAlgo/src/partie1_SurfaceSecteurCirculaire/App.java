@@ -30,6 +30,7 @@ public class App {
 		double rayonR;
 		double angleA;
 		double aireSecteurCirculaire;
+		double aireSecteurArrondi;
 
 		/* DEBUT DE PROGRAMME */
 		
@@ -44,8 +45,9 @@ public class App {
 		secteur.close();
 
 		aireSecteurCirculaire = (Math.PI*Math.pow(rayonR, 2)*angleA)/360;
+		aireSecteurArrondi = Math.round(aireSecteurCirculaire * 1000.0) / 1000.0;
 
-		System.out.println("L'aire du secteur circulaire est : " + aireSecteurCirculaire);
+		System.out.println("L'aire du secteur circulaire est : " + aireSecteurArrondi);
 
 		/* FIN DE PROGRAMME */
 

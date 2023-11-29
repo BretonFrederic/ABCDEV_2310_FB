@@ -1,0 +1,47 @@
+EXERCICE 3.3 : RECHERCHER UN NOMBRE DANS UN TABLEAU
+Soit un tableau de nombres entier triés par ordre croissant.
+Chercher si un nombre donné N figure parmi les éléments. 
+Si oui, afficher la valeur de l'indice correspondant. Sinon, afficher « 404 Not found ».
+
+
+-générer des nombres entiers aléatoires.
+-placer ces nombres dans l'ordre croissant dans le tableau.
+-Chercher si le nombre utilisateur figure parmi les éléments.
+-Si oui, afficher la valeur de l'indice correspondant. Sinon, afficher « 404 Not found ».
+
+/* VALEURS */
+
+nombreAleatoire		ENTIER
+liste[] = 10		ENTIER
+nombreUtilisateur	ENTIER
+i			ENTIER
+j			ENTIER
+
+/* DEBUT PROGRAMME */
+
+
+Ecrire "Saisir un nombre entier entre 0 et 100 : "
+Lire nombreUtilisateur
+
+Pour i <-- 0 à 10 Faire
+	nombreAleatoire <-- RANDOM(0, 100)
+	liste[i] <-- nombreAleatoire
+Fin Pour
+
+Pour i <-- 0 à 10 Faire
+	Pour j <-- 0 à 10 Faire
+		Si liste[i] > liste[j] Alors
+			liste[i], liste[j] = liste[j], liste[i]
+		Fin Si
+	Fin Pour
+Fin Pour
+
+Pour i <-- 0 à 10 Faire
+	Si liste[i] = nombreUtilisateur Alors
+		Ecrire "Votre nombre se trouve à l'indice ", i
+	Sinon
+		Ecrire "404 Not found"	
+	Fin Si
+Fin pour
+
+/* FIN PROGRAMME */

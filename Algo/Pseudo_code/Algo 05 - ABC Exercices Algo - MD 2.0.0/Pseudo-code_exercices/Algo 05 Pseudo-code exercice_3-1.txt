@@ -15,15 +15,18 @@ nombreEssai		ENTIER
 
 nombre mystère <-- RANDOM(0,100)
 
+Ecrire "Saisir un nombre entier entre 0 et 100 : "
+
 Faire
-	Ecrire "Saisir un nombre entier entrre 0 et 100 : "
 	Lire nombreJoueur
 	nombreEssai++
 	Si nombreJoueur = nombreMystere Alors
 		Ecrire "Bravo, vous avez trouvez le nombre mystère en ", essai, "essai(s)."
 	Sinon Si nombreJoueur < nombreMystere Alors
+		Ecrire "C'est plus !"
 		Ecrire "Le nombre mystère est compris entre ", nombreJoueur, " est ", 100
 	Sinon Si nombreJoueur > nombreMystere Alors
+		Ecrire "C'est moins !"
 		Ecrire "Le nombre mystère est compris entre ", nombreJoueur, " est ", 0
 	Fin Si
 Tant Que nombreJoueur != nombreMystere

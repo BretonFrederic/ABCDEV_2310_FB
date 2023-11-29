@@ -16,7 +16,7 @@ public class App {
 		System.out.println("Saisir un nombre entier : ");
 		nombre = saisie.nextInt();
 		saisie.close();
-		System.out.println("Le nombre " + nombre);
+		System.out.printf("Le nombre " + nombre);
 
 		for(diviseur = 2; diviseur < nombre-1; diviseur++) {
 			resultat = nombre%diviseur;

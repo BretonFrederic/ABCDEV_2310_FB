@@ -1,5 +1,4 @@
 package partie_2_tri_PlusieursNombres;
-
 import java.util.Scanner;
 
 public class App {

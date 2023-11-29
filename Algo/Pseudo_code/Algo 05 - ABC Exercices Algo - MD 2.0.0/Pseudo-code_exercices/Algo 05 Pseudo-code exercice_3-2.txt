@@ -12,13 +12,14 @@ DERNIER MAGASIN DEPENSE LE SOLDE
 DEPENSE AU MOINS 1 € DANS CHAQUE MAGASIN
 S SOMME AU DEPART NOMBRE ENTIER S > 1 €
 
-somme = ((somme / 2) + 1) * nombreMagasins + reste
-x = (x / 2 +1 ) * y - (x - (x / 2 +1 ) * y)
+x = x / 2 - 1
 
-
-
-avant dernier 1 + 1
-dernier 1
+S = 94		magasin n	47 + 1
+S = 46		magasin n	23 + 1
+S = 22		magasin n 	11 + 1
+S = 10		magasin n	 5 + 1
+S = 4		magasin n	 2 + 1
+S = 1		dernier 	     1
 
 /* VARIABLES */
 
@@ -27,6 +28,8 @@ somme		ENTIER
 
 /* DEBUT PROGRAMME */
 
-
+Tant Que somme > 1 Faire
+	
+Fin Tant Que
 
 /* FIN PROGRAMME */

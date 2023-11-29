@@ -15,6 +15,11 @@ S SOMME AU DEPART NOMBRE ENTIER S > 1 €
 somme = ((somme / 2) + 1) * nombreMagasins + reste
 x = (x / 2 +1 ) * y - (x - (x / 2 +1 ) * y)
 
+
+
+avant dernier 1 + 1
+dernier 1
+
 /* VARIABLES */
 
 magasin		ENTIER

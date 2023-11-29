@@ -9,16 +9,11 @@ public class App {
 		/* VARIABLES */
 
 		int age;
-
-		/* CONSTANTE */
-
-		int majorite;
+		int majorite = 18;
 
 		/* DEBUT DE PROGRAMME */
 		
 		Scanner saisie = new Scanner(System.in);
-
-		majorite = 18;
 
 		System.out.println("Saisir votre âge (en années): ");
 		age = saisie.nextInt();

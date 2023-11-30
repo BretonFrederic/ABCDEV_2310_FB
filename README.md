@@ -10,3 +10,5 @@
     * Diagramme_UML
     * Java
     * README
+
+2. [Mon CV](https://fbretonabcdev.github.io/Mon_CV/)

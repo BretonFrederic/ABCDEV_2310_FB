@@ -8,30 +8,39 @@ Proposez un jeu d'essai prévoyant les 3 cas suivants :
 ▪ La lettre n'est pas présente
 ▪ La lettre est présente une ou plusieurs fois
 
+
 /* VARIABLES */
 
-message		CHAINE
-occurence	ENTIER
-
+message			CHAINE
+occurence		ENTIER
+		 
 
 /* DEBUT PROGRAMME */
 
-message <-- "Donnez l'algorithme d'un programme qui compte le nombre d'occurrences d'une lettre donnée."
+occurence <-- -1
 
-Ecrire "Dans la chaine de caractères suivant : "
-Ecrire message
+Ecrire "Saisir une chaine de caractères : "
+Lire message
 
-Si message = "" Alors
+Si message = "" OU message = "." Alors
 	Ecrire "La phrase est vide"
 Sinon
-	Pour i <-- 0 à Longueur(message) Faire
-	Si message[1]= message[j] Alors
-		occurence = occurence + 1
-		Ecrire "La lettre est présente une ou plusieurs fois"
-	Sinon
-		Ecrire "La lettre n'est pas présente"
+	Pour i <-- 0 à i Longueur(message) Faire
+		Si message[1] == message[i] Alors
+			occurence <-- occurence + 1
+		Fin Si
+	Fin pour
+	Si occurence == 0 Alors
+		Ecrire "La lettre n'est pas présente(pas d'occurence)"
 	Fin Si
-Fin Pour
+Fin Si
+		
+Si occurence > 0 Alors
+	Si message[1] >= 'a' ET message[1] <= 'z' OU message[1] >= 'A' ET message[1] <= 'Z' Alors
+		Ecrire "La lettre '" + message[1] + "' est présente une ou plusieurs fois"
+	Sinon
+		Ecrire "Le caractère spécial " + message[1] + " est présente une ou plusieurs fois"
+	Fin Si
 Fin Si
 
 /* FIN DE PROGRAMME */

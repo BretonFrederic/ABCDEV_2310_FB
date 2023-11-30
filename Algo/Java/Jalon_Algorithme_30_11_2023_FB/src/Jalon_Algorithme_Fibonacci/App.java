@@ -17,10 +17,10 @@ public class App {
 		/* DEBUT PROGRAMME */
 		
 		Scanner saisie = new Scanner(System.in);
-
+			
 		System.out.println("Combien de nombres de la suite de Fibonacci souhaitez-vous afficher : ");
 		nb = saisie.nextInt();
-		
+			
 		position = 2;
 		resultat = "\t0\n\t1";
 		nbPrecedent = 0;
@@ -38,7 +38,8 @@ public class App {
 		}
 		System.out.println("Les" + nb + " premiers nombres de la suite de Fibonacci sont \n" + resultat);
 		System.out.println(nb + " nombres affichés");
-		saisie.close();
+			
+	saisie.close();
 
 		/* FIN PROGRAMME */
 		

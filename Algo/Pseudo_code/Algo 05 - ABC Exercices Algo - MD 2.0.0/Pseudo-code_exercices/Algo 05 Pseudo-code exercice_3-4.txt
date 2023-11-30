@@ -1,0 +1,37 @@
+EXERCICE 3.4 : RECHERCHER UNE LETTRE DANS UNE CHAINE DE CARACTERES
+Soit une chaîne de caractères terminée par le caractère « . ». 
+Donnez l'algorithme d'un programme qui compte le nombre d'occurrences d'une lettre donnée (« a » par exemple) dans cette 
+chaîne.
+Si la chaîne de caractères est vide ou n'est composée que du caractère « . », le message « LA CHAINE EST VIDE » sera affiché.
+Proposez un jeu d'essai prévoyant les 3 cas suivants :
+▪ La phrase est vide
+▪ La lettre n'est pas présente
+▪ La lettre est présente une ou plusieurs fois
+
+/* VARIABLES */
+
+message		CHAINE
+occurence	ENTIER
+
+
+/* DEBUT PROGRAMME */
+
+message <-- "Donnez l'algorithme d'un programme qui compte le nombre d'occurrences d'une lettre donnée."
+
+Ecrire "Dans la chaine de caractères suivant : "
+Ecrire message
+
+Si message = "" Alors
+	Ecrire "La phrase est vide"
+Sinon
+	Pour i <-- 0 à Longueur(message) Faire
+	Si message[1]= message[j] Alors
+		occurence = occurence + 1
+		Ecrire "La lettre est présente une ou plusieurs fois"
+	Sinon
+		Ecrire "La lettre n'est pas présente"
+	Fin Si
+Fin Pour
+Fin Si
+
+/* FIN DE PROGRAMME */

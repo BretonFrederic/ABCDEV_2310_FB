@@ -8,7 +8,8 @@ public class App {
 		/* VARIABLES */
 
 		int nombreMystere;
-		
+		int max = 100;
+		int min = 0;
 		int nombreJoueur;
 		int nombreEssai = 0;
 		
@@ -16,7 +17,7 @@ public class App {
 		
 		Scanner saisie = new Scanner(System.in);
 
-		nombreMystere = (int)Math.round(Math.random()*100);
+		nombreMystere = min + (int)(Math.random() * ((max - min) + 1));
 		
 		System.out.println("Saisir un nombre entier entre 0 et 100 : ");
 
@@ -26,11 +27,13 @@ public class App {
 			if(nombreJoueur == nombreMystere) {
 					System.out.println("Bravo, vous avez trouvez le nombre mystère en " + nombreEssai + " essai(s).");
 				}else if(nombreJoueur < nombreMystere) {
+					min = nombreJoueur;
 					System.out.println("C'est plus ! ");
-					System.out.println("Le nombre mystère est compris entre " + nombreJoueur + " est " + 100);
+					System.out.println("Le nombre mystère est compris entre " + min + " est " + max);
 				}else if(nombreJoueur > nombreMystere) {
+					max = nombreJoueur;
 					System.out.println("C'est moins ! ");
-					System.out.println("Le nombre mystère est compris entre " + 0 + " est " + nombreJoueur);
+					System.out.println("Le nombre mystère est compris entre " + min + " est " + max);
 			}
 		}while(nombreJoueur != nombreMystere);
 		

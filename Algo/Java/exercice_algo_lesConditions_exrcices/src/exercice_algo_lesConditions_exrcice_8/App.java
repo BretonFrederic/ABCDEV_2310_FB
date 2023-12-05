@@ -75,6 +75,10 @@ public class App {
 
 		/* FIN PROGRAMME */
 		
+		// cas1 = (age < 25 && ageDuPermis < 2)
+		// cas2 = (age < 25 && ageDuPermis > 2 || age > 25 && ageDuPermis < 2)
+		// cas3 = (age > 25 && ageDuPermis > 2)
+		// cas4 = (age >= 23 && ageDuPermis >= 5 && anneesDeFidelite > 5)
 	}
 
 }

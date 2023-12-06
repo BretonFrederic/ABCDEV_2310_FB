@@ -6,17 +6,15 @@ Ecrire cet algorithme dans un premier temps avec une boucle tant que, pus avec u
 --VARIABLES--
 
 userNumber		ENTIER
-goal			ENTIER
 
 --DEBUT PROGRAMME--
 
 ECRIRE "Saisir un nombre : "
 LIRE userNumber
-goal <-- userNumber+10
 
-TANT QUE userNumber != goal FAIRE
+POUR i <-- 0 À 10 FAIRE
 	userNumber <-- userNumber + 1
 	ECRIRE userNumber
-FIN TANT QUE
+FIN POUR
 
 --FIN PROGRAMME--

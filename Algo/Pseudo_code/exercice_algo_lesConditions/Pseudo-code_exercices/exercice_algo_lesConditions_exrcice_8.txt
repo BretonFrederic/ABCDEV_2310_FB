@@ -1,72 +1,5 @@
 EXERCICE 8
 
-/* VARIABLES */
-
-age			ENTIER
-ageDuPermis		ENTIER
-accident		ENTIER
-anneesDeFidelite	ENTIER
-tarif			CHAINE
-refuse			CHAINE
-
-/* DEBUT PROGRAMME */
-
-refuse <-- "Nous ne pouvons pas vous assurer."
-
-Ecrire "Saisir votre âge : "
-Lire age
-Ecrire "Saisir depuis combien d'année(s) vous êtes titulaire du permis : "
-Lire ageDuPermis
-Ecrire "Saisir le nombre d'accident(s) que vous avez eu : "
-Lire accident
-Ecrire "Saisir vos année(s) d'ancienneté dans notre compagnie d'assurance automobile : "
-Lire anneesDeFidelite
-
-
-Si age < 25 Et agePermis < 2 Alors
-	Si accident = 0 Alors
-		tarif <-- "rouge"
-	Sinon
-		Ecrire refuse
-Fin Si
-
-Si age < 25 Et agePermis > 2 Ou age > 25 Et agePermis < 2 Alors
-	Si accident = 0 Alors
-		tarif = orange
-	Sinon Si accident = 1 Alors
-		tarif = rouge
-	Sinon
-		Ecrire refuse
-	Fin Si
-Fin Si
-
-Si age > 25 Et agePermis > 2 Alors
-	Si accident = 0 Alors
-		tarif = vert
-	Sinon Si accident = 1 Alors
-		tarif = orange
-	Sinon Si accident = 2 Alors
-		tarif = rouge
-	Sinon Si accident > 2
-		Ecrire refuse
-	Fin Si
-Fin Si
-
-Si age >= 23 Et agePermis >= 5 Et anneesDeFidelite > 5 Alors
-	Si tarif = vert Alors
-		tarif <-- bleu
-	Sinon Si tarif = orange Alors
-		tarif <-- vert
-	Sinon Si tarif = rouge Alors
-		tarif <-- orange
-	Fin Si
-Fin Si
-
-Ecrire "Nous pouvons vous assurer, voici votre tarif : ",tarif 
-
-/* FIN PROGRAMME */
-
-
 Une compagnie d'assurance automobile propose à ses clients quatre familles de tarifs identifiables par une 
 couleur, du moins au plus onéreux : tarifs bleu, vert, orange et rouge. Le tarif dépend de la situation du 
 conducteur :
@@ -88,21 +21,47 @@ problème. Avant de se lancer à corps perdu dans cet exercice, on pourra réfl�
 qu'il est plus simple qu'il n'en a l'air (cela s'appelle faire une analyse !)
 
 
-/* VARIABLES */
-
-age, anneesPermis, annesAssurance, accidents		ENTIERS
-condition1, condition2, condition3, condition4		BOOLEENS
-
-/* DEBUT PROGRAMME */
-
-ECRIRE "Saisir votre âge : "
-LIRE age
-ECRIRE "Saisir depuis combien d'année(s) vous êtes titulaire du permis : "
-LIRE ageDuPermis
-ECRIRE "Saisir le nombre d'accident(s) que vous avez eu : "
-Lire accident
-ECRIRE "Saisir vos année(s) d'ancienneté dans notre compagnie d'assurance automobile : "
-LIRE anneesDeFidelite
-
-
-/* FIN PROGRAMME */
+Variables
+	age, annePermis, nbAccident, anneAssurance sont des entiers
+	condition1, condition2, condition3 sont des booleens
+	situation est une chaine de caracteres
+	point est un entier
+Debut du programme
+	Ecrire "Saisir l'age : "
+	Lire age
+	Ecrire "Saisir le nombre d'annees de permis"
+	Lire annePermis
+	Ecrire "Saisir le nombre d'accidents : "
+	Lire nbAccident
+	Ecrire "Saisir le nombre d'annees d'assurance : "
+	Lire anneeAssurance
+	condition1 <-- age >= 25
+	condition2 <-- annePermis >= 2
+	condition3 <-- anneAssurance > 5
+	point <-- 0
+Debut Si
+	Si condition1 = faux
+	Alors point <-- point + 1
+Fin Si
+Debut Si
+	Si condition2 = faux
+	Alors point <-- point + 1
+Fin Si
+Debut Si
+	point <-- point + nbAccident
+	Si point < 3 et condition3 = vrai
+	Alors point <-- point - 1
+Fin Si
+Debut Si
+	Si point = -1
+	Alors situation <-- "Bleu"
+	Sinon Si point = 0
+	Alors situation <-- "Vert"
+	Sinon Si point = 1
+	Alors situation <-- "Orange"
+	Sinon Si point = 2
+	Alors situation <-- "Rouge"
+	Sinon situation <-- "Refuser"
+Fin Si
+Ecrire "Votre situation : ",situation
+Fin du programme

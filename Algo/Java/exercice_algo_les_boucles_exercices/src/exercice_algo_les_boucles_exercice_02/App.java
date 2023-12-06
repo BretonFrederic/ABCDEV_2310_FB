@@ -12,18 +12,11 @@ public class App {
 
 		--VARIABLES--
 
-		randomNumber		ENTIER
 		userNumber		ENTIER
-		i			ENTIER
-		count			ENTIER
-		answer			BOOLEEN
 
 		--DEBUT PROGRAMME--
 
-		answer <-- faux
-		randomNumber <-- RANDOM(100)
-
-		FAIRE
+		TANT QUE userNumber < 10 || userNumber > 20 FAIRE
 			ECRIRE "Saisir un nombre compris entre 10 et 20 : "
 			LIRE userNumber
 			SI userNumber > 20 ALORS
@@ -31,25 +24,22 @@ public class App {
 			SINON SI userNumber < 10 ALORS
 				ECRIRE "Plus grand !"
 			ELSE
-				ECRIRE "Le nombre convient."
+				ECRIRE "La réponse convient."
 			FIN SI
-		TANT QUE answer = faux
 		FIN TANT QUE
 
-		--PROGRAMME--
+		--FIN PROGRAMME--
 		*/
 		
 		/* VARIABLES */
 
-		int userNumber;
-		boolean answer;
+		int userNumber=0;
 
 		/* DEBUT PROGRAMME */
 		
-		answer = false;
 		Scanner userInput = new Scanner(System.in);
 
-		do {
+		while(userNumber < 10 || userNumber > 20){
 			System.out.println("Saisir un nombre compris entre 10 et 20 : ");
 			userNumber = userInput.nextInt();
 			if(userNumber > 20) {
@@ -57,12 +47,12 @@ public class App {
 			}else if (userNumber < 10) {
 				System.out.println("Plus grand !");
 			}else {
-				answer = true;
 				System.out.println("Le nombre convient.");
 			}
 
-		}while(!answer);
+		}
 		userInput.close();
+		
 		/*FIN PROGRAMME*/
 	}
 

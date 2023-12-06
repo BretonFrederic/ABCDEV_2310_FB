@@ -5,16 +5,11 @@ grand ! » si le nombre est inférieur à 10.
 
 /* VARIABLES */
 
-
 userNumber		ENTIER
-answer			BOOLEEN
 
-/* DEBUT PROGRAMME */
+--DEBUT PROGRAMME--
 
-answer <-- faux
-
-
-FAIRE
+TANT QUE userNumber < 10 || userNumber > 20 FAIRE
 	ECRIRE "Saisir un nombre compris entre 10 et 20 : "
 	LIRE userNumber
 	SI userNumber > 20 ALORS
@@ -23,10 +18,7 @@ FAIRE
 		ECRIRE "Plus grand !"
 	ELSE
 		ECRIRE "La réponse convient."
-		answer <-- vrai
 	FIN SI
-
-TANT QUE answer = faux
 FIN TANT QUE
 
 /*FIN PROGRAMME*/

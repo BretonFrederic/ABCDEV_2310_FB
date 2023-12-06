@@ -34,9 +34,9 @@ public class App {
 				LIRE answer
 				
 				SI answer = "O" ALORS
-					quit <-- vrai
-				SINON SI answer = "N" ALORS
 					quit <-- faux
+				SINON SI answer = "N" ALORS
+					quit <-- vrai
 				FIN SI
 
 			TANT QUE !quit

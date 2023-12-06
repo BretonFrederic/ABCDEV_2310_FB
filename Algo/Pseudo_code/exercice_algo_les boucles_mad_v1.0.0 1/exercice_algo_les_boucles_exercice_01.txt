@@ -5,21 +5,14 @@ convienne.
 /* VARIABLES */
 
 userNumber		ENTIER
-answer			BOOLEEN
 
 /* DEBUT PROGRAMME */
 
-answer <-- false
+userNumber <-- 0
 
-FAIRE
-	ECRIRE"Saisir un nombre entre 1 et 3 : "
+TANT QUE userNumber < 1 OU userNumber > 3 FAIRE
+	ECRIRE "Saisir un nombre entre 1 et 3 : "
 	ECRIRE userNumber
-
-	SI userNumber < 1 ET userNumber > 3 ALORS
-		ECRIRE "La réponse ne convient pas."
-	SINON
-		ECRIRE "La réponse convient."
-		answer = true
-	FIN SI
-TANT QUE !answer FAIRE
 FIN TANT QUE
+
+ECRIRE "Le nombre convient."

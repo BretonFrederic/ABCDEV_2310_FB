@@ -8,6 +8,7 @@ NB : on souhaite afficher uniquement le résultat, pas la décomposition du calc
 /* VARIABLES */
 
 userNumber		ENTIER
+previousResultat	ENTIER
 result			ENTIER
 i			ENTIER
 
@@ -17,7 +18,8 @@ ECRIRE "Saisir un nombre entier : "
 LIRE userNumber
 
 POUR i <-- 1 À userNumber FAIRE
-	result <-- result + 1
+	previousResultat <-- previousResultat + 1
+	result <-- result + previousResultat
 FIN POUR
 
 ECRIRE "La somme des entiers jusqu'à ce nombre est : ", result

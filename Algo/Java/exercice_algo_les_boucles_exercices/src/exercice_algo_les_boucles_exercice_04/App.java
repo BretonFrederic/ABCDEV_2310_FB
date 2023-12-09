@@ -14,9 +14,11 @@ public class App {
 
 		--VARIABLES--
 
-		userNumber		ENTIER
-		result			ENTIER
-		i			ENTIER
+		userNumber			ENTIER
+		previousResultat	ENTIER
+		result				ENTIER
+		i					ENTIER
+
 
 		--DEBUT PROGRAMME--
 
@@ -24,7 +26,8 @@ public class App {
 		LIRE userNumber
 
 		POUR i <-- 1 À userNumber FAIRE
-			result <-- result + 1
+			previousResultat <-- previousResultat + 1
+			result <-- result + previousResultat
 		FIN POUR
 
 		ECRIRE "La somme des entiers jusqu'à ce nombre est : ", result
@@ -35,6 +38,7 @@ public class App {
 		/* VARIABLES */
 
 		int userNumber;
+		int previousResult = 0;
 		int result = 0;
 
 		/* DEBUT PROGRAMME */
@@ -45,7 +49,8 @@ public class App {
 		userNumber = userInput.nextInt();
 		
 		for(int i = 0; i < userNumber; i++) {
-			result = result + 1;
+			previousResult += 1;
+			result = result + previousResult;
 		}
 
 		System.out.println("La somme des entiers jusqu'à ce nombre est : " + result);

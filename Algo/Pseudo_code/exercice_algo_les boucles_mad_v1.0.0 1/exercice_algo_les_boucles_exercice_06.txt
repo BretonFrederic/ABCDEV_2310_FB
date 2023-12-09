@@ -1,0 +1,32 @@
+EXERCICE 6
+
+Ecrire un algorithme qui demande successivement 20 nombres à l’utilisateur, et qui lui dise ensuite quel 
+était le plus grand parmi ces 20 nombres : Entrez le nombre numéro 1 : 12 Entrez le nombre numéro 2 : 14 
+etc. Entrez le nombre numéro 20 : 6 Le plus grand de ces nombres est : 14 Modifiez ensuite l’algorithme 
+pour que le programme affiche de surcroît en quelle position avait été saisie ce nombre : C’était le nombre 
+numéro 2
+
+
+--VARIABLES--
+
+userNumber		ENTIER
+greaterNumber		ENTIER
+index			ENTIER
+i			ENTIER
+
+--DEBUT PROGRAMME--
+
+POUR i <-- 1 À 20 FAIRE
+	ECRIRE "Saisir un nombre : ", i
+	LIRE userNumber
+	
+	SI userNumber > greaterNumber ALORS
+		greaterNumber <-- userNumber
+		index <-- i
+	FIN SI
+FIN POUR
+
+ECRIRE "le plus grand parmi ces 20 nombres est : ", greaterNumber
+ECRIRE "C’était le nombre numéro : ", index
+
+--FIN PROGRAMME--

@@ -22,7 +22,7 @@ public class App {
 		--DEBUT PROGRAMME--
 
 		POUR i <-- 1 À 20 FAIRE
-			ECRIRE "Saisir un nombre : ", i
+			ECRIRE "Saisir le nombre numéro : ", i
 			LIRE userNumber
 			
 			SI userNumber > greaterNumber ALORS

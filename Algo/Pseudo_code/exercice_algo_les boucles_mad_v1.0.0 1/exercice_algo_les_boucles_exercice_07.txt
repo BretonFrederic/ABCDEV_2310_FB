@@ -1,0 +1,33 @@
+EXERCICE 7
+
+Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d’avance combien l’utilisateur 
+souhaite saisir de nombres. La saisie des nombres s’arrête lorsque l’utilisateur entre un zéro
+
+--VARIABLES--
+
+userNumber		ENTIER
+greaterNumber		ENTIER
+index			ENTIER
+i			ENTIER
+
+--DEBUT PROGRAMME--
+
+i <-- 1
+DEBUT TANT QUE
+	i <-- i + 1
+	ECRIRE "Saisir un nombre : "
+	LIRE userNumber
+	
+	SI userNumber > greaterNumber ALORS
+		greaterNumber <-- userNumber
+		index <-- i-1
+	FIN SI
+TANT QUE userNumber != 0
+FIN TANT QUE
+
+i <-- i - 1
+
+ECRIRE "le plus grand parmi ces ", i, " nombres est : ", greaterNumber
+ECRIRE "C’était le nombre numéro : ", index
+
+--FIN PROGRAMME--

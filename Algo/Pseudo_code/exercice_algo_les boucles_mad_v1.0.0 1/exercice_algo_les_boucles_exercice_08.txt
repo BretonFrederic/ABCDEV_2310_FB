@@ -21,6 +21,19 @@ FAIRE
 TANT QUE prix !=0
 FIN TANT QUE
 
-ECRIRE "Le prix total est : ", somme
+ECRIRE "Pour payer la somme de ", somme, " € ", " en monnaie vous devez donner : "
+
+TANT QUE somme > 0 FAIRE
+	SI somme >= 10 ALORS
+		ECRIRE " 10 €"
+		somme = somme - 10
+	SINON SI somme >= 5 ALORS
+		ECRIRE " 5 €"
+		somme = somme - 5
+	SINON SI somme >= 1 ALORS
+		ECRIRE " 1 €"
+		somme = somme - 1
+	FIN SI
+FIN TANT QUE
 
 --FIN PROGRAMME--

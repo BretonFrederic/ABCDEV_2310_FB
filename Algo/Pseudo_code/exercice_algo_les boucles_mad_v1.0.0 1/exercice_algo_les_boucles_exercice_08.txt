@@ -6,10 +6,21 @@ Euros" et "1 Euro" autant de fois qu’il y a de coupures de chaque sorte à ren
 
 --VARIABLES--
 
+prix		ENTIER
+somme		ENTIER
 
 
 --DEBUT PROGRAMME--
 
+DEBUT TANT QUE
+FAIRE
+	ECRIRE "Saisir le prix de votre achat : "
+	LIRE prix
+	somme <-- somme + prix
+	
+TANT QUE prix !=0
+FIN TANT QUE
 
+ECRIRE "Le prix total est : ", somme
 
 --FIN PROGRAMME--

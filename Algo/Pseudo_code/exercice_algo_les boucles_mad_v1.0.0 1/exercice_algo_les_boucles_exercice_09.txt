@@ -1,4 +1,4 @@
-EXERCICE 9
+		EXERCICE 9
 
 Écrire un algorithme qui permette de connaître ses chances de gagner au tiercé, quarté, quinté et autres 
 impôts volontaires. 
@@ -18,16 +18,17 @@ permettant de le résoudre.
 
 --VARIABLES--
 
-nbHorses		ENTIER // nombre de chevaux partants
-horseBet		ENTIER // nombre de chevaux joués
-factorial_nbHorses	ENTIER // factorial de nombre de chevaux partants
-factorial_horseBet	ENTIER // factorial de nombre de chevaux joués
-diff			ENTIER // la différence nbHorses et horseBet
-factorial_diff		ENTIER // factorial de la différence nbHorses et horseBet
-ordre			ENTIER // une chance sur X de gagner
-desordre		ENTIER // une chance sur Y de gagner 
-i			ENTIER
-j			ENTIER
+nbHorses			ENTIER 32bits // nombre de chevaux partants
+horseBet			ENTIER 32bits // nombre de chevaux joués
+factorial_nbHorses	ENTIER 64bits // factorial de nombre de chevaux partants
+factorial_horseBet	ENTIER 64bits // factorial de nombre de chevaux joués
+factorial_diff		ENTIER 64bits // factorial de la différence nbHorses et horseBet
+diff				ENTIER 32bits // la différence nbHorses et horseBet
+ordre				ENTIER 64bits // une chance sur X de gagner
+desordre			ENTIER 64bits // une chance sur Y de gagner 
+i					ENTIER 32bits
+j					ENTIER 32bits
+k					ENTIER 32bits
 
 --DEBUT PROGRAMME--
 

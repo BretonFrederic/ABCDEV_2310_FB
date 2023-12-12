@@ -18,12 +18,47 @@ permettant de le résoudre.
 
 --VARIABLES--
 
-
 nbHorses		ENTIER // nombre de chevaux partants
 horseBet		ENTIER // nombre de chevaux joués
+factorial_nbHorses	ENTIER // factorial de nombre de chevaux partants
+factorial_horseBet	ENTIER // factorial de nombre de chevaux joués
+diff			ENTIER // la différence nbHorses et horseBet
+factorial_diff		ENTIER // factorial de la différence nbHorses et horseBet
+ordre			ENTIER // une chance sur X de gagner
+desordre		ENTIER // une chance sur Y de gagner 
+i			ENTIER
+j			ENTIER
 
 --DEBUT PROGRAMME--
 
+ECRIRE "Saisir le nombre de chevaux sur la grille de départ ? :"
+LIRE nbHorses
+ECRIRE "Saisir le nombre de chevaux joués ? :"
+LIRE horseBet
 
+factorial_nbHorses <-- 1
+factorial_horseBet <-- 1
+factorial_diff <-- 1
+diff <-- nbHorses – horseBet
+
+POUR i <-- 2 À nbHorses FAIRE
+	factorial_nbHorses = factorial_nbHorses*i
+FIN POUR
+
+POUR j <-- 2 À horseBet FAIRE
+	factorial_horseBet = factorial_horseBet*i
+FIN POUR
+
+
+POUR k <-- 2 À diff FAIRE
+	factorial_diff = factorial_diff*i
+FIN POUR
+
+ordre = factorial_nbHorses / factorial_diff
+desordre = factorial_nbHorses / (factorial_horseBet * factorial_diff)
+
+
+ECRIRE "Dans l’ordre : une chance sur ", ordre, " de gagner."
+ECRIRE "Dans le désordre : une chance sur ", desordre, " de gagner." 
 
 --FIN PROGRAMME--

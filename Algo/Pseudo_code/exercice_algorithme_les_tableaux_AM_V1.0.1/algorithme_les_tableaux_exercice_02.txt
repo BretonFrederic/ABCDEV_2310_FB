@@ -1,0 +1,44 @@
+EXERCICE 2
+
+		System.out.printlnun algorithme qui déclare et remplit un tableau contenant les six voyelles de l’alphabet latin.
+
+		--VARIBLES--
+
+		array[6]	CHAINE
+		voyelle_A	CHAINE
+		voyelle_E	CHAINE
+		voyelle_I	CHAINE
+		voyelle_O	CHAINE
+		voyelle_U	CHAINE
+		voyelle_Y	CHAINE
+		i			ENTIER
+		position	ENTIER
+
+		--DEBUT PROGRAMME--
+
+		position <-- 1
+
+		ECRIRE "Tableau avant affectation des six voyelles de l'alphabet latin."
+		POUR i <-- 0 À LONGUEUR(array)-1 FAIRE
+			array[i] <-- none
+			position <-- position + 1
+			ECRIRE "Valeur ", position, " : ", array[i]
+		FIN POUR
+		
+		array[0] <-- voyelle_A
+		array[1] <-- voyelle_E
+		array[2] <-- voyelle_I
+		array[3] <-- voyelle_O
+		array[4] <-- voyelle_U
+		array[5] <-- voyelle_Y
+		
+		position <-- 1
+		
+		ECRIRE "Tableau après affectation des six voyelles de l'alphabet latin."
+		POUR i <-- 0 À LONGUEUR(array)-1 FAIRE
+			position <-- position + 1
+			ECRIRE "Valeur ", position, " : ", array[i]
+		FIN POUR
+		
+		
+		--FIN PROGRAMME--

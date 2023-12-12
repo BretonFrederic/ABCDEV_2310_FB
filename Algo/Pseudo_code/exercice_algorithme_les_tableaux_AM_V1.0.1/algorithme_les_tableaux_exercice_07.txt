@@ -1,0 +1,33 @@
+EXERCICE 7
+
+Ecrivez un algorithme qui permet la saisie d’un nombre quelconque de valeurs, sur le principe de l’exercice 
+3. Toutes les valeurs doivent être ensuite augmentées de 1, et le nouveau tableau sera affiché à l’écran.
+
+--VARIABLES--
+
+sizeArray		ENTIER
+userNumber		ENTIER
+sum[]			ENTIER
+
+--DEBUT PROGRAMME--
+
+ECRIRE "Combien de valeurs souhaitez vous saisir ? : "
+LIRE sizeArray
+
+sum[sizeArray]
+
+ECRIRE "Vous devez saisir ", sizeArray, " valeurs."
+
+POUR i <-- 0 À sizeArray FAIRE
+	ECRIRE "Saisir une valeur : "
+	LIRE userNumber
+	sum[i] <-- userNumber + 1
+FIN POUR
+
+ECRIRE "Le nouveau tableau des valeurs augmentées de +1 est : "
+
+POUR i <-- 0 À LONGUEUR(sum)-1 FAIRE
+	ECRIRE sum[i], " "
+FIN POUR
+
+--FIN PROGRAMME--

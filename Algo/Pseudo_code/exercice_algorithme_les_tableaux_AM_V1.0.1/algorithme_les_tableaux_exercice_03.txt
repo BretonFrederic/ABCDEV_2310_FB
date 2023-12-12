@@ -1,0 +1,38 @@
+EXERCICE 3
+
+Ecrivez un algorithme permettant à l’utilisateur de saisir un nombre quelconque de valeurs, qui devront 
+être stockées dans un tableau. L’utilisateur doit donc commencer par entrer le nombre de valeurs qu’il 
+compte saisir. Il effectuera ensuite cette saisie. Enfin, une fois la saisie terminée, le programme affichera le 
+nombre de valeurs négatives et le nombre de valeurs positives.
+
+--VARIABLES--
+
+sizeArray		ENTIER
+userNumber		ENTIER
+array[]			ENTIER
+nbIsNegative	ENTIER
+nbIsPositive	ENTIER
+
+--DEBUT PROGRAMME--
+
+ECRIRE "Combien de valeurs souhaitez vous saisir ? : "
+LIRE sizeArray
+
+array[sizeArray]
+
+ECRIRE "Vous devez saisir ", sizeArray, " valeurs."
+
+POUR i <-- 0 À LONGUEUR(array)-1 FAIRE
+	ECRIRE "Saisir une valeur : "
+	LIRE userNumber
+	SI userNumber < 0 ALORS
+		nbIsNegative <-- nbIsNegative + 1
+	SINON SI userNumber > 0 ALORS
+		nbIsPositive <-- nbIsPositive + 1
+	FIN SI
+FIN POUR
+
+ECRIRE "Il y a ", nbIsNegative, " valeur(s) négative(s)."
+ECRIRE "Il y a ", nbIsPositive, " valeur(s) positive(s)."
+
+--FIN PROGRAMME--

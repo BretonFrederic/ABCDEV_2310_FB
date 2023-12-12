@@ -1,0 +1,27 @@
+EXERCICE 4
+
+		Ecrivez un algorithme calculant la somme des valeurs d’un tableau (on suppose que le tableau a été 
+		préalablement saisi).
+
+		--VARIABLES--
+
+		array[5]	ENTIER
+		sum			ENTIER
+
+		--DEBUT PROGRAMME--
+
+		array[5] <-- {5, 2, 9, 3, 4}
+
+		ECRIRE "La somme de "
+		POUR i <-- 0 À LONGUEUR(array)-1 FAIRE
+			sum <-- sum + array[i]
+			SI i < LONGUEUR(array)-1 ALORS
+				ECRIRE array[i], " + "
+			SINON
+				ECRIRE array[i], " = "
+			FIN SI
+		FIN POUR
+
+		ECRIRE sum
+
+		--FIN PROGRAMME--

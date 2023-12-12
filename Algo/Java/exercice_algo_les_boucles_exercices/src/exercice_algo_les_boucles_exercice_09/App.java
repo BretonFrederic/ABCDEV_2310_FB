@@ -123,7 +123,9 @@ public class App {
 		System.out.println("Dans l’ordre : une chance sur " + ordre + " de gagner.");
 		System.out.println("Dans le désordre : une chance sur " + desordre + " de gagner."); 
 
-		userInput.close();		/*FIN PROGRAMME*/
+		userInput.close();	
+		
+		/*FIN PROGRAMME*/
 	}
 
 }

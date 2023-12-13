@@ -1,0 +1,47 @@
+EXERCICE 9
+
+Toujours et encore sur le même principe, écrivez un algorithme permettant, à l’utilisateur de saisir les 
+notes d'une classe. Le programme, une fois la saisie terminée, renvoie le nombre de ces notes supérieures 
+à la moyenne de la classe.
+
+--VARIABLES--
+
+grades[]		REEL
+arraySize		ENTIER
+number			REEL
+i				ENTIER
+sum				REEL
+average			REEL
+greaterNb		ENTIER
+
+
+--DEBUT PROGRAMME--
+
+ECRIRE "Combien de notes souhaitez-vous saisir ? : "
+LIRE arraySize
+
+grades[arraySize]
+POUR i À LONGUEUR(grades)-1 FAIRE
+	DEBUT TANT QUE
+	FAIRE
+		ECRIRE "Saisir une note entre 0 et 20 : "
+		LIRE number
+	TANT QUE number > 20
+	FIN TANT QUE
+	grades[i] <-- number
+FIN POUR
+
+POUR i À LONGUEUR(grades)-1 FAIRE
+	sum <-- sum + grades[i]
+FIN POUR
+
+average <-- sum/arraySize
+
+POUR i À LONGUEUR(grades)-1 FAIRE
+	SI grades[i] > average ALORS
+		greaterNb <-- greaterNb + 1
+	FIN SI
+
+ECRIRE "Le nombre de notes supérieures à la moyenne est : ", greaterNb
+
+--FIN PROGRAMME--

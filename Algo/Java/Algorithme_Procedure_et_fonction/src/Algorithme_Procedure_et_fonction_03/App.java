@@ -34,7 +34,7 @@ public class App {
 		
 		/* DEBUT PROGRAMME */
 		
-		System.out.printf("Calcul de la moyenne de 2 nombres : %f et %f\n", number1, number2);
+		System.out.printf("Calcul de la moyenne de 2 nombres : %.2f et %.2f\n", number1, number2);
 		result = Average(number1, number2);
 		//result = Math.round(result*100.0)/100.0;
 		System.out.printf("La moyenne de ces 2 nombres est : %.2f", result);

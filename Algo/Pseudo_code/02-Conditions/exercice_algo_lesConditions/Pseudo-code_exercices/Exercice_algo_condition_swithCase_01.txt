@@ -1,0 +1,31 @@
+EXERCICE 1
+
+Le but de cet exercice est de créer une calculatrice, dans un premier temps on demandera à l’utilisateur de 
+saisir deux nombres, puis on lui demandera l’opérateur qui souhaite utiliser parmi +,-,* ou / et selon son 
+choix on affichera le calcul correspondant.
+
+	PROCEDURE Calculator(REEL numberA, REEL numberB, CHAINE operator)
+	
+		result		REEL
+	
+		SELON operator
+		
+		CAS "+" FAIRE
+			result <-- numberA + numberB
+			ECRIRE "Résultat : ", numberA, " + ", numberB, " = ", result
+		CAS  "-" FAIRE
+			result <-- numberA - numberB
+			ECRIRE "Résultat : ", numberA, " - ", numberB, " = ", result
+		CAS  "*" FAIRE
+			result <-- numberA * numberB
+			ECRIRE "Résultat : ", numberA, " * ", numberB, " = ", result
+		CAS  "/" FAIRE
+			SI numberB = 0 ALORS
+				System.out.println("Désolé impossible de diviser par 0...");
+				break;
+			SINON
+				result <-- numberA / numberB;
+				ECRIRE "Résultat : ", numberA, " / ", numberB, " = ", result
+		FIN SELON
+	
+	FIN PROCEDURE

@@ -1,0 +1,21 @@
+Enoncé 6:
+Ecrire et utiliser une procédure qui reçoit une chaîne de caractères et qui retourne 
+cette même chaîne inversée (Le dernier caractère devient le premier, l'avant dernier 
+le deuxième…). Un seul argument sera utilisé.
+
+FONCTION CHAINE reverse(CHAINE sentence)
+
+temp[]				CARACTERE
+reverseSentence[]	CARACTERE
+revesrseString		CHAINE
+
+//temp = sentence.toCharArray();
+temp <-- CARACTERE[](sentence)
+POUR i <-- 0 À LONGUEUR(sentence)
+	reverseSentence[LONGUEUR(sentence)-i] <-- temp[i]
+FIN POUR
+
+revesrseString <-- CHAINE(reverseSentence)
+
+RETOURNE reverseSentence
+FIN FONCTION

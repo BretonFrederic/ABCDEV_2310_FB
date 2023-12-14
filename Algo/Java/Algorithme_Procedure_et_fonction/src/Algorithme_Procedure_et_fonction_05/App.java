@@ -9,6 +9,7 @@ public class App {
 
 		month31days	ENTIER
 		bissextile	BOOLEEN
+		date		BOOLEEN
 
 
 		SI year mod 4 = 0 ET year mod 100 != 0 OU year mod 400 = 0 ALORS
@@ -22,32 +23,34 @@ public class App {
 				SI day = 31 ALORS
 					POUR month31days = 1 à 7 par pas de 2 FAIRE
 						SI month31days = month ALORS
-							bissextile <-- true
+							date <-- true
 						FIN SI
 					FIN POUR
 					POUR month31days = 8 à 12 par pas de 2 FAIRE
 						SI month31days = month ALORS
-							bissextile <-- true
+							date <-- true
 						FIN SI
 					FIN POUR
 
 				SINON SI month = 2 ALORS
 					SI day > 29 ALORS
-						bissextile <-- false
+						date <-- false
 					SINON SI day = 29 Et bissextile = vrai Ou day = 28 Et bissextile = faux ALORS
-						bissextile <-- true
+						date <-- true
 					SINON
-						bissextile <-- false
+						datte <-- false
 					FIN SI
+				SINON
+					date <-- true
 				FIN SI
 			SINON
-				bissextile <-- false
+				date <-- false
 			FIN SI
 		SINON
-			bissextile <-- false
+			date <-- false
 		FIN SI
 
-		RETOURNE bissextile
+		RETOURNE date
 	FIN FONCTION
 	*/
 	
@@ -110,7 +113,9 @@ public class App {
 		/* DEBUT PROGRAMME */
 		
 		System.out.println("La fonction de ce programme vérifie si la date " + day + "/" + month + "/" + year + " passée en paramètre est valide");
+		// Affectation de la booléen du retour de la fontion de vérification dans date
 		date = IsDateValid(day,month,year);
+		// on affiche un message suivant le retour de type booléen de la fonction
 		if(date) {
 			System.out.println("Cette date est valide.");
 		}else if(!date){

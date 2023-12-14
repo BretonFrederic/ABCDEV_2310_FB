@@ -7,13 +7,13 @@ public class App {
 
 	Ecrire et utiliser une procédure inversant le contenu de 2 variables a et b passées en arguments
 
-	PROCEDURE invert(int number1, int number2)
+	PROCEDURE Invert(int number1, int number2)
 
 	temp	ENTIER
 
 	temp <-- number1
 	number1 <-- number2
-	number1 <-- temp
+	number2 <-- temp
 	ECRIRE "valeur 1 : ", number1, "Valeur 2 : ", number2
 
 	FIN PROCEDURE
@@ -46,20 +46,22 @@ public class App {
 		variableA = 7;
 		variableB = 2;
 
-		System.out.println("\nValeur 1 : " + variableA + " Valeur 2 : " + variableB);
-		invert(variableA, variableB);
+		System.out.println("Avant l'appel de la procédure d'inversion de 2 valeurs.");
+		System.out.println("\nValeur 1 = " + variableA + "\nValeur 2 = " + variableB);
+		System.out.println("\nAprès l'appel de la procédure d'inversion de 2 valeurs.");
+		Invert(variableA, variableB);
 
 		/*FIN PROGRAMME*/
 	}
 
-	public static void invert(int variableA, int variableB) {
+	public static void Invert(int nb1, int nb2) {
 
 		int temp;
 
-		temp = variableA;
-		variableA = variableB;
-		variableA = temp;
-		System.out.println("\nValeur 1 modifiée : " + variableA + " Valeur 2 modifiée : " + variableB);
+		temp = nb1;
+		nb1 = nb2;
+		nb2 = temp;
+		System.out.println("\nValeur 1 = " + nb1 + "\nValeur 2 = " + nb2);
 
-		}
+	}
 }

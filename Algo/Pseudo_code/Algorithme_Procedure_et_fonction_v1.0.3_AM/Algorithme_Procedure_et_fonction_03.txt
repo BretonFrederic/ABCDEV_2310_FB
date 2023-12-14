@@ -1,0 +1,11 @@
+Enoncé 3:
+Ecrire et utiliser une fonction calculant la moyenne de 2 nombres
+
+FONCTION Average(REEL nb1, REEL nb2)
+
+average		REEL
+
+average <-- (nb1 + nb2)/2
+ 
+RETOURNE average
+FIN FONCTION

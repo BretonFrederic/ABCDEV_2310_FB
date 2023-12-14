@@ -1,0 +1,17 @@
+Enoncé 2: 
+Ecrire et utiliser une procédure calculant le périmètre et l'aire d'un triangle en connaissant les 3 côtés
+Périmètre = p = a + b + c et aire = ((p/2-a)(p/2-b)(p/2-c))1/2
+
+
+PROCEDURE TriPeriArea(REEL a, REEL b, REEL c)
+
+	peri	REEL
+	area	REEL
+
+	peri = a + b + c
+	area = ((peri/2-a)(peri/2-b)(peri/2-c))1/2
+	
+	ECRIRE "Le périmètre du triangle est : ", peri
+	ECRIRE "L'aire du triangle est : ", area
+	
+FIN PROCEDURE

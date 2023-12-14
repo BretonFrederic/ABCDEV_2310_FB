@@ -47,7 +47,7 @@ public class App {
 			}
 		}
 		
-		System.out.println("bissextile : " + bissextile);
+		//System.out.println("bissextile : " + bissextile);
 
 		if(jour > 0 && jour < 32) {
 			if(mois > 0 && mois < 13) {
@@ -71,6 +71,8 @@ public class App {
 					}else {
 						System.out.println("Date invalide.");
 					}
+				}else {
+					System.out.println("Date valide.");
 				}
 				
 			}else {

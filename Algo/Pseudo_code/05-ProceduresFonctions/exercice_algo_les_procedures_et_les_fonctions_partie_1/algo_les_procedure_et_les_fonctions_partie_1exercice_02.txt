@@ -1,0 +1,20 @@
+EXERCICE 2
+
+Écrivez une fonction qui renvoie le nombre de voyelles contenues dans une chaîne de caractères passée en 
+argument.
+
+CHAINE ENTIER VowelExtractor(VAL CHAINE myString)
+
+vowel	BOOLEEN
+count	ENTIER
+
+vowel <-- myString[i] = 'A' || myString[i] = 'a' || myString[i] = 'E' || myString[i] = 'e' || myString[i] = 'I' || myString[i] = 'i' || myString[i] = 'O' || myString[i] = 'o' || myString[i] = 'U' || myString[i] = 'u' || myString[i] = 'Y' || myString[i] = 'y'
+
+POUR I <-- 0 À LONGUEUR(myString)-1 FAIRE
+	SI vowel ALORS
+		count++
+	FIN SI
+FIN POUR
+
+RETOURNE count
+FIN FONCTION

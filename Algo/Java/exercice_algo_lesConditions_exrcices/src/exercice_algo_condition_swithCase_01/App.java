@@ -88,7 +88,7 @@ public class App {
 		userNumberA = userInput.nextDouble();
 		
 		// on demande de saisir un opérateur addition, soustraction, multiplication ou division
-		System.out.println("Saisir un des opérateurs suivants :\\n\\t(+) ou (-) ou (*) ou (/)");
+		System.out.println("Saisir un des opérateurs suivants :\n\t(+) ou (-) ou (*) ou (/)");
 		operator = userInput.next();
 		
 		// on demande de saisir un deuxième nombre

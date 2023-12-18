@@ -1,0 +1,13 @@
+EXERCICE 1
+
+Écrivez une fonction qui renvoie la somme de cinq nombres fournis en argument.
+
+ENTIER FONCTION SumNumbers(VAL ENTIER nb1, VAL ENTIER nb2, VAL ENTIER nb3, VAL ENTIER nb4, VAL ENTIER nb5)
+
+sum		ENTIER
+
+sum <-- nb1 + nb2 + nb3 + nb4 + nb5
+
+RETOURNE sum
+
+FIN FONCTION

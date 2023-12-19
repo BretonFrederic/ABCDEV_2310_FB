@@ -1,0 +1,22 @@
+EXERCICE 4
+
+Même question que précédemment, mais cette fois, la fonction Purgebis doit pouvoir recevoir un nombre 
+quelconque de caractères à supprimer en argument. Par exemple, Purgebis(phrase, "aeiouy") enlèvera 
+toutes les voyelles que contient la variable phrase.
+
+CHAINE FONCTION TrapString(VAL STRING myString, VAL STRING removeChar)
+	
+	/* VARIABLES */
+	
+	arrayString[]		TAB CARACTERE
+	arrayChar[]			TAB CARACTERE
+	
+	arrayString <-- TAB CARACTERE(myString)
+	arrayChar <-- TAB CARACTERE(removeChar)
+	
+	POUR i <-- 0 À LONGUEUR() FAIRE
+		
+	FIN POUR
+	
+	RETOURNE 
+FIN FONCTION

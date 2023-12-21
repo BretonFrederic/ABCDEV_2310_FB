@@ -2,99 +2,63 @@ package algo_les_procedures_et_les_fonctions_partie_1exercice_03;
 import java.util.Scanner;
 
 public class App {
-	
+
 	/*
 	 EXERCICE 3
-
 	Ecrivez une fonction qui purge une chaîne d'un caractère, la chaîne comme le caractère étant passés en 
 	argument. Si le caractère spécifié ne fait pas partie de la chaîne, celle-ci devra être retournée intacte. Par 
 	exemple :
 	• Purge("Bonjour","o") renverra "Bnjur"
 	• Purge("J'ai horreur des espaces"," ") renverra "J'aihorreurdesespaces"
 	• Purge("Bonjour tout le monde", "y") renverra "Bonjour tout le monde"
+	 
+	 FONCTION CHAINE delCharInString(VAL CHAINE myString, VAL CARACTERE myChar)
+	newString		CHAINE
 	
-	CHAINE FONCTION TrapChar(VAR STRING myString, VAL CHAR myChar)
-		charArray[]	TAB CARACTERE
-		newCharArray[]	TAB CARACTERE
-		sizeArray		ENTIER
-		charEqual			ENTIER
-		
-		charArray <-- CARACTERE[](myString)
-		
-		
-		POUR i <-- 0 À LONGUEUR(charArray)-1 FAIRE
-			Si charArray[i] != myChar ALORS
-				sizeArray++
-			FIN Si
-		FIN POUR
-		
-		newCharArray[] <-- CARACTERE[sizeArray]
-		
-		POUR i <-- 0 À LONGUEUR(charArray)-1 FAIRE
-			Si charArray[i] != myChar ALORS
-				newCharArray[i-charEqual] <-- charArray[i]
-			SINON
-				charEqual++
-			FIN Si
-		FIN POUR
-		
-		myString <-- CHAINE(newCharArray)
-		
-		RETOURNE myString
+	newString <-- ""
+	
+	POUR i <-- 0 À LONGUEUR(myString)-1 FAIRE
+		SI myString[i] != myChar ALORS
+			newString <-- newString + myString[i]
+		FIN SI
+	FIN POUR
+	RETOURNE newString
 	FIN FONCTION
+
 	 */
 	
-	public static String TrapChar(String myString, char myChar) {
-		char charArray[];
-		char newCharArray[];
-		int sizeArray=0;
-		int charEqual=0;
+	public static String DelCharInString(String myString, char myChar) {
+		String newString="";
 		
-		charArray = myString.toCharArray();
-		
-		
-		for(int i = 0; i <= charArray.length-1; i++){
-			if(charArray[i] != myChar) {
-				sizeArray++;
+		for(int i = 0; i <= myString.length()-1; i++) {
+			if(myString.charAt(i) != myChar) {
+				newString = newString + myString.charAt(i);
 			}
 		}
-		
-		newCharArray = new char[sizeArray];
-		
-		for(int i = 0; i <= charArray.length-1; i++){
-			if(charArray[i] != myChar) {
-				newCharArray[i-charEqual] = charArray[i];
-			}
-			else {
-				charEqual++;
-			}
-		}
-		
-		myString = new String(newCharArray);
-		
-		return myString;
+		return newString;
 	}
-
+	
 	public static void main(String[] args) {
 		
 		/* VARIABLES */
 		
-		String sentence;
-		char character;
+		String userString;
+		char removeChars;
+		String newString;
+		
 		
 		/* DEBUT PROGRAMME */
 		
 		Scanner userInput = new Scanner(System.in);
 		
 		System.out.println("Saisir une chaine de caractère : ");
-		sentence = userInput.nextLine();
+		userString = userInput.nextLine();
 		
-		System.out.println("Saisir un caractère : ");
-		character = userInput.next().charAt(0);
+		System.out.println("Saisir les caractères à supprimer : ");
+		removeChars = userInput.nextLine().charAt(0);
 		
-		sentence = TrapChar(sentence, character);
-		
-		System.out.println("Chaine de caractère saisie après purge du caractère " + character + " : \n" + sentence);
+		newString = DelCharInString(userString, removeChars);
+		System.out.println("Chaine de caractère saisie après purge des caractères " + removeChars + " : \n" + newString);
 		
 		userInput.close();
 		

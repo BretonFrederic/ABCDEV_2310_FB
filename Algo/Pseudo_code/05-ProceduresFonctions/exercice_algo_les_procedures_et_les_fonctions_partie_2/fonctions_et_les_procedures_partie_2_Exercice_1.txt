@@ -1,0 +1,21 @@
+EXERCICE 1
+
+Écrivez la fonction pourcentage(), qui permet de calculer les pourcentages d’utilisation de la Carte Bleue, du chéquier et des 
+virements automatiques, sachant que la formule de calcul du pourcentage pour la Carte Bleue est :
+Nombre de paiements par Carte Bleue / Nombre total de paiements * 100
+Résultat attendu :
+Nombre de paiement par Carte Bleue : 5
+Nombre de chèques émis : 10
+Nombre de virements automatiques : 5
+Vous avez émis 20 ordres de débit dont :
+25.0 % par Carte Bleue
+50.0 % par cheque
+25.0 % par virement
+
+REEL FONCTION pourcentage(VAL ENTIER nbPaiements, VAL ENTIER nbTotalPaiements)
+
+	pourcentage		REEL
+	pourcentage <-- nbPaiements / nbTotalPaiements * 100
+	RETOURNE pourcentage
+	
+FIN FONCTION

@@ -1,0 +1,21 @@
+EXERCICE 2
+
+Ecrivez une fonction qui retourne le plus grand nombre entier présent dans un tableau 
+Exemple :
+int[] tab = {1, 2, 9, 4};
+Sortie prévue :
+9
+
+ENTIER FONCTION biggestNumber(VAL TAB ENTIER arrayNumbers)
+	number		ENTIER
+	
+	POUR i <-- 0 À i <= LONGUEUR(arrayNumbers)-2 FAIRE
+		SI arrayNumbers[i] > arrayNumbers[i+1] ALORS
+			number <-- arrayNumbers[i]
+			arrayNumbers[i] <-- arrayNumbers[i+1]
+			arrayNumbers[i+1] <-- number
+		FIN SI
+	FIN POUR
+	number <-- arrayNumbers[LONGUEUR(arrayNumbers)-1]
+	RETOURNE number
+FIN FONCTION 

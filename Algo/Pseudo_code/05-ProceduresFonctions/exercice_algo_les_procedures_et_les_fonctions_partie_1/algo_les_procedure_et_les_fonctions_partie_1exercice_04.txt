@@ -6,37 +6,17 @@ toutes les voyelles que contient la variable phrase.
 
 CHAINE FONCTION TrapString(VAL STRING myString, VAL STRING removeChar)
 	
-	arrayString[]		TAB CARACTERE
-	arrayChar[]			TAB CARACTERE
-	newString[]			TAB CARACTERE
-	arraySize			ENTIER
-	charEqual			ENTIER
+	newString		CHAINE
 	
+	newString <-- ""
 	
-	arrayString <-- TAB CARACTERE(myString)
-	arrayChar <-- TAB CARACTERE(removeChar)
-	
-	arraySize <-- LONGUEUR(arrayString)
-	
-	POUR i <-- 0 À LONGUEUR(arrayString)-1 FAIRE
-		POUR j <-- 0 À LONGUEUR(arrayChar)-1 FAIRE
-			SI arrayString[i] = arrayChar[j] ALORS
-				arraySize--
+	POUR i <-- 0 À LONGUEUR(myString)-1 FAIRE
+		POUR j <-- 0 À LONGUEUR(removeChar)-1 FAIRE
+			SI myString[i] != removeChar[j] ALORS
+				newString <-- newString + myString[i]
 			FIN SI
 		FIN POUR
 	FIN POUR
 	
-	newString <-- TAB CARACTERE[arraySize]
-	
-	POUR i <-- 0 À LONGUEUR(arraySize)-1 FAIRE
-		SI arrayString[i] != arrayChar[i] ALORS
-			newString[i-charEqual] <-- arrayString[i]
-		SINON
-			charEqual++
-		FIN SI
-	FIN POUR
-	
-	myString <-- CHAINE(newString)
-	
-	RETOURNE myString
+	RETOURNE newString
 FIN FONCTION

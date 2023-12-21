@@ -1,38 +1,22 @@
 EXERCICE 3
-
+ 
 Ecrivez une fonction qui purge une chaîne d'un caractère, la chaîne comme le caractère étant passés en 
 argument. Si le caractère spécifié ne fait pas partie de la chaîne, celle-ci devra être retournée intacte. Par 
 exemple :
+
 • Purge("Bonjour","o") renverra "Bnjur"
 • Purge("J'ai horreur des espaces"," ") renverra "J'aihorreurdesespaces"
 • Purge("Bonjour tout le monde", "y") renverra "Bonjour tout le monde"
 
-CHAINE FONCTION TrapChar(VAR STRING myString, VAL CHAR myChar)
-	charArray[]	TAB CARACTERE
-	newCharArray[]	TAB CARACTERE
-	sizeArray		ENTIER
-	charEqual			ENTIER
+FONCTION CHAINE delCharInString(VAL CHAINE myString, VAL CARACTERE myChar)
+	newString		CHAINE
 	
-	charArray <-- CARACTERE[](myString)
+	newString <-- ""
 	
-	
-	POUR i <-- 0 À LONGUEUR(charArray)-1 FAIRE
-		Si charArray[i] != myChar ALORS
-			sizeArray++
-		FIN Si
+	POUR i <-- 0 À LONGUEUR(myString)-1 FAIRE
+		SI myString[i] != myChar ALORS
+			newString <-- newString + myString[i]
+		FIN SI
 	FIN POUR
-	
-	newCharArray[] <-- CARACTERE[sizeArray]
-	
-	POUR i <-- 0 À LONGUEUR(charArray)-1 FAIRE
-		Si charArray[i] != myChar ALORS
-			newCharArray[i-charEqual] <-- charArray[i]
-		SINON
-			charEqual++
-		FIN Si
-	FIN POUR
-	
-	myString <-- CHAINE(newCharArray)
-	
-	RETOURNE myString
+	RETOURNE newString
 FIN FONCTION

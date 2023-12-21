@@ -12,6 +12,20 @@ public class App {
 	• Purge("Bonjour","o") renverra "Bnjur"
 	• Purge("J'ai horreur des espaces"," ") renverra "J'aihorreurdesespaces"
 	• Purge("Bonjour tout le monde", "y") renverra "Bonjour tout le monde"
+	 
+	 FONCTION CHAINE delCharInString(VAL CHAINE myString, VAL CARACTERE myChar)
+	newString		CHAINE
+	
+	newString <-- ""
+	
+	POUR i <-- 0 À LONGUEUR(myString)-1 FAIRE
+		SI myString[i] != myChar ALORS
+			newString <-- newString + myString[i]
+		FIN SI
+	FIN POUR
+	RETOURNE newString
+	FIN FONCTION
+
 	 */
 	
 	public static String DelCharInString(String myString, char myChar) {
@@ -27,7 +41,7 @@ public class App {
 	
 	public static void main(String[] args) {
 		
-/* VARIABLES */
+		/* VARIABLES */
 		
 		String userString;
 		char removeChars;
@@ -48,6 +62,8 @@ public class App {
 		System.out.println("Chaine de caractère saisie après purge des caractères " + removeChars + " : \n" + newString);
 		
 		userInput.close();
+		
+		/* FIN PROGRAMME */
 		
 	}
 

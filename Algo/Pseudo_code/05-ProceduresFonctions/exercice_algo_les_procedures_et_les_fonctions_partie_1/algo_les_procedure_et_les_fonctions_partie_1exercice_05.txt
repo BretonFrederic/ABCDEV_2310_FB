@@ -1,0 +1,16 @@
+EXERCICE 5
+
+Ecrivez une procédure qui affiche un message différent en fonction de l’âge passés en argument.
+Exemple : « Vous êtes majeur » ou « Vous êtes mineur », la majorité étant fixé à 18 ans.
+
+PROCEDURE displayAge(VAL ENTIER age)
+
+	SI age < 0 ALORS
+		ECRIRE "Vous n'êtes pas née"
+	SI age >= 18 ALORS
+		ECRIRE "Vous êtes majeur"
+	SINON SI age < 18 ALORS
+		ECRIRE "Vous êtes mineur"
+	FIN SI
+	
+FIN PROCEDURE

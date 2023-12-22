@@ -1,0 +1,22 @@
+EXERCICE 3
+
+Ecrire une fonction qui permet de savoir si un entier est divisible par un autre 
+BOOLEEN FONCTION estDivisible ( entier a, entier b) 
+SI (a mod b = 0)
+retourner vrai;
+SINON
+retourner faux;
+FIN
+
+BOOLEEN FONCTION isDivisible(VAL ENTIER numberA, VAL ENTIER numberB)
+
+	divisible <-- faux
+	
+	SI(numberA mod numberB == 0)
+		divisible <-- vrai
+	SINON
+		divisible <-- faux
+	FIN SI
+	
+	RETOURNE divisible
+FIN FONCTION

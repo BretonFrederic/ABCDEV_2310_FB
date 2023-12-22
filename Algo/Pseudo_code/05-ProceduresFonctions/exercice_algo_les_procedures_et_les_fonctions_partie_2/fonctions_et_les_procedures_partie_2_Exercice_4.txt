@@ -1,0 +1,22 @@
+EXERCICE 4 LA VENGENCE DE LA FOURCHETTE
+
+Améliorer le jeu de la fourchette en permettant à l’ordinateur de jouer contre le joueur humain.
+Le nombre choisi par l’ordinateur à chaque essai sera générer aléatoirement grâce à une fonction qui générera également le 
+nombre à trouver.
+Le premier qui trouve le nombre à gagner la partie.
+Pour compliquer le jeu vous pouvez déterminer un nombre d’essais maximum.
+A la fin de la partie vous demanderez à l’utilisateur si il veux rejouer ou quitter la partie.
+
+nombreOrdinateur
+nombreMystère
+
+nombreJoueur
+
+ENTIER FONCTION randomNumber()
+
+	number	ENTIER
+	
+	number <-- ALEATOIRE(0,100)
+
+	RETOURNE number
+FIN FONCTION

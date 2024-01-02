@@ -56,28 +56,29 @@ public class App {
 					System.out.println("Bravo, vous avez trouvez le nombre mystère en " + nombreEssai + " essai(s).");
 				}else if(nombreJoueur < nombreMystere) {
 					min = nombreJoueur;
-					System.out.println("C'est plus ! ");
+					System.out.println("C'est plus ! \n");
 					System.out.println("Le nombre mystère est compris entre " + min + " est " + max);
 				}else if(nombreJoueur > nombreMystere) {
 					max = nombreJoueur;
-					System.out.println("C'est moins ! ");
+					System.out.println("C'est moins ! \n");
 					System.out.println("Le nombre mystère est compris entre " + min + " est " + max);
 			}
 			
-			nombrePC = randomNumber( min, max);
-			System.out.printf("L'ordinateur a choisi le nombre :\n %d \n", nombrePC);
-			if(nombrePC == nombreMystere) {
-					System.out.println("Perdu, l'ordinateur a trouvez le nombre mystère en " + nombreEssai + " essai(s).");
-				}else if(nombrePC < nombreMystere) {
-					min = nombrePC;
-					System.out.println("C'est plus ! ");
-					System.out.println("Le nombre mystère est compris entre " + min + " est " + max);
-				}else if(nombrePC > nombreMystere) {
-					max = nombrePC;
-					System.out.println("C'est moins ! ");
-					System.out.println("Le nombre mystère est compris entre " + min + " est " + max);
+			nombrePC = randomNumber( min, max-1);
+			if(nombreJoueur != nombreMystere) {
+				System.out.printf("L'ordinateur a choisi le nombre :\n %d \n", nombrePC);
+				if(nombrePC == nombreMystere) {
+						System.out.println("Perdu, l'ordinateur a trouvez le nombre mystère en " + nombreEssai + " essai(s).");
+					}else if(nombrePC < nombreMystere) {
+						min = nombrePC;
+						System.out.println("C'est plus ! \n");
+						System.out.println("Le nombre mystère est compris entre " + min + " est " + max);
+					}else if(nombrePC > nombreMystere) {
+						max = nombrePC;
+						System.out.println("C'est moins ! \n");
+						System.out.println("Le nombre mystère est compris entre " + min + " est " + max);
+				}
 			}
-			
 		}while(nombreJoueur != nombreMystere && nombrePC != nombreMystere);
 		
 		saisie.close();

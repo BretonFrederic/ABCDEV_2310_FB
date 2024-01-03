@@ -12,12 +12,12 @@ public class App {
 	Pour compliquer le jeu vous pouvez déterminer un nombre d’essais maximum.
 	A la fin de la partie vous demanderez à l’utilisateur si il veux rejouer ou quitter la partie.
 	
-	ENTIER FONCTION randomNumber()
-
-		number	ENTIER
+	ENTIER FONCTION randomNumber(VALEUR ENTIER min, VALEUR ENTIER max) {
 	
-		number <-- ALEATOIRE(0,100)
-
+		number		ENTIER
+	
+		number <-- RANDOM(min À max)
+	
 		RETOURNE number
 	FIN FONCTION
 	 */

@@ -8,21 +8,13 @@ public class Voiture {
 	double consoMixte;
 	int reservoir;
 	
-	
-
 	/* Méthodes */
 
-	public int accelerer(int kilometresHeure){
-		int vitesse = 10;
-		vitesse += kilometresHeure;
-		return vitesse;
+	public void accelerer(){
+		System.out.println("La voiture accélère !");
 	}
 	
-	public int freiner(int kilometresHeure){
-		int vitesse = -10;
-		if(kilometresHeure >= 10) {
-			vitesse += kilometresHeure;
-		}
-		return vitesse;
+	public void freiner(){
+		System.out.println("La voiture est à l'arrêt !");
 	}
 }

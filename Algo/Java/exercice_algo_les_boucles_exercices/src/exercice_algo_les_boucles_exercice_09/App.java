@@ -78,17 +78,14 @@ public class App {
 		int horseBet; // nombre de chevaux joués
 		long factorial_nbHorses; // factorial de nombre de chevaux partants
 		long factorial_horseBet; // factorial de nombre de chevaux joués
-		long factorial_diff; // factorial de la différence nbHorses et horseBet
+		long factorial_divide; 
 		int diff; // la différence nbHorses et horseBet
-		
-		long ordre; // une chance sur X de gagner
-		long desordre; // une chance sur Y de gagner 
 
 		/*DEBUT PROGRAMME*/
 
 		factorial_nbHorses = 1;
 		factorial_horseBet = 1;
-		factorial_diff = 1;
+		factorial_divide = 1;
 		Scanner userInput = new Scanner(System.in);
 		
 		System.out.println("Saisir le nombre de chevaux sur la grille de départ ? :");
@@ -100,28 +97,20 @@ public class App {
 		// initialisation de diff pour calcul de sa factorielle
 		diff = nbHorses-horseBet;
 
-		// on calcul nos factorielles
-		for(int i = 2; i <= nbHorses; i++) {
+		// probabilité de gagner dans l'ordre
+		for(int i = nbHorses; i > diff; i--) {
 			factorial_nbHorses = factorial_nbHorses*i;
 		}
-			
+		
+		System.out.println("Dans l’ordre : une chance sur " + factorial_nbHorses + " de gagner.");
 
 		for(int j = 2; j <= horseBet; j++) {
 			factorial_horseBet = factorial_horseBet*j;
 		}
 
+		factorial_divide = factorial_nbHorses/factorial_horseBet;
 
-		for(int k = 2; k <= diff; k++) {
-			factorial_diff = factorial_diff*k;
-		}
-
-		// calcul de probabilité de gagner dans l'ordre et désordre
-		ordre = factorial_nbHorses / factorial_diff;
-		desordre = factorial_nbHorses / (factorial_horseBet * factorial_diff);
-
-
-		System.out.println("Dans l’ordre : une chance sur " + ordre + " de gagner.");
-		System.out.println("Dans le désordre : une chance sur " + desordre + " de gagner."); 
+		System.out.println("Dans le désordre : une chance sur " + factorial_divide + " de gagner."); 
 
 		userInput.close();	
 		

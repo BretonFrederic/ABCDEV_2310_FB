@@ -8,19 +8,25 @@ public class App {
 		String systemeOuverture = "coulissante";
 		int positionMax = 100;
 		int positionMin = 0;
-		int pourcentageOuverture = 50;
-		boolean estOuverte = true;
-		boolean estVerrouillee = false;
+		int pourcentageOuverture = 0;
+		boolean estOuverte = false;
+		boolean estVerrouillee = true;
 		
 		//DEBUT PROGRAMME
 		
 		PorteDeGarage porteJeune = new PorteDeGarage();
-		PorteDeGarage porteClignancourt = new PorteDeGarage(systemeOuverture, positionMax, positionMin, pourcentageOuverture, estOuverte, estVerrouillee);
+		PorteDeGarage porteClignancourt = new PorteDeGarage(systemeOuverture,
+				positionMax, 
+				positionMin, 
+				pourcentageOuverture, 
+				estOuverte, 
+				estVerrouillee);
 		
 		//Appelle méthode porteJeune
 		boolean deverrouiller = porteJeune.Deverrouiller();
-		boolean ouvrirTout = porteJeune.OuvrirTout();
+		pourcentageOuverture = 50;
 		boolean ouvrir = porteJeune.Ouvrir(pourcentageOuverture);
+		boolean ouvrirTout = porteJeune.OuvrirTout();
 		boolean fermer = porteJeune.Fermer(pourcentageOuverture);
 		boolean fermerTout = porteJeune.FermerTout();
 		boolean verrouiller = porteJeune.Verrouiller();
@@ -31,13 +37,15 @@ public class App {
 		fermerTout = false;
 		ouvrir = false;
 		fermer = false;
-		verrouiller = false;
+		verrouiller = true;
 		deverrouiller = false;
+		pourcentageOuverture = 50;
 		
 		//Appelle méthode porteClignancourt
 		deverrouiller = porteClignancourt.Deverrouiller();
-		ouvrirTout = porteClignancourt.OuvrirTout();
+		pourcentageOuverture = 50;
 		ouvrir = porteClignancourt.Ouvrir(pourcentageOuverture);
+		ouvrirTout = porteClignancourt.OuvrirTout();
 		fermer = porteClignancourt.Fermer(pourcentageOuverture);
 		fermerTout = porteClignancourt.FermerTout();
 		verrouiller = porteClignancourt.Verrouiller();

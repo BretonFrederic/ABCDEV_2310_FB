@@ -12,7 +12,7 @@ public class PorteDeGarage {
 	
 	//Méthode
 	public boolean OuvrirTout() {
-		if(!estOuverte && !estVerrouillee) {
+		if(!estVerrouillee) {
 			pourcentageOuverture = positionMax;
 			estOuverte = true;
 			return true;
@@ -22,7 +22,7 @@ public class PorteDeGarage {
 	}
 	
 	public boolean FermerTout() {
-		if(estOuverte && !estVerrouillee) {
+		if(estOuverte) {
 			pourcentageOuverture = positionMin;
 			estOuverte = false;
 			return true;

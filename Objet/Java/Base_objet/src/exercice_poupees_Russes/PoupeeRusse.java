@@ -16,13 +16,15 @@ public class PoupeeRusse {
 		this.estOuverte = _estOuverte;
 		this.estContenant = false;
 		this.estContenu = false;
+		this.setTaille();
 		nombreInstance ++;
-		public void setTaille() {
-			//
-		}
 	}
 	
 	//Méthodes
+	public void setTaille() {
+		this.taille = nombreInstance;
+	}
+	
 	public int getTaille(){
 		int poupeeTaille;
 		poupeeTaille = this.taille;
@@ -39,6 +41,14 @@ public class PoupeeRusse {
 		if(!this.estContenu && !this.estOuverte) {
 			this.estOuverte =  true;
 			return true;
+		//Un contenu ouvert dans un contenant ouvert, on peut l'ouvrir et le fermer
+		//}else if(this.estContenu){
+		//	if(le contenant est ouvert) {
+		//		this.estOuverte =  true;
+		//		return true;
+		//	}else {
+		//		return false;
+		//	}
 		}else {
 			return false;
 		}
@@ -48,13 +58,20 @@ public class PoupeeRusse {
 		if(!this.estContenu && this.estOuverte) {
 			this.estOuverte = false;
 			return true;
+		//}else if(this.estContenu){
+		//	if(le contenant est ouvert) {
+		//		this.estOuverte =  false;
+		//		return true;
+		//	}else {
+		//		return false;
+		//	}
 		}else {
 			return false;
 		}
 	}
 	
 	public boolean PlacerDans(PoupeeRusse poupee){
-		if(this.taille < poupee.getTaille() && poupee.getEstOuverte()) {
+		if(this.taille < poupee.getTaille() && poupee.getEstOuverte() && poupee.estContenant == false) {
 			poupee.estContenant = true;
 			this.estContenu = true;
 			return true;

@@ -7,7 +7,12 @@ public class App {
 		PoupeeRusse poupee2 = new PoupeeRusse("poupee2", false);
 		PoupeeRusse poupee3 = new PoupeeRusse("poupee3", false);
 		
-		//boolean ouvrirP2 = poupee2.Ouvrir();
-		boolean PlacerDans = poupee1.PlacerDans(poupee2);
+		boolean ouvrirP3 = poupee3.Ouvrir();
+
+		boolean PlacerDans = poupee1.PlacerDans(poupee3);
+		boolean FermerP3 = poupee3.Fermer();
+		PlacerDans = poupee3.PlacerDans(poupee2);
+		//boolean FermerP2 = poupee2.Fermer();
+		boolean SortirDe = poupee1.SortirDe(poupee3);
 	}
 }

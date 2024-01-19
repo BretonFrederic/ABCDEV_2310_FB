@@ -8,6 +8,7 @@ public class PoupeeRusse {
 	private boolean estContenant;
 	private boolean estContenu;
 	
+	//Variables de Classe
 	private static int nombreInstance;
 	
 	//Constructeur
@@ -71,7 +72,7 @@ public class PoupeeRusse {
 	}
 	
 	public boolean PlacerDans(PoupeeRusse poupee){
-		if(this.taille < poupee.getTaille() && poupee.getEstOuverte() && poupee.estContenant == false) {
+		if(this.taille < poupee.getTaille() && poupee.getEstOuverte() == true && poupee.estContenant == false) {
 			poupee.estContenant = true;
 			this.estContenu = true;
 			return true;
@@ -81,7 +82,7 @@ public class PoupeeRusse {
 	}
 	
 	public boolean SortirDe(PoupeeRusse poupee){
-		if(this.estContenu && poupee.estContenant && poupee.getEstOuverte()) {
+		if(this.estContenu && poupee.estContenant && poupee.getEstOuverte() == true) {
 			poupee.estContenant = false;
 			this.estContenu = false;
 			return true;

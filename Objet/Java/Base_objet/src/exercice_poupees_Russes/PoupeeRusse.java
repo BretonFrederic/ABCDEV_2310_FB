@@ -21,7 +21,7 @@ public class PoupeeRusse {
 		nombreInstance ++;
 	}
 	
-	//Méthodes
+	// Setters et getters
 	public void setTaille() {
 		this.taille = nombreInstance;
 	}
@@ -37,6 +37,8 @@ public class PoupeeRusse {
 		poupeeOuverte = this.estOuverte;
 		return poupeeOuverte;
 	}
+	
+	//Méthodes
 	
 	public boolean Ouvrir(){
 		if(!this.estContenu && !this.estOuverte) {

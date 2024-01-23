@@ -6,10 +6,15 @@ public class Montre {
 	private String proprietaire;
 	private int heures;
 	private int minutes;
+	private boolean estPortee;
 	
 	//getters et setters
 	public void setProprietaire(String _proprietaire) {
 		this.proprietaire = _proprietaire;
+	}
+	
+	public void setEstPortee(boolean _estPortee) {
+		this.estPortee = _estPortee;
 	}
 	
 	public void setMinutes(int _minutes) {
@@ -18,6 +23,10 @@ public class Montre {
 	
 	public void setHeures(int _heures) {
 		this.heures = _heures%24;
+	}
+	
+	public boolean getEstPortee() {
+		return estPortee;
 	}
 	
 	public int getMinutes() {
@@ -29,30 +38,37 @@ public class Montre {
 	}
 	
 	//Constructeur
-	public Montre(String _proprietaire, int _heures, int _minutes) {
-		this.proprietaire = _proprietaire;
+	public Montre(int _heures, int _minutes) {
+		this.proprietaire = "inconnu";
 		setHeures(_heures);
 		setMinutes(_minutes);
+		this.estPortee = false;
 	}
 	
-	public Montre(String _proprietaire, Montre _montre) {
-		this.proprietaire = _proprietaire;
+	public Montre(Montre _montre) {
+		this.proprietaire = "inconnu";
 		setHeures(_montre.getHeures());
 		setMinutes(_montre.getMinutes());
+		this.estPortee = false;
 	}
 	
 	//Méthodes
-	public void AfficherHeure() {
-		if(this.getHeures() > 9 && this.getMinutes() > 9) {
-			System.out.println(this.getHeures()+"h"+this.getMinutes());
-		}else if(this.getHeures() < 10 && this.getMinutes() > 9) {
-			System.out.println("0"+this.getHeures()+"h"+this.getMinutes());
-		}else if(this.getHeures() > 9 && this.getMinutes() < 10) {
-			System.out.println(this.getHeures()+"h0"+this.getMinutes());
-		}else if(this.getHeures() < 10 && this.getMinutes() < 10) {
-			System.out.println("0"+this.getHeures()+"h0"+this.getMinutes());
-		}
+	public String AfficherHeure() {
+		String heures = Integer.toString(this.getHeures());
+		String minutes = String.valueOf(this.getMinutes());
+		String heureActuelle = "";
 		
+		if(this.getHeures() > 9 && this.getMinutes() > 9) {
+			heureActuelle = heures+"h"+minutes;
+		}else if(this.getHeures() < 10 && this.getMinutes() > 9) {
+			heureActuelle = "0"+heures+"h"+minutes;
+		}else if(this.getHeures() > 9 && this.getMinutes() < 10) {
+			heureActuelle = heures+"h0"+minutes;
+		}else if(this.getHeures() < 10 && this.getMinutes() < 10) {
+			//heureActuelle = "0"+heures+"h0"+minutes;
+			heureActuelle = String.format("%02dh%02d", this.getHeures(), this.getMinutes());
+		}
+		return heureActuelle;
 	}
 	
 	public void AvancerUneMinute() {

@@ -4,23 +4,20 @@ public class Personne {
 	
 	//Variable d'instance
 	private String nom;
-	private boolean porteUnemontre;
+	private boolean porteUneMontre;
 	private Montre montre;
 	
 	//Constructeurs
 	public Personne(String _nom) {
 		this.nom = _nom;
-		this.porteUnemontre = false;
-		this.montre = new Montre(_nom, 13, 45);
+		this.porteUneMontre = false;
 	}
-	
-	//Setters et getters
-	
 	
 	//Méthodes
 	public boolean MettreMontre(Montre _montre) {
-		if(!this.porteUnemontre) {
-			this.porteUnemontre = true;
+		if(!this.porteUneMontre && !_montre.getEstPortee()) {
+			this.porteUneMontre = true;
+			_montre.setEstPortee(true);
 			this.montre = _montre;
 			this.montre.setProprietaire(nom);
 			return true;
@@ -30,9 +27,11 @@ public class Personne {
 	}
 	
 	public boolean EnleverMontre() {
-		if(this.porteUnemontre) {
-			this.porteUnemontre = false;
-		//	this.setProprietaireMontre(_montre);
+		if(this.porteUneMontre && this.montre.getEstPortee()) {
+			this.montre.setProprietaire("inconnu");
+			this.porteUneMontre = false;
+			this.montre.setEstPortee(false);
+			this.montre = null;
 			return true;
 		}else {
 			return false;
@@ -40,7 +39,12 @@ public class Personne {
 	}
 	
 	public String DemanderHeure(Personne _personne) {
-		//
-		return "00h00";
+		String heureActuelle = "";
+		if(_personne.porteUneMontre) {
+			heureActuelle = _personne.montre.AfficherHeure();
+		}else {
+			heureActuelle = "Désolé, je n'ai pas de montre.";
+		}
+		return heureActuelle;
 	}
 }

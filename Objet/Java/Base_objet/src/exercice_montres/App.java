@@ -3,6 +3,7 @@ package exercice_montres;
 public class App {
 
 	public static void main(String[] args) {
+		/*TEST CLASSE MONTRE--------------------
 		Montre montre1 = new Montre("", 13, 45);
 		//Afficher l'heure
 		montre1.AfficherHeure();
@@ -24,6 +25,10 @@ public class App {
 			//Afficher l'heure
 			montre2.AfficherHeure();
 		}
+		-------------------------------------*/
+		
+		Personne paul = new Personne("Paul", true);
+		paul.montre.AfficherHeure();
 	}
 
 }

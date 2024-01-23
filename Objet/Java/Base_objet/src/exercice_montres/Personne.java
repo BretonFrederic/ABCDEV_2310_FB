@@ -5,31 +5,41 @@ public class Personne {
 	//Variable d'instance
 	private String nom;
 	private boolean porteUnemontre;
-	protected Montre montre;
+	private Montre montre;
 	
 	//Constructeurs
 	public Personne(String _nom) {
 		this.nom = _nom;
 		this.porteUnemontre = false;
-		//this.montre = new Montre(_nom, 13, 45);
+		this.montre = new Montre(_nom, 13, 45);
 	}
 	
 	//Setters et getters
-	public void setMontre(Montre _montre) {
-		_montre.setProprietaire(this.nom);
-		montre = _montre;
-		
-	}
+	//public void setProprietaireMontre(Montre _montre) {
+	//	_montre.setProprietaire(this.nom);
+	//	montre = _montre;
+	//}
 	
 	//Méthodes
-	public void MettreMontre(Montre _montre) {
-		this.setMontre(_montre);
-		this.porteUnemontre = true;
+	public boolean MettreMontre(Montre _montre) {
+		if(!this.porteUnemontre) {
+			this.porteUnemontre = true;
+			this.montre = _montre;
+			this.montre.setProprietaire(nom);
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
-	public void EnleverMontre() {
-		this.setMontre(null);
-		this.porteUnemontre = false;
+	public boolean EnleverMontre() {
+		if(this.porteUnemontre) {
+			this.porteUnemontre = false;
+		//	this.setProprietaireMontre(_montre);
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 	public String DemanderHeure(Personne _personne) {

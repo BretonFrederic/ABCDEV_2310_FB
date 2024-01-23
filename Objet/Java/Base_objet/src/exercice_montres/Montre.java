@@ -8,6 +8,10 @@ public class Montre {
 	private int minutes;
 	
 	//getters et setters
+	public void setProprietaire(String _proprietaire) {
+		this.proprietaire = _proprietaire;
+	}
+	
 	public void setMinutes(int _minutes) {
 		this.minutes = _minutes%60;
 	}

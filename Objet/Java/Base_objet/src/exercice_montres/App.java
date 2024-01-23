@@ -27,9 +27,11 @@ public class App {
 		}
 		-------------------------------------*/
 		
+		Montre montre1 = new Montre("test", 13, 45);
+		
 		Personne paul = new Personne("Paul");
-		
-		
+		paul.MettreMontre(montre1);
+		paul.montre.AfficherHeure();
 		
 		//paul.montre.AfficherHeure();
 	}

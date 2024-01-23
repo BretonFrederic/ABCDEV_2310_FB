@@ -5,17 +5,20 @@ public class Personne {
 	//Variable d'instance
 	private String nom;
 	private boolean porteUnemontre;
-	private Montre montre;
+	protected Montre montre;
 	
 	//Constructeurs
 	public Personne(String _nom) {
 		this.nom = _nom;
 		this.porteUnemontre = false;
+		//this.montre = new Montre(_nom, 13, 45);
 	}
 	
 	//Setters et getters
 	public void setMontre(Montre _montre) {
+		_montre.setProprietaire(this.nom);
 		montre = _montre;
+		
 	}
 	
 	//Méthodes

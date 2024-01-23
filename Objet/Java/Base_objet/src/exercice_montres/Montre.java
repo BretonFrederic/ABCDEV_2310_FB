@@ -31,34 +31,36 @@ public class Montre {
 		setMinutes(_minutes);
 	}
 	
+	public Montre(String _proprietaire, Montre _montre) {
+		this.proprietaire = _proprietaire;
+		setHeures(_montre.getHeures());
+		setMinutes(_montre.getMinutes());
+	}
+	
 	//Méthodes
-	public void AfficherHeure(Montre _montre) {
-		System.out.println(_montre.getHeures()+"h"+_montre.getMinutes());
+	public void AfficherHeure() {
+		if(this.getHeures() > 9 && this.getMinutes() > 9) {
+			System.out.println(this.getHeures()+"h"+this.getMinutes());
+		}else if(this.getHeures() < 10 && this.getMinutes() > 9) {
+			System.out.println("0"+this.getHeures()+"h"+this.getMinutes());
+		}else if(this.getHeures() > 9 && this.getMinutes() < 10) {
+			System.out.println(this.getHeures()+"h0"+this.getMinutes());
+		}else if(this.getHeures() < 10 && this.getMinutes() < 10) {
+			System.out.println("0"+this.getHeures()+"h0"+this.getMinutes());
+		}
+		
 	}
 	
 	public void AvancerUneMinute() {
-		int min = this.getMinutes()+1;
-		
-		this.setMinutes(min);
-        //if(this.getMinutes() > 59){
-        //    heures = heures + minutes/60;
-        //    this.minutes = minutes%60;
-        //}
-        //if(this.getHeures() > 23){
-        //	this.heures = heures%24;
-        //}
+		int heures=0;
+		int min = 0;
+		min = this.getMinutes()+1;
+		if(min > 59){
+            heures = this.getHeures() + min/60;
+            this.setHeures(heures);
+    		this.setMinutes(min);
+        }else if(min <= 59) {
+        	this.setMinutes(min);
+        }
     }
-	/*
-	public void AvancerMinutes() {
-		if(this.minutes < 59) {
-		this.minutes += 1;
-		}else {
-			this.minutes = 0;
-			if(this.heures < 23) {
-				this.heures += 1;
-			}else {
-				this.heures = 0;
-			}
-		}
-	}*/
 }

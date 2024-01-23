@@ -15,10 +15,7 @@ public class Personne {
 	}
 	
 	//Setters et getters
-	//public void setProprietaireMontre(Montre _montre) {
-	//	_montre.setProprietaire(this.nom);
-	//	montre = _montre;
-	//}
+	
 	
 	//Méthodes
 	public boolean MettreMontre(Montre _montre) {

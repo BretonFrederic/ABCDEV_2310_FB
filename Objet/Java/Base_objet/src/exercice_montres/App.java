@@ -27,8 +27,11 @@ public class App {
 		}
 		-------------------------------------*/
 		
-		Personne paul = new Personne("Paul", true);
-		paul.montre.AfficherHeure();
+		Personne paul = new Personne("Paul");
+		
+		
+		
+		//paul.montre.AfficherHeure();
 	}
 
 }

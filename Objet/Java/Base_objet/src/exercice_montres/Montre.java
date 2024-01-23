@@ -3,58 +3,50 @@ package exercice_montres;
 public class Montre {
 	
 	//Variables d'instance
-	private String nom;
+	private String proprietaire;
 	private int heures;
 	private int minutes;
 	
 	//getters et setters
-	public String getNom() {
-		String nomDeMontre;
-		nomDeMontre = nom;
-		return nomDeMontre;
-	}
-	
-	public int getHeures() {
-		int heuresDeMontre;
-		heuresDeMontre = heures;
-		return heuresDeMontre;
-	}
-	
 	public void setMinutes(int _minutes) {
-		minutes = _minutes;
+		this.minutes = _minutes%60;
 	}
 	
 	public void setHeures(int _heures) {
-		heures = _heures;
+		this.heures = _heures%24;
 	}
 	
 	public int getMinutes() {
-		int MinutesDeMontre;
-		MinutesDeMontre = minutes;
-		return MinutesDeMontre;
+		return minutes;
+	}
+	
+	public int getHeures() {
+		return heures;
 	}
 	
 	//Constructeur
-	public Montre(String _nomMontre, int _heures, int _minutes) {
-		this.nom = _nomMontre;
-		this.Initialisation(_heures, _minutes);
-	}
-	
-	public Montre(Montre _montre) {
-		this.nom = _montre.getNom();
-		this.heures = _montre.getHeures();
-		this.minutes = _montre.getMinutes();
+	public Montre(String _proprietaire, int _heures, int _minutes) {
+		this.proprietaire = _proprietaire;
+		setHeures(_heures);
+		setMinutes(_minutes);
 	}
 	
 	//Méthodes
-	public void Initialisation(int _heures, int _minutes) {
-        if(_minutes > 59){
-            this.setHeures(heures); = _heures + _minutes/60;
-            this.minutes = _minutes%60;
-        }
-        if(this.heures > 23){
-        	this.heures = this.heures%24;
-        }
+	public void AfficherHeure(Montre _montre) {
+		System.out.println(_montre.getHeures()+"h"+_montre.getMinutes());
+	}
+	
+	public void AvancerUneMinute() {
+		int min = this.getMinutes()+1;
+		
+		this.setMinutes(min);
+        //if(this.getMinutes() > 59){
+        //    heures = heures + minutes/60;
+        //    this.minutes = minutes%60;
+        //}
+        //if(this.getHeures() > 23){
+        //	this.heures = heures%24;
+        //}
     }
 	/*
 	public void AvancerMinutes() {
@@ -69,8 +61,4 @@ public class Montre {
 			}
 		}
 	}*/
-	
-	public void AfficherHeures() {
-		System.out.println(this.heures + "h" + this.minutes);
-	}
 }

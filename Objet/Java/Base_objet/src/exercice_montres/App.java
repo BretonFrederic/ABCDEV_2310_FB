@@ -3,13 +3,10 @@ package exercice_montres;
 public class App {
 
 	public static void main(String[] args) {
-		
-		Montre maMontre = new Montre("montre1", 13, 59);
-		maMontre.AfficherHeures();
-		//maMontre.AvancerMinutes();
-		maMontre.AfficherHeures();
-		//maMontre.AvancerMinutes();
-		maMontre.AfficherHeures();
+		Montre montre1 = new Montre("", 23, 59);
+		montre1.AfficherHeure(montre1);
+		montre1.AvancerUneMinute();
+		montre1.AfficherHeure(montre1);
 	}
 
 }

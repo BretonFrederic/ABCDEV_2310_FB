@@ -38,8 +38,9 @@ public class PoupeeRusse {
 	}
 	public boolean PlacerDans(PoupeeRusse p) {
 		if(!this.estContenuDans && !this.estOuverte && p.estOuverte && this.taille < p.taille) {
-			this.setContenirPoupee(p, p);
+			this.setContenirPoupee(p, this);
 			this.estContenuDans = true;
+			p.contient = true;
 			return true;
 		}else {
 			return false;
@@ -47,16 +48,20 @@ public class PoupeeRusse {
 	}
 	public boolean SortirDe(PoupeeRusse p) {
 		if(this.estContenuDans && p.estOuverte) {
+			this.setViderPoupee(p, this);
 			this.estContenuDans = false;
+			p.contient = false;
 			return true;
 		}else {
 			return false;
 		}
 	}
 	public void setContenirPoupee(PoupeeRusse poupeeQuiContient, PoupeeRusse poupeeContenu) {
-		//
+		estContenuDansPoupee = poupeeQuiContient.identifiantPoupee;
+		poupeeQuiContient.contientPoupee = this.identifiantPoupee;
 	}
 	public void setViderPoupee(PoupeeRusse poupeeQuiContient, PoupeeRusse poupeeContenu) {
-		//
+		estContenuDansPoupee = ' ';
+		poupeeQuiContient.contientPoupee = ' ';
 	}
 }

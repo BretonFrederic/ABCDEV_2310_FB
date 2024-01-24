@@ -4,8 +4,8 @@ public class App {
 
 	public static void main(String[] args) {
 		//Création des montres
-				Montre montre1 = new Montre(3, 145);
-				Montre montre2 = new Montre(montre1);
+				Montre montre1 = new Montre('A', 23, 58);
+				Montre montre2 = new Montre('B', montre1);
 				
 				//Création des personnes
 				Personne paul = new Personne("Paul");

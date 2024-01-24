@@ -22,6 +22,10 @@ public class Montre {
 		proprietaire = _nom;
 	}
 	
+	public void setEstPortee(boolean _estPortee) {
+		estPortee = _estPortee;
+	}
+	
 	public char getIdentifiant() {
 		return identifiant;
 	}
@@ -35,15 +39,19 @@ public class Montre {
 		minutes = _montre.minutes;
 	}
 	
-	public String AfficherHeure(Montre _montre) {
-		return String.format("%02dh%02d", _montre.heures, _montre.minutes);
+	public String AfficherHeure() {
+		return String.format("La montre "+identifiant+" de "+proprietaire+" affiche %02dh%02d", this.heures, this.minutes);
 	}
 	
 	public void AvancerUneMinute() {
+		System.out.println("On avance la montre "+this.identifiant+" d'une minute.");
 		this.minutes += 1;
 		if(this.minutes > 59) {
 			this.heures = this.heures + this.minutes/60;
 			this.minutes = this.minutes%60;
+		}
+		if(this.heures > 23) {
+			this.heures = this.heures%24;
 		}
 	}
 }

@@ -17,6 +17,14 @@ public class Montre {
 		minutes = _minutes;
 	}
 	
+	public Montre(char _identifiant, Montre _montre) {
+		identifiant = _identifiant;
+		estPortee = false;
+		proprietaire = "";
+		heures = _montre.heures;
+		minutes = _montre.minutes;
+	}
+	
 	//setters et getters
 	public void setProprietaire(String _nom) {
 		proprietaire = _nom;
@@ -30,15 +38,7 @@ public class Montre {
 		return identifiant;
 	}
 	
-	//méthodes
-	public Montre(char _identifiant, Montre _montre) {
-		identifiant = _identifiant;
-		estPortee = false;
-		proprietaire = "";
-		heures = _montre.heures;
-		minutes = _montre.minutes;
-	}
-	
+	//méthode
 	public String AfficherHeure() {
 		return String.format("La montre "+identifiant+" de "+proprietaire+" affiche %02dh%02d", this.heures, this.minutes);
 	}

@@ -1,7 +1,7 @@
 package voiture;
 
 public class Voiture {
-	
+	/*
 	//variables d'instance
 	Moteur moteur;
 	int capaciteConsommation;
@@ -57,7 +57,7 @@ public class Voiture {
 			return false;
 		}
 	}
-	
+	/*
 	public boolean Accelerer() {
 		if(contientConducteur && !this.Accelerer() && !this.Freiner()) {
 			//320 = 18000/320
@@ -67,13 +67,13 @@ public class Voiture {
 		}
 	}
 	
-	public boolean Freiner() {
-		if(contientConducteur && !this.Accelerer()) {
+	//public boolean Freiner() {
+	//	if(contientConducteur && !this.Accelerer()) {
 			
-		}
+	//	}
 	}
 	
 	//constructeur
-	public Voiture(Moteur _moteur, int _capaciteConsommation, )
-	
+	//public Voiture(Moteur _moteur, int _capaciteConsommation, )
+	*/
 }

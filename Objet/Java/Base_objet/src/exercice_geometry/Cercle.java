@@ -13,7 +13,7 @@ public class Cercle {
 	}
 	
 	public double perimetre() {
-		double perimetre = 2* Math.PI * this.rayon;//2PIr
+		double perimetre = 2* Math.PI * this.rayon;
 		return perimetre;
 	}
 	
@@ -23,7 +23,7 @@ public class Cercle {
 	}
 	
 	public void Appartenance(Point _point) {
-		//distancePoint = racineCarre(valeur abs(_point.x - this.point.x)² + valeur abs(_point.y - this.point.y)²)
+		//pythagore
 		double distancePoint = Math.sqrt(Math.abs(Math.pow((_point.getAbscisse() - this.centre.getAbscisse()), 2)) + Math.abs(Math.pow((_point.getOrdonnee()- this.centre.getOrdonnee()), 2)));
 		if(rayon == distancePoint) {
 			System.out.println("Le point appartient au cercle.");

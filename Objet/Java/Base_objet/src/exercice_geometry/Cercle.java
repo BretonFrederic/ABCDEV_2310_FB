@@ -24,7 +24,7 @@ public class Cercle {
 	
 	public void Appartenance(Point _point) {
 		//pythagore
-		double distancePoint = Math.sqrt(Math.abs(Math.pow((_point.getAbscisse() - this.centre.getAbscisse()), 2)) + Math.abs(Math.pow((_point.getOrdonnee()- this.centre.getOrdonnee()), 2)));
+		double distancePoint = Math.sqrt(Math.abs(Math.pow((_point.getAbscisse() - this.centre.getAbscisse()), 2)) + Math.abs(Math.pow((_point.getOrdonnee() - this.centre.getOrdonnee()), 2)));
 		if(rayon == distancePoint) {
 			System.out.println("Le point appartient au cercle.");
 		}else {
@@ -33,6 +33,6 @@ public class Cercle {
 	}
 	
 	public void Afficher() {
-		System.out.println("Le périmètre du cercle est : "+this.perimetre()+"\nLa surface du disque est : "+this.surface());
+		System.out.println("Le périmètre du cercle est : "+this.perimetre()+"\nLa surface du disque est : "+this.surface()+" ²");
 	}
 }

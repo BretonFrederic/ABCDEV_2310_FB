@@ -24,7 +24,7 @@ public class Cercle {
 	
 	public void Appartenance(Point _point) {
 		//distancePoint = racineCarre(valeur abs(_point.x - this.point.x)² + valeur abs(_point.y - this.point.y)²)
-		double distancePoint = Math.sqrt(Math.abs(_point.getAbscisse()- this.centre.getAbscisse()) + Math.abs(_point.getOrdonnee()- this.centre.getOrdonnee()));
+		double distancePoint = Math.sqrt(Math.abs(Math.pow((_point.getAbscisse() - this.centre.getAbscisse()), 2)) + Math.abs(Math.pow((_point.getOrdonnee()- this.centre.getOrdonnee()), 2)));
 		if(rayon == distancePoint) {
 			System.out.println("Le point appartient au cercle.");
 		}else {

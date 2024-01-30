@@ -20,6 +20,6 @@ public class Compte {
 	}
 	
 	public void Afficher() {
-		System.out.println("Il y a "+solde+" sur le compte.");
+		System.out.printf("Il y a %.2f sur le compte.\n",solde);
 	}
 }

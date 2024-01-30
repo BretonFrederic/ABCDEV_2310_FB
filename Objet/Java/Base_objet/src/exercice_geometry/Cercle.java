@@ -12,6 +12,7 @@ public class Cercle {
 		this.rayon = _rayon;
 	}
 	
+	//méthode
 	public double perimetre() {
 		double perimetre = 2* Math.PI * this.rayon;
 		return perimetre;

@@ -25,7 +25,7 @@ public class Detecteur {
 	public boolean Appartenance(Position _position) {
 		//pythagore
 		double distancePoint = Math.sqrt(Math.abs(Math.pow(((_position.getPositionX() - this.position.getPositionX())), 2)) + Math.abs(Math.pow(((_position.getPositionY() - this.position.getPositionY())), 2)));
-		if(rayon == distancePoint) {
+		if(rayon <= distancePoint) {
 			System.out.println("Le scanner a détecté de la roche lunaire.");
 			return true;
 		}else {

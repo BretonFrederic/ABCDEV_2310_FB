@@ -7,7 +7,7 @@ public class Base {
 	private Position position;
 	private Rectangle dimension;
 	private int batterie;
-	private Roche reserveEchantillon;
+	private Roche coffreEchantillon;
 	private int pieceMecanique;
 	
 	//constructeur
@@ -16,7 +16,12 @@ public class Base {
 		position = new Position(16, 4); // La position est en haut à gauche de la zone de dimension 20*20
 		dimension = new Rectangle(8, 8); // La surface au sol est un carre de 8*8
 		batterie = 100;
-		reserveEchantillon = new Roche();
+		coffreEchantillon = new Roche();
 		pieceMecanique = 10;
+	}
+	
+	//getters
+	public Position getPosition() {
+		return position;
 	}
 }

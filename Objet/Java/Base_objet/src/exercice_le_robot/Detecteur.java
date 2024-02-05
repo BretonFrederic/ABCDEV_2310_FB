@@ -33,8 +33,4 @@ public class Detecteur {
 			return false;
 		}
 	}
-	
-	public void Afficher() {
-		System.out.println("Le périmètre du cercle est : "+this.perimetre()+"\nLa surface du disque est : "+this.surface()+" ²");
-	}
 }

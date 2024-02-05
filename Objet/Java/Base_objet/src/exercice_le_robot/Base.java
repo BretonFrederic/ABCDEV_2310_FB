@@ -24,4 +24,22 @@ public class Base {
 	public Position getPosition() {
 		return position;
 	}
+	
+	//méthodes
+	public boolean RechargerRobot(Robot _robot) {
+		int charge = 100 - _robot.getBatterie();
+		if(this.batterie > 0) {
+			if(this.batterie >= charge) {
+				_robot.setBatterie(100);
+				this.batterie -= charge;
+			}else if(this.batterie < charge) {
+				_robot.setBatterie(this.batterie + _robot.getBatterie());
+				this.batterie = 0;
+			}
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
 }

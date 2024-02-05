@@ -15,7 +15,7 @@ public class Robot {
 	
 	//constructeur
 	public Robot() {
-		nom = "Lunokhod";
+		nom = "Lunokhod 1";
 		position = new Position(16, 4); // La position est en haut à gauche de la zone de dimension 20*20
 		//taux d'usure des composants du robot en pourcentage
 		batterie = 100;
@@ -25,5 +25,14 @@ public class Robot {
 		roues = 100;
 		reserveEchantillon = new Roche();
 		scanner = new Detecteur(this.position, 4);
+	}
+	
+	//setters et getters
+	public void setBatterie(int _batterie) {
+		this.batterie = 
+	}
+	
+	public int getBatterie() {
+		return this.batterie;
 	}
 }

@@ -5,4 +5,26 @@ public class Roche {
 	//attributs
 	private Position position;
 	private Rectangle dimension;
+	private int pourcentageOxygene;
+	private int pourcentageSilicium;
+	private int pourcentageAluminium;
+	private int pourcentageCalcium;
+	private int pourcentageFer;
+	private int pourcentageMagnesium;
+	private int pourcentageTitane;
+	private int pourcentageSodium;
+	
+	//constructeur
+	public Roche() {
+		position = new Position(2, 2);
+		dimension = new Rectangle(4, 4);
+		pourcentageOxygene = 3;
+		pourcentageSilicium = 60;
+		pourcentageAluminium = 5;
+		pourcentageCalcium = 12;
+		pourcentageFer = 7;
+		pourcentageMagnesium = 6;
+		pourcentageTitane = 2;
+		pourcentageSodium = 5;
+	}
 }

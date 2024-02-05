@@ -27,4 +27,23 @@ public class Roche {
 		pourcentageTitane = 2;
 		pourcentageSodium = 5;
 	}
+	
+	//getters et setters
+	public Position getPosition() {
+		return this.position;
+	}
+	
+	public void setPosition() {
+		this.position = new Position(-2,-2);
+	}
+	
+	//méthodes
+	public boolean SupprimerDuSol() {
+		if(StockerEchantillon()) {
+			this.setPosition();
+			return true;
+		}else {
+			return false;
+		}
+	}
 }

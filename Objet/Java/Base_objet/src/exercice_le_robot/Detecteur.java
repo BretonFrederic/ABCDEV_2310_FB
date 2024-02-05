@@ -22,7 +22,7 @@ public class Detecteur {
 		return surface;
 	}
 	
-	public boolean Appartenance(Position _position) {
+	public boolean Detecter(Position _position) {
 		//pythagore
 		double distancePoint = Math.sqrt(Math.abs(Math.pow(((_position.getPositionX() - this.position.getPositionX())), 2)) + Math.abs(Math.pow(((_position.getPositionY() - this.position.getPositionY())), 2)));
 		if(rayon <= distancePoint) {

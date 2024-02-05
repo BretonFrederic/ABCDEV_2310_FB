@@ -11,6 +11,7 @@ public class Robot {
 	private int brasArticule;
 	private int roues;
 	private Roche reserveEchantillon;
+	private Detecteur scanner;
 	
 	//constructeur
 	public Robot() {
@@ -23,5 +24,6 @@ public class Robot {
 		brasArticule = 100;
 		roues = 100;
 		reserveEchantillon = new Roche();
+		scanner = new Detecteur(this.position, 4);
 	}
 }

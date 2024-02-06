@@ -27,6 +27,10 @@ public class Zone {
 		return roche;
 	}
 	
+	public Base getBase() {
+		return base;
+	}
+	
 	public void setRoche() {
 		this.roche = null;
 	}

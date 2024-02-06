@@ -48,11 +48,22 @@ public class Robot {
 	
 	public boolean Recolter(Zone _zone) {
 		if(this.scanner.Detecter(_zone.getRoche().getPosition())) {
-			for(int i = 0; i <= reserveEchantillon.getPourcentage().length - 1; i++) {
-				temp[i] = 0;
-			}
-			this.reserveEchantillon = new Roche();
+			int[] temp  = _zone.getRoche().getPourcentage();
+			this.reserveEchantillon.setPourcentage(temp);
 			_zone.setRoche();
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean ViderTout(Zone _zone) {
+		if(this.scanner.Detecter(_zone.getBase().getPosition())) {
+			_zone.getBase().getCoffreEchantillon().setPourcentage(this.reserveEchantillon.getPourcentage());
+			this.reserveEchantillon = null;
+			return true;
+		}else {
+			return false;
 		}
 	}
 }

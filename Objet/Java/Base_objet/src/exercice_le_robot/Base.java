@@ -29,6 +29,14 @@ public class Base {
 		return this.batterie;
 	}
 	
+	public Roche getCoffreEchantillon() {
+		return this.coffreEchantillon;
+	}
+	
+	public void setCoffreEchantillon(Roche _roche) {
+		this.coffreEchantillon = _roche;;
+	}
+	
 	//méthodes
 	public void RechargerRobot(Robot _robot) {
 		int charge = 100 - _robot.getBatterie();

@@ -45,12 +45,4 @@ public class Roche {
 	}
 	
 	//méthodes
-	public boolean SupprimerDuSol() {
-		if(StockerEchantillon()) {
-			this.setPosition();
-			return true;
-		}else {
-			return false;
-		}
-	}
 }

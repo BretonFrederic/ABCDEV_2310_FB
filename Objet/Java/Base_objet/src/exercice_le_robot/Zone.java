@@ -22,4 +22,12 @@ public class Zone {
 	public Robot getRobot() {
 		return robot;
 	}
+	
+	public Roche getRoche() {
+		return roche;
+	}
+	
+	public void setRoche() {
+		this.roche = null;
+	}
 }

@@ -16,7 +16,7 @@ public class Robot {
 		this.position = new Position(16, 4); // La position est en haut à gauche de la zone de dimension 20*20
 		this.batterie = 100;
 		this.etatVehicule = 100;
-		//reserveEchantillon = new Roche();
+		reserveEchantillon = new Roche();
 		int[] temp  = this.reserveEchantillon.getPourcentage();
 		for(int i = 0; i <= reserveEchantillon.getPourcentage().length - 1; i++) {
 			temp[i] = 0;
@@ -64,6 +64,29 @@ public class Robot {
 			return true;
 		}else {
 			return false;
+		}
+	}
+	
+	public void Haut() {
+		this.position.setPositionY(this.position.getPositionY()+1);
+	}
+	
+	public void Bas() {
+		this.position.setPositionY(this.position.getPositionY()-1);
+	}
+	
+	public void Gauche() {
+		this.position.setPositionX(this.position.getPositionX()-1);
+	}
+	
+	public void Droite() {
+		this.position.setPositionX(this.position.getPositionX()+1);
+	}
+	
+	public void AfficherDonnee() {
+		System.out.printf("Nom du robot : %s\nPosition du robot : %d(abscisse), %d(ordonnée)\nBatterie : %d\nEtat du véhicule : %d", this.nom, this.position.getPositionX(), this.position.getPositionY(), this.batterie, this.etatVehicule);
+		for(int i = 0; i <= this.reserveEchantillon.getMateriaux().length - 1; i++) {
+			System.out.printf("%s : %d", this.reserveEchantillon.getMateriaux()[i], this.reserveEchantillon.getPourcentage()[i]);
 		}
 	}
 }

@@ -20,4 +20,12 @@ public class Position {
 	public int getPositionY() {
 		return positionY;
 	}
+	
+	public void setPositionX(int _positionX) {
+		this.positionX = _positionX;
+	}
+	
+	public void setPositionY(int _positionY) {
+		this.positionY = _positionY;
+	}
 }

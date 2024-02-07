@@ -24,6 +24,7 @@ public class Robot {
 		}
 		this.reserveEchantillon.setPourcentage(temp);
 		this.scanner = new Detecteur(this.position, 4);
+		this.direction = Direction.STOP;
 	}
 	
 	//setters et getters
@@ -69,22 +70,22 @@ public class Robot {
 	}
 	
 	public void Haut() {
-		this.position.setPositionY(this.position.getPositionY()+1);
+		this.position.setPositionY(this.position.getPositionY()+Direction.HAUT.getDeplacement());
 	}
 	
 	public void Bas() {
-		this.position.setPositionY(this.position.getPositionY()-1);
+		this.position.setPositionY(this.position.getPositionY()-Direction.BAS.getDeplacement());
 	}
 	
 	public void Gauche() {
-		this.position.setPositionX(this.position.getPositionX()-1);
+		this.position.setPositionX(this.position.getPositionX()-Direction.GAUCHE.getDeplacement());
 	}
 	
 	public void Droite() {
-		this.position.setPositionX(this.position.getPositionX()+1);
+		this.position.setPositionX(this.position.getPositionX()+Direction.DROITE.getDeplacement());
 	}
 	
-	public void AfficherDonnee() {
+	public void AfficherDonnees() {
 		System.out.printf("Nom du robot : %s\nPosition du robot : %d(abscisse), %d(ordonnée)\nBatterie : %d\nEtat du véhicule : %d\n", this.nom, this.position.getPositionX(), this.position.getPositionY(), this.batterie, this.etatVehicule);
 		for(int i = 0; i <= this.reserveEchantillon.getMateriaux().length - 1; i++) {
 			System.out.printf("%s : %d\n", this.reserveEchantillon.getMateriaux()[i], this.reserveEchantillon.getPourcentage()[i]);

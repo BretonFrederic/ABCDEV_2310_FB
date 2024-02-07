@@ -77,14 +77,17 @@ public class Robot {
 			//pythagore
 			double distancePoint = Math.sqrt(Math.abs(Math.pow(((posRoche.getPositionX() - this.position.getPositionX())), 2)) + Math.abs(Math.pow(((posRoche.getPositionY() - this.position.getPositionY())), 2)));
 			if(rayonDetection >= distancePoint) {
-				this.stockage += _secteur.getRochePoids(i);
-				_secteur.setRochePosition(i);
-				System.out.printf("\nLe robot a récolté : %d gramme(s) de roche lunaire\n", _secteur.getRochePoids(i));
+				//On vérifie qu'il reste assez de la place, capacité stockage Max 20
+				if(_secteur.getRochePoids(i) <= (20-this.stockage)) {
+					this.stockage += _secteur.getRochePoids(i);
+					_secteur.setRochePosition(i);
+					System.out.printf("\nLe robot a récolté : %d gramme(s) de roche lunaire\n", _secteur.getRochePoids(i));
+				}
 			}
 		}
 	}
 	
 	public void AfficherInfo() {
-		System.out.printf("\nNom : %s\nPosition : x = %d, y = %d\nStockage : %d\nBatterie : %d\n", this.nom, this.position.getPositionX(), this.position.getPositionY(), this.stockage, this.batterie);
+		System.out.printf("\nNom : %s\nPosition : x = %d, y = %d\nStockage : %d gramme(s)\nBatterie : %d%%\n", this.nom, this.position.getPositionX(), this.position.getPositionY(), this.stockage, this.batterie);
 	}
 }

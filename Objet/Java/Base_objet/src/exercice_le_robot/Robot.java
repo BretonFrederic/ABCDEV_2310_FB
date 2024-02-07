@@ -64,7 +64,7 @@ public class Robot {
 	}
 	
 	public boolean ViderTout(Zone _zone) {
-		if(this.scanner.Detecter(_zone.getBase().getPosition())) {
+		if(this.scanner.Detecter(_zone.getBase().getPosition()) && this.Recolter(_zone)) {
 			_zone.getBase().getCoffreEchantillon().setPourcentage(this.reserveEchantillon.getPourcentage());
 			this.reserveEchantillon = null;
 			return true;
@@ -89,7 +89,7 @@ public class Robot {
 		this.position.setPositionX(this.position.getPositionX()+1);
 	}
 	
-	public void AfficherDonnees() {
+	public void AfficherDonneesRobot() {
 		if(this.reserveEchantillon == null) {
 			System.out.println("Mission réussi !\n");
 		}else {

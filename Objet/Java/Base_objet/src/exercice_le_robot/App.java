@@ -5,56 +5,56 @@ public class App {
 	public static void main(String[] args) {
 		
 		//variables
-		String direction;
+		Direction dir = Direction.GAUCHE;
 		
 		
 		//début programme
 		
 		Zone zone1 = new Zone();
-		zone1.getRobot().AfficherDonnees();
+		zone1.getRobot().AfficherDonneesRobot();//
 		zone1.getBase().AfficherDonnees();
 		
 		for(int i = 1; i <= 14; i++) {
-			direction = Direction.GAUCHE.getDir();
-			switch(direction) {
-			case "haut":
+			dir = Direction.GAUCHE;
+			switch(dir) {
+			case HAUT:
 				zone1.getRobot().Haut();
 				break;
-			case "bas":
+			case BAS:
 				zone1.getRobot().Haut();
 				break;
-			case "gauche":
-				zone1.getRobot().Gauche();;
+			case GAUCHE:
+				zone1.getRobot().Gauche();
 				break;
-			case "droite":
-				zone1.getRobot().Droite();;
+			case DROITE:
+				zone1.getRobot().Droite();
 				break;
 			}
 		}
 		
 		zone1.getRobot().Recolter(zone1);
-		zone1.getRobot().AfficherDonnees();
+		zone1.getRobot().AfficherDonneesRobot();
 		
 		for(int i = 1; i <= 14; i++) {
-			direction = Direction.DROITE.getDir();
-			switch(direction) {
-			case "haut":
+			dir = Direction.DROITE;
+			switch(dir) {
+			case HAUT:
 				zone1.getRobot().Haut();
 				break;
-			case "bas":
+			case BAS:
 				zone1.getRobot().Haut();
 				break;
-			case "gauche":
-				zone1.getRobot().Gauche();;
+			case GAUCHE:
+				zone1.getRobot().Gauche();
 				break;
-			case "droite":
-				zone1.getRobot().Droite();;
+			case DROITE:
+				zone1.getRobot().Droite();
 				break;
 			}
 		}
 		
 		zone1.getRobot().ViderTout(zone1);
-		zone1.getRobot().AfficherDonnees();
+		zone1.getRobot().AfficherDonneesRobot();
 		zone1.getBase().AfficherDonnees();
 		
 		//fin programme

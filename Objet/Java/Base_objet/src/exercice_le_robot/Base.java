@@ -17,6 +17,11 @@ public class Base {
 		this.dimension = new Rectangle(8, 8); // La surface au sol est un carre de 8*8
 		this.batterie = 100;
 		this.coffreEchantillon = new Roche();
+		int[] temp  = this.coffreEchantillon.getPourcentage();
+		for(int i = 0; i <= coffreEchantillon.getPourcentage().length - 1; i++) {
+			temp[i] = 0;
+		}
+		this.coffreEchantillon.setPourcentage(temp);
 		this.pieceMecanique = 10;
 	}
 	
@@ -63,10 +68,11 @@ public class Base {
 	}
 	
 	public void AfficherDonnees() {
-		System.out.printf("Nom de la base : %s\nPosition de la base : %d(abscisse), %d(ordonnée)\nBatterie : %d", this.nom, this.position.getPositionX(), this.position.getPositionY(), this.batterie);
+		System.out.printf("Nom de la base : %s\nPosition de la base : %d(abscisse), %d(ordonnée)\nBatterie : %d\n", this.nom, this.position.getPositionX(), this.position.getPositionY(), this.batterie);
 		for(int i = 0; i <= this.coffreEchantillon.getMateriaux().length - 1; i++) {
-			System.out.printf("%s : %d", this.coffreEchantillon.getMateriaux()[i], this.coffreEchantillon.getPourcentage()[i]);
+			System.out.printf("%s : %d\n", this.coffreEchantillon.getMateriaux()[i], this.coffreEchantillon.getPourcentage()[i]);
 		}
-		System.out.printf("Pièce(s) mécanique : ", pieceMecanique);
+		System.out.printf("Pièce(s) mécanique : %d", pieceMecanique);
+		System.out.println();
 	}
 }

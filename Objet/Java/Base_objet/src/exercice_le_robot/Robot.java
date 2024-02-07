@@ -9,6 +9,7 @@ public class Robot {
 	private int etatVehicule;
 	private Roche reserveEchantillon;
 	private Detecteur scanner;
+	private Direction direction;
 	
 	//constructeur
 	public Robot() {

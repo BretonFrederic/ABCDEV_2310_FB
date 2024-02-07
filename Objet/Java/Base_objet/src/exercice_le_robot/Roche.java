@@ -10,7 +10,7 @@ public class Roche {
 	
 	//constructeur
 	public Roche() {
-		position = new Position(2, 2); // La position est en haut à droite de la zone de dimension 20*20
+		position = new Position(2, 4); // La position est en haut à droite de la zone de dimension 20*20
 		dimension = new Rectangle(4, 4); // // La surface au sol est un carre de 4*4
 		materiaux = new String[]{"pourcentageOxygene", 
 								"pourcentageSilicium", 

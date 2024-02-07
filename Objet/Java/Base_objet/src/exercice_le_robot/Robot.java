@@ -24,7 +24,7 @@ public class Robot {
 		}
 		this.reserveEchantillon.setPourcentage(temp);
 		this.scanner = new Detecteur(this.position, 4);
-		this.direction = Direction.STOP;
+		this.direction = Direction.BAS;
 	}
 	
 	//setters et getters
@@ -44,7 +44,11 @@ public class Robot {
 		return this.etatVehicule;
 	}
 	
-	public Position getposition() {
+	public Position getPosition() {
+		return this.position;
+	}
+	
+	public Position getDiretion() {
 		return this.position;
 	}
 	
@@ -70,26 +74,30 @@ public class Robot {
 	}
 	
 	public void Haut() {
-		this.position.setPositionY(this.position.getPositionY()+Direction.HAUT.getDeplacement());
+		this.position.setPositionY(this.position.getPositionY()+1);
 	}
 	
 	public void Bas() {
-		this.position.setPositionY(this.position.getPositionY()-Direction.BAS.getDeplacement());
+		this.position.setPositionY(this.position.getPositionY()-1);
 	}
 	
 	public void Gauche() {
-		this.position.setPositionX(this.position.getPositionX()-Direction.GAUCHE.getDeplacement());
+		this.position.setPositionX(this.position.getPositionX()-1);
 	}
 	
 	public void Droite() {
-		this.position.setPositionX(this.position.getPositionX()+Direction.DROITE.getDeplacement());
+		this.position.setPositionX(this.position.getPositionX()+1);
 	}
 	
 	public void AfficherDonnees() {
-		System.out.printf("Nom du robot : %s\nPosition du robot : %d(abscisse), %d(ordonnée)\nBatterie : %d\nEtat du véhicule : %d\n", this.nom, this.position.getPositionX(), this.position.getPositionY(), this.batterie, this.etatVehicule);
-		for(int i = 0; i <= this.reserveEchantillon.getMateriaux().length - 1; i++) {
-			System.out.printf("%s : %d\n", this.reserveEchantillon.getMateriaux()[i], this.reserveEchantillon.getPourcentage()[i]);
+		if(this.reserveEchantillon == null) {
+			System.out.println("Mission réussi !\n");
+		}else {
+			System.out.printf("Nom du robot : %s\nPosition du robot : %d(abscisse), %d(ordonnée)\nBatterie : %d\nEtat du véhicule : %d\n", this.nom, this.position.getPositionX(), this.position.getPositionY(), this.batterie, this.etatVehicule);
+			for(int i = 0; i <= this.reserveEchantillon.getMateriaux().length - 1; i++) {
+				System.out.printf("%s : %d\n", this.reserveEchantillon.getMateriaux()[i], this.reserveEchantillon.getPourcentage()[i]);
+			}
+			System.out.println();
 		}
-		System.out.println();
 	}
 }

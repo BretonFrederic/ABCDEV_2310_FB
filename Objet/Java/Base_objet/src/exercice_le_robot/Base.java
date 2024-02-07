@@ -45,7 +45,7 @@ public class Base {
 	//méthodes
 	public void RechargerRobot(Robot _robot) {
 		int charge = 100 - _robot.getBatterie();
-		if(this.batterie > 0 && this.position == _robot.getposition()) {
+		if(this.batterie > 0 && this.position == _robot.getPosition()) {
 			if(this.batterie >= charge) {
 				_robot.setBatterie(100);
 				this.batterie -= charge;
@@ -59,7 +59,7 @@ public class Base {
 	
 	public void RepareRobot(Robot _robot) {
 		int degats = 100 - _robot.getEtatVehicule();
-		if(this.pieceMecanique > 0 && this.position == _robot.getposition()) {
+		if(this.pieceMecanique > 0 && this.position == _robot.getPosition()) {
 			if(degats > 0) {
 				_robot.setEtatVehicule(100);
 				this.pieceMecanique -= 1;

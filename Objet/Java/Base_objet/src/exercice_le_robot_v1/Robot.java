@@ -27,6 +27,10 @@ public class Robot {
 		return this.batterie;
 	}
 	
+	public Position getPosition() {
+		return this.position;
+	}
+	
 	//Méthodes
 	public void Avancer(Direction _direction) {
 		if(batterie > 0) {
@@ -34,13 +38,13 @@ public class Robot {
 			case HAUT:
 				if(this.position.getPositionY() > 0) {
 					this.batterie -= 2;
-					this.position.setPositionY(this.position.getPositionY()-1);
+					this.position.setPositionY(this.position.getPositionY()+1);
 				}
 				break;
 			case BAS:
 				if(this.position.getPositionY() < 20) {
 					this.batterie -= 2;
-					this.position.setPositionY(this.position.getPositionY()+1);
+					this.position.setPositionY(this.position.getPositionY()-1);
 				}
 			case GAUCHE:
 				if(this.position.getPositionX() > 0) {

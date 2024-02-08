@@ -7,7 +7,7 @@ public class App {
 	public static void main(String[] args) {
 
 		//Variables
-		char quitter = ' ';
+		char quitter = 'n';
 		int distance = 0;
 		char fleche;
 		char scan;
@@ -30,13 +30,14 @@ public class App {
 		
 		
 		do {
-			System.out.println("Saisir une option : \n\t1 - Se déplacer\n\t2 - Activer détecteur(rayon 2)\n\t3 - Récolter\n\t4 - Afficher infos");
+			System.out.println("\nSaisir une option : \n\t1 - Se déplacer\n\t2 - Activer détecteur(rayon 2)\n\t3 - Récolter\n\t4 - Afficher infos\n\t5 - Quitter");
+			System.out.printf("\nPosition robot : x = %d, y = %d\n", r2d2.getPosition().getPositionX(), r2d2.getPosition().getPositionY());
 			option = sc.nextInt();
 			
 			if(option == 1) {
 				System.out.println("Saisir une distance à parcourir : ");
 				distance = sc.nextInt();
-				System.out.println("Saisir une direction avec z,q,s,d : ");
+				System.out.println("Saisir une direction avec z (nord),q (est),s (sud),d (ouest) : ");
 				fleche = sc.next().charAt(0);
 				switch(fleche) {
 					case 'z':
@@ -64,21 +65,18 @@ public class App {
 					r2d2.Recolter(secteur1);
 			}else if(option == 4) {
 					r2d2.AfficherInfo();
-			}
-			
-			if(r2d2.getStockage() < 999) {
+			}else if(option == 5) {
 				do {
 					System.out.println("\nQuitter : \n\to = oui\n\tn = non\n");
 					quitter = sc.next().charAt(0);
 				}while(quitter != 'o' && quitter != 'n');
-			}else {
-				System.out.println("Mission réussie !\nTotal : "+r2d2.getStockage()+" gramme(s)");
 			}
-			
-			if(r2d2.getStockage() < 999 && r2d2.getBatterie() == 0) {
+
+			if(r2d2.getStockage() > 999) {
+				System.out.println("Mission réussie !\nTotal : "+r2d2.getStockage()+" gramme(s)");
+			}else if(r2d2.getStockage() < 999 && r2d2.getBatterie() == 0) {
 				System.out.println("Mission échouée !\nBatterie : "+r2d2.getBatterie()+" %");
 			}
-			
 		}while(quitter == 'n' && r2d2.getStockage() < 999 && r2d2.getBatterie() > 0);
 		sc.close();
 		//Fin programme

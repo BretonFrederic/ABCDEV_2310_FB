@@ -30,14 +30,15 @@ public class App {
 		
 		
 		do {
-			System.out.println("\nSaisir une option : \n\t1 - Se déplacer\n\t2 - Activer détecteur(rayon 2)\n\t3 - Récolter\n\t4 - Afficher infos\n\t5 - Quitter");
 			System.out.printf("\nPosition robot : x = %d, y = %d\n", r2d2.getPosition().getPositionX(), r2d2.getPosition().getPositionY());
+			System.out.println("\nSaisir une option : \n\t1 - Se déplacer\n\t2 - Activer détecteur(rayon 2)\n\t3 - Récolter\n\t4 - Afficher infos\n\t5 - Quitter");
+			
 			option = sc.nextInt();
 			
 			if(option == 1) {
 				System.out.println("Saisir une distance à parcourir : ");
 				distance = sc.nextInt();
-				System.out.println("Saisir une direction avec z (nord),q (est),s (sud),d (ouest) : ");
+				System.out.println("Saisir une direction avec Z (nord) , Q (est) , S (sud), D (ouest) : ");
 				fleche = sc.next().charAt(0);
 				switch(fleche) {
 					case 'z':

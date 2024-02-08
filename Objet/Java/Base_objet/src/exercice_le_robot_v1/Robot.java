@@ -23,31 +23,33 @@ public class Robot {
 		return this.stockage;
 	}
 	
+	public int getBatterie() {
+		return this.batterie;
+	}
+	
 	//Méthodes
 	public void Avancer(Direction _direction) {
-		boolean horsLimiteX = this.position.getPositionX()== 20 || this.position.getPositionX()== 0;
-		boolean horsLimiteY = this.position.getPositionY()== 20 || this.position.getPositionY()== 0;
 		if(batterie > 0) {
 			switch(_direction) {
 			case HAUT:
-				if(!horsLimiteY) {
+				if(this.position.getPositionY() > 0) {
 					this.batterie -= 2;
 					this.position.setPositionY(this.position.getPositionY()-1);
 				}
 				break;
 			case BAS:
-				if(!horsLimiteY) {
+				if(this.position.getPositionY() < 20) {
 					this.batterie -= 2;
 					this.position.setPositionY(this.position.getPositionY()+1);
 				}
 			case GAUCHE:
-				if(!horsLimiteX) {
+				if(this.position.getPositionX() > 0) {
 					this.batterie -= 2;
 				this.position.setPositionX(this.position.getPositionX()-1);
 				}
 				break;
 			case DROITE:
-				if(!horsLimiteX) {
+				if(this.position.getPositionX() < 20) {
 					this.batterie -= 2;
 					this.position.setPositionX(this.position.getPositionX()+1);
 				}

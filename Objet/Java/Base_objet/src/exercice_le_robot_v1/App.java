@@ -71,10 +71,15 @@ public class App {
 					System.out.println("\nQuitter : \n\to = oui\n\tn = non\n");
 					quitter = sc.next().charAt(0);
 				}while(quitter != 'o' && quitter != 'n');
+			}else {
+				System.out.println("Mission réussie !\nTotal : "+r2d2.getStockage()+" gramme(s)");
 			}
 			
+			if(r2d2.getStockage() < 999 && r2d2.getBatterie() == 0) {
+				System.out.println("Mission échouée !\nBatterie : "+r2d2.getBatterie()+" %");
+			}
 			
-		}while(quitter == 'n' || r2d2.getStockage() < 999);
+		}while(quitter == 'n' && r2d2.getStockage() < 999 && r2d2.getBatterie() > 0);
 		sc.close();
 		//Fin programme
 	}

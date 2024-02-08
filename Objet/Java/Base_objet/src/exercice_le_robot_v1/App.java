@@ -30,7 +30,7 @@ public class App {
 		
 		
 		do {
-			System.out.println("Saisir une option : \n\t1 - Se déplacer\n\t2 - Activer détecteur\n\t3 - Récolter\n\t4 - Afficher infos");
+			System.out.println("Saisir une option : \n\t1 - Se déplacer\n\t2 - Activer détecteur(rayon 2)\n\t3 - Récolter\n\t4 - Afficher infos");
 			option = sc.nextInt();
 			
 			if(option == 1) {
@@ -66,12 +66,15 @@ public class App {
 					r2d2.AfficherInfo();
 			}
 			
-			do {
-				System.out.println("\nQuitter : \n\to = oui\n\tn = non\n");
-				quitter = sc.next().charAt(0);
-			}while(quitter != 'o' && quitter != 'n');
+			if(r2d2.getStockage() < 999) {
+				do {
+					System.out.println("\nQuitter : \n\to = oui\n\tn = non\n");
+					quitter = sc.next().charAt(0);
+				}while(quitter != 'o' && quitter != 'n');
+			}
 			
-		}while(quitter == 'n');
+			
+		}while(quitter == 'n' || r2d2.getStockage() < 999);
 		sc.close();
 		//Fin programme
 	}

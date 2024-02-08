@@ -18,6 +18,11 @@ public class Robot {
 		this.rayonDetection = 2;
 	}
 	
+	//getters
+	public int getStockage() {
+		return this.stockage;
+	}
+	
 	//Méthodes
 	public void Avancer(Direction _direction) {
 		boolean horsLimiteX = this.position.getPositionX()== 20 || this.position.getPositionX()== 0;
@@ -64,9 +69,9 @@ public class Robot {
 			}
 		}
 		if(compteur > 0) {
-			System.out.println("\nLe scanner a détecté de la roche lunaire.\n");
+			System.out.println("\n[Le scanner a détecté de la roche lunaire.]\n");
 		}else {
-			System.out.println("\nLe scanner n'a rien détecté.\n");
+			System.out.println("\n[Le scanner n'a rien détecté.]\n");
 		}
 	}
 	
@@ -81,7 +86,7 @@ public class Robot {
 				if(_secteur.getRochePoids(i) <= (2000-this.stockage)) {
 					this.stockage += _secteur.getRochePoids(i);
 					_secteur.setRochePosition(i);
-					System.out.printf("\nLe robot a récolté : %d gramme(s) de roche lunaire\n\n", _secteur.getRochePoids(i));
+					System.out.printf("\n[Le robot a récolté : %d gramme(s) de roche lunaire.]\n\n", _secteur.getRochePoids(i));
 				}
 			}
 		}

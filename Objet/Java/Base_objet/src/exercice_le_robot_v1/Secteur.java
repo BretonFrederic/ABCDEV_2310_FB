@@ -10,11 +10,11 @@ public class Secteur {
 	public Secteur() {
 		nom = "Mer de tranquillité";
 		taille = new Rectangle(20, 20);
-		rocheLunaire = new int[][] {{3, 1, 5},
-									{2, 5, 3},
-									{17, 10, 7},
-									{12, 14, 3},
-									{7, 15, 2}};
+		rocheLunaire = new int[][] {{3, 1, 500},
+									{2, 5, 300},
+									{17, 10, 700},
+									{12, 14, 300},
+									{7, 15, 200}};
 	}
 	
 	//getters et setters

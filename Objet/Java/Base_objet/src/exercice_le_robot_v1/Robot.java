@@ -27,13 +27,13 @@ public class Robot {
 			case HAUT:
 				if(!horsLimiteY) {
 					this.batterie -= 2;
-					this.position.setPositionY(this.position.getPositionY()+1);
+					this.position.setPositionY(this.position.getPositionY()-1);
 				}
 				break;
 			case BAS:
 				if(!horsLimiteY) {
 					this.batterie -= 2;
-					this.position.setPositionY(this.position.getPositionY()-1);
+					this.position.setPositionY(this.position.getPositionY()+1);
 				}
 			case GAUCHE:
 				if(!horsLimiteX) {
@@ -77,11 +77,11 @@ public class Robot {
 			//pythagore
 			double distancePoint = Math.sqrt(Math.abs(Math.pow(((posRoche.getPositionX() - this.position.getPositionX())), 2)) + Math.abs(Math.pow(((posRoche.getPositionY() - this.position.getPositionY())), 2)));
 			if(rayonDetection >= distancePoint) {
-				//On vérifie qu'il reste assez de la place, capacité stockage Max 20
-				if(_secteur.getRochePoids(i) <= (20-this.stockage)) {
+				//On vérifie qu'il reste assez de la place, capacité stockage Max 2000
+				if(_secteur.getRochePoids(i) <= (2000-this.stockage)) {
 					this.stockage += _secteur.getRochePoids(i);
 					_secteur.setRochePosition(i);
-					System.out.printf("\nLe robot a récolté : %d gramme(s) de roche lunaire\n", _secteur.getRochePoids(i));
+					System.out.printf("\nLe robot a récolté : %d gramme(s) de roche lunaire\n\n", _secteur.getRochePoids(i));
 				}
 			}
 		}

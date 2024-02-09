@@ -9,11 +9,18 @@ public class Personne {
 	
 	//Constructeur
 	public Personne(double _taille, double _poids, int _age) {
-		taille = _taille;
-		poids = _poids;
-		age = _age;
+		this.taille = _taille;
+		this.poids = _poids;
+		this.age = _age;
 	}
 	
 	//Méthodes
+	public double Imc() {
+		return this.poids/Math.pow(this.taille, 2);
+	}
 	
+	public String Interpretation() {
+		this.Imc();
+		}
+	}
 }

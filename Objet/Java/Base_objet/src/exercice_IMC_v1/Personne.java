@@ -15,7 +15,7 @@ public class Personne {
 	}
 	
 	//Méthodes
-	public double Imc() {
+	private double Imc() {
 		return this.poids/Math.pow(this.taille, 2);
 	}
 	
@@ -34,7 +34,7 @@ public class Personne {
 		}else if(this.Imc() >= 35 && this.Imc()<= 40) {
 			System.out.println("Risque de maladie très élevé, obésité sévère.");
 		}else if(this.Imc() > 40) {
-			System.out.println("Risque de maladie extrêmement elevé, obésité normale.");
+			System.out.println("Risque de maladie extrêmement elevé, obésité morbide.");
 		}
 	}
 }

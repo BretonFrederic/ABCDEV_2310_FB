@@ -7,7 +7,9 @@ public class App {
 		Telecommande cispeo = new Telecommande(r2d2);
 		cispeo.Allumer();
 		cispeo.Allumer();
+		System.out.println(r2d2.affichageRobotInfo());
 		cispeo.Avancer();
+		System.out.println(r2d2.affichageRobotInfo());
 		
 	}
 

@@ -17,6 +17,12 @@ public class Telecommande {
 		this.reculer = false;
 	}
 	//Méthodes
+	
+	/**
+	 * Méthode qui permet d'activer le bouton Allumer de la 
+	 * télécommande du robot donné en argument à la télécommande.
+	 * @return
+	 */
 	public boolean Allumer() {
 		if(!this.allumer) {
 			this.robot.action(Bouton.ALLUMER);
@@ -28,7 +34,12 @@ public class Telecommande {
 			return false;
 		}
 	}
-		
+	
+	/**
+	 * Méthode qui permet d'activer le bouton Eteindre de la 
+	 * télécommande du robot donné en argument à la télécommande.
+	 * @return
+	 */
 	public boolean Eteindre() {
 		if(!this.eteindre) {
 			this.robot.action(Bouton.ETEINDRE);
@@ -40,7 +51,12 @@ public class Telecommande {
 			return false;
 		}
 	}
-		
+	
+	/**
+	 * Méthode qui permet d'activer le bouton Avancer de la 
+	 * télécommande du robot donné en argument à la télécommande.
+	 * @return
+	 */
 	public boolean Avancer() {
 		if(!this.reculer && this.allumer) {
 			this.robot.action(Bouton.AVANCER);
@@ -52,7 +68,12 @@ public class Telecommande {
 			return false;
 		}
 	}
-		
+	
+	/**
+	 * Méthode qui permet d'activer le bouton TournerADroite de la 
+	 * télécommande du robot donné en argument à la télécommande.
+	 * @return
+	 */
 	public boolean TournerADroite() {
 		if(!this.tournerAGauche && this.allumer) {
 			this.robot.action(Bouton.TOURNERADROITE);
@@ -64,7 +85,12 @@ public class Telecommande {
 			return false;
 		}
 	}
-		
+	
+	/**
+	 * Méthode qui permet d'activer le bouton TournerAGauche de la 
+	 * télécommande du robot donné en argument à la télécommande.
+	 * @return
+	 */
 	public boolean TournerAGauche() {
 		if(!this.tournerADroite && this.allumer) {
 			this.robot.action(Bouton.TOURNERAGAUCHE);
@@ -76,7 +102,12 @@ public class Telecommande {
 			return false;
 		}
 	}
-		
+	
+	/**
+	 * Méthode qui permet d'activer le bouton Reculer de la 
+	 * télécommande du robot donné en argument à la télécommande.
+	 * @return
+	 */
 	public boolean Reculer() {
 		if(!this.avancer && this.allumer) {
 			this.robot.action(Bouton.RECULER);

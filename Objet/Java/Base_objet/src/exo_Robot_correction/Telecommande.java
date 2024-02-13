@@ -1,122 +1,63 @@
 package exo_Robot_correction;
+import java.util.Scanner;
+
 
 public class Telecommande {
 	//Attributs
 	private Robot robot;
-	private boolean allumer, eteindre, avancer,tournerADroite, tournerAGauche, reculer;
+	private char touche;
+	Scanner sc;
 	
+	//private String touche;
 	
 	//Constructeur
 	public Telecommande(Robot _robot) {
 		this.robot = _robot;
-		this.allumer = false;
-		this.eteindre = false;
-		this.avancer = false;
-		this.tournerADroite = false;
-		this.tournerAGauche = false;
-		this.reculer = false;
+		this.touche = ' ';
+		this.sc = new Scanner(System.in);
 	}
 	//Méthodes
 	
 	/**
-	 * Méthode qui permet d'activer le bouton Allumer de la 
-	 * télécommande du robot donné en argument à la télécommande.
-	 * @return
+	 * Méthode qui permet de contrôler les actions d'un robot avec les touches du clavier.
+	 * z - avancer, q - tourner à gauche, s - reculer, d - tourner à droite, a - allumer, e - eteindre, k - Fin du programme
+	 * @param _touche
 	 */
-	public boolean Allumer() {
-		if(!this.allumer) {
-			this.robot.action(Bouton.ALLUMER);
-			this.allumer = true;
-			this.eteindre = false;
-			System.out.println("Robot allumé");
-			return true;
-		}else {
-			return false;
+	public void Controleur() {
+		while(touche != 'k') {
+			System.out.println("\nMenu télécommande : \n\tA - Allumer\n\tE - Eteindre\n\tZ - Avancer\n\tS - Reculer\n\tQ - tourner à gauche\n\tD - Tourner à droite\n\tI - info robot\n\tK - Quitter\n");
+			touche = sc.next().charAt(0);
+			switch(touche) {
+			case 'z':
+				robot.action(Bouton.AVANCER);
+				break;
+			case 'q':
+				robot.action(Bouton.TOURNERAGAUCHE);
+				break;
+			case 's':
+				robot.action(Bouton.RECULER);
+				break;
+			case 'd':
+				robot.action(Bouton.TOURNERADROITE);
+				break;
+			case 'a':
+				robot.action(Bouton.ALLUMER);
+				break;
+			case 'e':
+				robot.action(Bouton.ETEINDRE);
+				break;
+			case 'i':
+				System.out.println(this.robot.affichageRobotInfo());
+				break;
+			case 'k':
+				System.out.println("Fin de programme.");
+				break;
+				default:
+					System.out.println("Erreur de touche.");
+			}
+			System.out.println(this.robot.affichageRobotInfo());
 		}
-	}
-	
-	/**
-	 * Méthode qui permet d'activer le bouton Eteindre de la 
-	 * télécommande du robot donné en argument à la télécommande.
-	 * @return
-	 */
-	public boolean Eteindre() {
-		if(!this.eteindre) {
-			this.robot.action(Bouton.ETEINDRE);
-			this.allumer = false;
-			this.eteindre = true;
-			System.out.println("Robot éteint");
-			return true;
-		}else {
-			return false;
-		}
-	}
-	
-	/**
-	 * Méthode qui permet d'activer le bouton Avancer de la 
-	 * télécommande du robot donné en argument à la télécommande.
-	 * @return
-	 */
-	public boolean Avancer() {
-		if(!this.reculer && this.allumer) {
-			this.robot.action(Bouton.AVANCER);
-			this.avancer = true;
-			this.reculer = false;
-			System.out.println("Robot avance");
-			return true;
-		}else {
-			return false;
-		}
-	}
-	
-	/**
-	 * Méthode qui permet d'activer le bouton TournerADroite de la 
-	 * télécommande du robot donné en argument à la télécommande.
-	 * @return
-	 */
-	public boolean TournerADroite() {
-		if(!this.tournerAGauche && this.allumer) {
-			this.robot.action(Bouton.TOURNERADROITE);
-			this.tournerADroite = true;
-			this.tournerAGauche = false;
-			System.out.println("Robot tourne à droite");
-			return true;
-		}else {
-			return false;
-		}
-	}
-	
-	/**
-	 * Méthode qui permet d'activer le bouton TournerAGauche de la 
-	 * télécommande du robot donné en argument à la télécommande.
-	 * @return
-	 */
-	public boolean TournerAGauche() {
-		if(!this.tournerADroite && this.allumer) {
-			this.robot.action(Bouton.TOURNERAGAUCHE);
-			this.tournerADroite = false;
-			this.tournerAGauche = true;
-			System.out.println("Robot tourne à gauche");
-			return true;
-		}else {
-			return false;
-		}
-	}
-	
-	/**
-	 * Méthode qui permet d'activer le bouton Reculer de la 
-	 * télécommande du robot donné en argument à la télécommande.
-	 * @return
-	 */
-	public boolean Reculer() {
-		if(!this.avancer && this.allumer) {
-			this.robot.action(Bouton.RECULER);
-			this.avancer = false;
-			this.reculer = true;
-			System.out.println("Robot recule");
-			return true;
-		}else {
-			return false;
-		}
+		
+		sc.close();
 	}
 }

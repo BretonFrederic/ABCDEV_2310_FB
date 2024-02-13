@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"Base_objet"}];updateSearchResults();

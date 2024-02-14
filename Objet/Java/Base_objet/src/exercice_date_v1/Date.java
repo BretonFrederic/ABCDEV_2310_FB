@@ -17,7 +17,7 @@ public class Date {
 		this.moisEnLettres = new String[]{"janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"};
 	}
 	
-	public boolean ValiderDate() {
+	private boolean ValiderDate() {
 		boolean estBissextile = this.annee%4 == 0 && this.annee%100 != 0 || this.annee%400 == 0;
 		boolean fevrier29 = this.mois == 2 && this.jour >= 1 && this.jour <= 29;
 		boolean fevrier28 = this.mois == 2 && this.jour >= 1 && this.jour <= 28;
@@ -28,23 +28,42 @@ public class Date {
 		//valide mois de février à 29 jours années bissextile et mois de février à 28 jours pour années non bissextile
 		if(estBissextile && fevrier29 || !estBissextile && fevrier28) {
 			this.estValide = true;
+		//valide les mois de 30 jours et de 31 jours de janvier à juillet
 		}else if(semestre1) {
 			this.estValide = true;
+		//valide les mois de 30 jours et de 31 jours de août à décembre
 		}else if(semestre2) {
 			this.estValide = true;
 		}else {
 			this.estValide = false;
 		}
-		//valide les mois de 30 jours et de 31 jours de janvier à juillet
+		
 		return this.estValide;
 	}
-	/*
-	public static String Afficher(Date _date) {
-		
+	
+	public static void Afficher(Date _date) {
+		if(_date.ValiderDate()) {
+			System.out.printf("%02d/%s/%d\n", _date.jour, _date.moisEnLettres[_date.mois-1], _date.annee);
+		}else {
+			System.out.printf("Date invalide");
+		}
 	}
 	
 	public boolean Comparer(Date _date) {
-		//code
-		return false;
-	}*/
+		boolean date1EstInferieur = false;
+		if(this.annee < _date.annee) {
+			date1EstInferieur = true;
+		}else if(this.annee == _date.annee) {
+			if(this.mois < _date.mois) {
+				date1EstInferieur = true;
+			}else if(this.mois == _date.mois) {
+				if(this.jour < _date.jour) {
+					date1EstInferieur = true;
+				}
+			}
+		}else {
+			date1EstInferieur = false;
+		}
+		return date1EstInferieur;
+	}
 }

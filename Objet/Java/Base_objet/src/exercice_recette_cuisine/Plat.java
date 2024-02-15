@@ -25,4 +25,20 @@ public class Plat {
 	    // ajout d'un nouveau élément au tableau
 	    this.recette[longueurTableau] = _ingredient;
 	}
+	
+	public boolean Comparer(Plat _plat) {
+		int compteur = 0;
+		boolean identique = false;
+		for(int i = 0; i <= this.recette.length - 1; i++) {
+			for(int j = 0; j <= _plat.recette.length - 1; j++) {
+				if(this.recette[i].Comparer(_plat.recette[j])) {
+					compteur++;
+				}
+			}
+		}
+		if(compteur > 0) {
+			identique = true;
+		}
+		return identique;
+	}
 }

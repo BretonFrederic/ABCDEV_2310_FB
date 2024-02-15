@@ -13,7 +13,8 @@ public class App {
 			System.out.println("Il y a au moins un aliment identique et avec le même état dans les 2 plats");
 		}
 		
-		Ingredient nouveauIngredient = new Ingredient("choucroute","cuite", 500, "g");
+		IngredientCru nouveauIngredient = new IngredientCru("choucroute","cru", 500, "g");
+		nouveauIngredient.Cuire(80);
 		choucroute1.AjouterIngredient(nouveauIngredient);
 		
 		if(choucroute1.Comparer(choucroute2)) {

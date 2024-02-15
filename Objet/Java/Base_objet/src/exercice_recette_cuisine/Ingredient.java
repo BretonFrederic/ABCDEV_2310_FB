@@ -18,7 +18,11 @@ public class Ingredient {
 		return this.nomAliment;
 	}
 	
-	private void setEtat(String _etat) {
+	public String getEtat() {
+		return this.etat;
+	}
+	
+	public void setEtat(String _etat) {
 		this.etat = _etat;
 	}
 	
@@ -29,8 +33,5 @@ public class Ingredient {
 			return false;
 		}
 	}
-	
-	public void Cuire() {
-		this.setEtat("cuit");
-	}
+
 }

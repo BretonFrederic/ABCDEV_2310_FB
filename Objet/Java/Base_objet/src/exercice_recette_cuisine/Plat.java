@@ -9,15 +9,19 @@ public class Plat {
 	//constructeur
 	public Plat(String _nomPlat) {
 		nomPlat = _nomPlat;
-		this.recette = new Ingredient[]  {new Ingredient("choucroute","cuite", 500, "g"), 
+		this.recette = new Ingredient[]{new Ingredient("choucroute", "cuit", 500, "g"), 
 										new Ingredient("lard","cuit et entier", 150, "g"),
-										new Ingredient("saucisse","cuite et entière", 0, "g"),  
-										new Ingredient("saucisse","cuite et entière", 0, "g")};
+										new Ingredient("saucisse","cuit et entier", 0, "g"),  
+										new Ingredient("saucisse","cuit et entier", 0, "g")};
 	}
 	
 	//getters et setters
 	public String getNomPlat() {
 		return this.nomPlat;
+	}
+	
+	public Ingredient[] getRecette() {
+		return this.recette;
 	}
 	
 	//méthodes

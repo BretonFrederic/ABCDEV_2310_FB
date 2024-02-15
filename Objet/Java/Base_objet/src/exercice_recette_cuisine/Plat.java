@@ -1,13 +1,14 @@
 package exercice_recette_cuisine;
-
 import java.util.*;
 
 public class Plat {
 	//attributs
 	private Ingredient[] recette;
+	private String nomPlat;
 	
 	//constructeur
-	public Plat() {
+	public Plat(String _nomPlat) {
+		nomPlat = _nomPlat;
 		this.recette = new Ingredient[]  {new Ingredient("choucroute","cuite", 500, "g"), 
 										new Ingredient("lard","cuit et entier", 150, "g"),
 										new Ingredient("saucisse","cuite et entière", 0, "g"),  
@@ -15,6 +16,9 @@ public class Plat {
 	}
 	
 	//getters et setters
+	public String getNomPlat() {
+		return this.nomPlat;
+	}
 	
 	//méthodes
 	public void AjouterIngredient(Ingredient _ingredient) {
@@ -29,8 +33,8 @@ public class Plat {
 	public boolean Comparer(Plat _plat) {
 		int compteur = 0;
 		boolean identique = false;
-		for(int i = 0; i <= this.recette.length - 1; i++) {
-			for(int j = 0; j <= _plat.recette.length - 1; j++) {
+		for(int i = 0; i <= this.recette.length-1; i++) {
+			for(int j = 0; j <= _plat.recette.length-1; j++) {
 				if(this.recette[i].Comparer(_plat.recette[j])) {
 					compteur++;
 				}

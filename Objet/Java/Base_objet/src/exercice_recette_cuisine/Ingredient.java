@@ -17,4 +17,12 @@ public class Ingredient {
 	public String getNomAliment() {
 		return this.nomAliment;
 	}
+	
+	public boolean Comparer(Ingredient _ingredient) {
+		if(this.nomAliment.equals(_ingredient.nomAliment) && this.etat.equals(_ingredient.etat)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }

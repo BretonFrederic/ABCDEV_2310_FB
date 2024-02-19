@@ -11,6 +11,7 @@ public class IngredientCru extends Ingredient{
 	public void Cuire(int _temperature) {
 		if(this.getEtat().equals("cru")&& _temperature > 70) {
 			this.setEtat("cuit");
+			System.out.println("L'aliment est cuit");
 		}
 	}
 }

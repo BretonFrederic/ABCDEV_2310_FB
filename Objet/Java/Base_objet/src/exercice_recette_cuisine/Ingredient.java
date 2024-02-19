@@ -26,6 +26,8 @@ public class Ingredient {
 		this.etat = _etat;
 	}
 	
+	//méthodes
+	
 	public boolean Comparer(Ingredient _ingredient) {
 		if(this.nomAliment.equals(_ingredient.nomAliment) && this.etat.equals(_ingredient.etat)) {
 			return true;

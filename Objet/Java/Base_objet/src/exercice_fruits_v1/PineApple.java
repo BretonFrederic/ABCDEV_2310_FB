@@ -1,6 +1,8 @@
 package exercice_fruits_v1;
 
-public class PineApple extends Fruit {
+public class PineApple extends Fruit implements PeelFruit {
+	
+	private boolean peeled = false;
 	
 	public PineApple() {
 		super("ananas");
@@ -21,5 +23,15 @@ public class PineApple extends Fruit {
 	public boolean hasSeed() {
 		//
 		return false;
+	}
+	
+	@Override
+	public boolean isPeeled() {
+		return peeled;
+	}
+	
+	@Override
+	public String getSkinType() {
+		return "piquante";
 	}
 }

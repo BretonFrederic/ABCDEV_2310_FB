@@ -1,6 +1,6 @@
 package exercice_fruits_v1;
 
-public class Apple extends Fruit {
+public class Apple extends Fruit implements PeelFruit {
 	
 	public Apple() {
 		super("pomme");

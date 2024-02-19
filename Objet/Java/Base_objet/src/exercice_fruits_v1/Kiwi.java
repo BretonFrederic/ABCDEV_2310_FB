@@ -1,6 +1,6 @@
 package exercice_fruits_v1;
 
-public class Kiwi extends Fruit {
+public class Kiwi extends Fruit implements PeelFruit {
 	
 	public Kiwi(String name) {
 		super("Kiwi");
@@ -19,5 +19,15 @@ public class Kiwi extends Fruit {
 	@Override
 	public boolean hasSeed() {
 		return false;
+	}
+	
+	@Override
+	public boolean isPeeled() {
+		return true;
+	}
+	
+	@Override
+	public String getSkinType() {
+		return "doux";
 	}
 }

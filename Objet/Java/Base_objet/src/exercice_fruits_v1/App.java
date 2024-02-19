@@ -11,6 +11,10 @@ public class App {
 		PineApple pen = new PineApple();
 		pen.taste();
 		pen.miam();
+		
+		if(!(a instanceof PeelFruit) {
+			System.out.println("Ce fruit n'implemente pas l'interface PeelFruit");
+		}
 	}
 
 }

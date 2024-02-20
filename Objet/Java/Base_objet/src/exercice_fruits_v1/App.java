@@ -12,7 +12,7 @@ public class App {
 		pen.taste();
 		pen.miam();
 		
-		if(!(a instanceof PeelFruit) {
+		if(!(a instanceof PeelFruit)) {
 			System.out.println("Ce fruit n'implemente pas l'interface PeelFruit");
 		}
 	}

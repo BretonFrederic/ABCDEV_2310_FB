@@ -22,4 +22,14 @@ public class Apple extends Fruit implements PeelFruit {
 		//
 		return true;
 	}
+
+	@Override
+	public boolean isPeeled() {
+		return false;
+	}
+
+	@Override
+	public String getSkinType() {
+		return "lisse";
+	}
 }

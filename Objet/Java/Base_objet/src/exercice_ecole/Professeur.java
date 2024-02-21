@@ -17,6 +17,6 @@ public class Professeur extends Personne {
 		}
 		
 		public String ACours() {
-			return "Le cours va commencer.\n";
+			return "Je suis professeur de "+this.sujet + "." +"\nLe cours va commencer.\n";
 		}
 }

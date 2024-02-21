@@ -17,6 +17,6 @@ public class Etudiant extends Personne {
 	}
 	
 	public String GoToClasse() {
-		return "Je suis en "+this.section+" Je vais en cours.";
+		return "Je suis en "+this.section+" Je vais en cours.\n";
 	}
 }

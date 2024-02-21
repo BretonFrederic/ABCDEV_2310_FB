@@ -14,15 +14,18 @@ public class Personne {
 	
 	//constructeur
 	public Personne(String _nom, String _prenom, int _anneeNaissance) {
-		//
+		this.nom = _nom;
+		this.prenom = _prenom;
+		this.anneeNaissance = _anneeNaissance;
 	}
 	
 	//méthodes
 	public String DireBonjour() {
-		return "Bonjour !!!";
+		return "Bonjour !!!\nJe m'appelle : "+this.prenom+" "+this.nom;
 	}
 	
 	public int CalculAge(int _anneeCourante) {
-		return 1;
+		int age = this.year - this.anneeNaissance;
+		return age;
 	}
 }

@@ -13,11 +13,10 @@ public class Etudiant extends Personne {
 	
 	//méthodes
 	public String AffichageAge() {
-		int age = super.year - super.anneeNaissance;
-		return Integer.toString(age);
+		return "J'ai : "+Integer.toString(this.CalculAge(super.year))+" ans.";
 	}
 	
 	public String GoToClasse() {
-		return "";
+		return "Je suis en "+this.section+" Je vais en cours.";
 	}
 }

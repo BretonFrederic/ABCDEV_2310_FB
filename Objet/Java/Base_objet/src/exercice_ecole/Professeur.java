@@ -13,10 +13,10 @@ public class Professeur extends Personne {
 		
 		//méthodes
 		public String AffichageAge() {
-			return "";
+			return "J'ai : "+Integer.toString(this.CalculAge(super.year))+" ans.";
 		}
 		
 		public String ACours() {
-			return "";
+			return "Le cours va commencer.\n";
 		}
 }

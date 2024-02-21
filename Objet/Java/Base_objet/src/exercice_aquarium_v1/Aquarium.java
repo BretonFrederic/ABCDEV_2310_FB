@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Aquarium {
 	//attributs
 		private  int algue;
-		private Poisson poisson;
+		//private Poisson poisson;
 		private ArrayList<Poisson> listePoisson;
 		
 		//constructeur

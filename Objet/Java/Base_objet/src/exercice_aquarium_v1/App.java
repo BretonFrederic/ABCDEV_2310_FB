@@ -5,14 +5,14 @@ public class App {
 	public static void main(String[] args) {
 		
 		Aquarium a = new Aquarium();
-		a.PasserTemps();
-		a.AjouterAlgue();
-		a.PasserTemps();
-		a.AjouterAlgue();
+		//a.PasserTemps();
+		//a.AjouterAlgue();
+		//a.PasserTemps();
+		//a.AjouterAlgue();
 		Poisson poisson1 = new Poisson("Maurice", "mâle");
 		Poisson poisson2 = new Poisson("Paulette", "femelle");
 		a.AjouterPoisson(poisson1);
-		a.PasserTemps();
+		//a.PasserTemps();
 		a.AjouterAlgue();
 		a.AjouterPoisson(poisson2);
 		a.PasserTemps();		

@@ -13,8 +13,7 @@ public class App {
 		m2.unePorte.setCouleur("vert");
 		Personne vanessa = new Personne("Vanessa",m2);
 		System.out.println(vanessa.toString());
-		
-		Porte p1 = new Porte("jaune");
+
 	}
 
 }

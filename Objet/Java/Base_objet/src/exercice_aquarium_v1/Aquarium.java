@@ -1,34 +1,37 @@
 package exercice_aquarium_v1;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Aquarium {
 	//attributs
-		private  int algue;
-		//private Poisson poisson;
-		private ArrayList<Poisson> listePoisson;
-		
-		//constructeur
-		public Aquarium() {
-			this.algue = 0;
-			this.listePoisson = new ArrayList<Poisson>();
-		}
-		
-		//méthode
-		public void AjouterPoisson(Poisson _poisson) {
-			this.listePoisson.add(_poisson);
-		}
-		
-		public void AjouterAlgue() {
-			this.algue += 1;
-		}
-		
-		public ArrayList<Poisson> getListePoisson(){
-			return this.listePoisson;
-		}
+	private  int algue;
+	private ArrayList<Poisson> listePoisson;
+	
+	//constructeur
+	public Aquarium() {
+		this.algue = 0;
+		this.listePoisson = new ArrayList<Poisson>();
+	}
+	
+	//méthode
+	public void AjouterPoisson(Poisson _poisson) {
+		this.listePoisson.add(_poisson);
+	}
+	
+	public void AjouterAlgue() {
+		this.algue += 1;
+	}
+	
+	public ArrayList<Poisson> getListePoisson(){
+		return this.listePoisson;
+	}
 
-		public void PasserTemps(){
-		
+	public void PasserTemps(){
+	
+		Scanner sc = new Scanner(System.in);
+		char continuer;
+		do {
 			//futur code on fait toutes les actions
 			//...
 			System.out.println("\n"+"nombre algues : " + this.algue+ "\n");
@@ -40,5 +43,9 @@ public class Aquarium {
 			}else {
 				System.out.println("Il n'y a pas de poissons dans l'aquarium.");
 			}
-		}
+		System.out.println("Saisir n pour quitter");
+		continuer = sc.next().charAt(0);
+		}while(continuer != 'n');
+		sc.close();
+	}
 }

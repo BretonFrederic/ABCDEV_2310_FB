@@ -10,8 +10,18 @@ public class Porte {
 		
 	}
 	
+	//getters et setters
+	public String getCouleur() {
+		return couleur;
+	}
+
+	public void setCouleur(String _couleur) {
+		this.couleur = _couleur;
+	}
+	
 	//méthodes
+	@Override
 	public String toString(){
-		return "";
+		return "\nSa porte est de couleur " + this.couleur;
 	}
 }

@@ -1,5 +1,5 @@
 package exercice_aquarium_v1;
-
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Aquarium {
@@ -9,6 +9,7 @@ public class Aquarium {
 	private int nbTours;
 	private ArrayList<Algue> algue;
 	private ArrayList<Poisson> poisson;
+	private Scanner sc;
 			
 	//constructeurs
 	public Aquarium() {
@@ -16,17 +17,70 @@ public class Aquarium {
 		this.nbTours = 0;
 		this.algue = new ArrayList<Algue>();
 		this.poisson = new ArrayList<Poisson>();
+		this.sc = new Scanner(System.in);
 	}
 			
 	//getters et setters
 			
 			
 	//méthodes
-	public boolean AjouterAlgue() {
-		return false;
+	public void AjouterAlgue() {
+		System.out.println("Vous voulez ajouter une algue...");
 	}
 	
-	public boolean AjouterPoisson() {
-		return false;
+	public void AjouterPoisson() {
+		String saisieNom = "";
+		String saisieSexe = "";
+		System.out.println("Saisir le nom du poisson : ");
+		saisieNom = sc.next();
+		System.out.println("Saisir le sexe du poisson : ");
+		saisieSexe = sc.next();
+		this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, RaceH.BAR));
+	}
+	
+	public void PasserTemps() {
+		boolean quitterAquarium = false;	
+		do {
+			char choix = ' ';
+			boolean quitterMenu = false;
+			do {
+				System.out.println("MENU\n\tP -> Ajouter poisson"
+						+ "\n\tA -> Ajouter algue"
+						+ "\n\tC -> continuer"
+						+ "\n\tQ -> quitter\n");
+				choix = this.sc.next().charAt(0);
+				
+				switch(choix) {
+				case 'P':
+					this.AjouterPoisson();
+					break;
+				case 'A':
+					this.AjouterAlgue();
+					break;
+				case 'C':
+					//vieillir <- manger+reproduction
+					//passer à l'affichage de la situation
+					quitterMenu = true;
+					break;
+				case 'Q':
+					quitterMenu = true;
+					quitterAquarium = true;
+					//quitter le programme de l'aquarium
+					break;
+				default:
+					System.out.println("Ce choix n'existe pas.");
+					break;
+				}
+			}while(!quitterMenu);
+			//Afficher situation
+			if(this.poisson.size() > 0) {
+				for(int i = 0; i <= this.poisson.size()-1; i++) {
+					this.poisson.get(i).Vieillir();
+					System.out.println(this.poisson.get(i).toString());
+				}
+			}
+			
+		}while(!quitterAquarium);
+		this.sc.close();
 	}
 }

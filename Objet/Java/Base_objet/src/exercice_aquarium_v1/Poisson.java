@@ -17,6 +17,14 @@ public abstract class Poisson {
 	}
 
 	//getters et setters
+	public String getNom() {
+		return this.nom;
+	}
+
+	public void setNom(String _nom) {
+		this.nom = _nom;
+	}
+
 	public String getSexe() {
 		return this.sexe;
 	}
@@ -49,8 +57,6 @@ public abstract class Poisson {
 		if(this.pointsVie > 0 && this.age < 20) {
 			this.pointsVie += 1;
 			this.age += 1;
-			System.out.println("Age poisson : "+this.getAge());
-			System.out.println("Points de Vie : "+this.getPointsVie()+"\n");
 			//this.DonnerlaVie();
 			return true;
 		}else {

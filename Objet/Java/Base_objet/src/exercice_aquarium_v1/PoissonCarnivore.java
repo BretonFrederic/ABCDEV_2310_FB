@@ -12,7 +12,14 @@ public class PoissonCarnivore extends Poisson {
 	}
 	
 	//getters et setters
-	
+	public RaceC getRace() {
+		return this.race;
+	}
+
+	@Override
+	public String toString() {
+		return "Poisson=Carnivore, race=" + this.race + ", nom=" + super.getNom() + ", sexe=" + super.getSexe() + ", age=" + super.getAge() + ", pointsVie=" + super.getPointsVie();
+	}
 	
 	//méthodes
 	

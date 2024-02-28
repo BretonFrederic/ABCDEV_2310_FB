@@ -12,7 +12,14 @@ public class PoissonHerbivore extends Poisson {
 	}
 		
 	//getters et setters
-		
+	public RaceH getRace() {
+		return this.race;
+	}
+
+	@Override
+	public String toString() {
+		return "Poisson=Herbivore, race=" + this.race + ", nom=" + super.getNom() + ", sexe=" + super.getSexe() + ", age=" + super.getAge() + ", pointsVie=" + super.getPointsVie();
+	}
 		
 	//méthodes
 	

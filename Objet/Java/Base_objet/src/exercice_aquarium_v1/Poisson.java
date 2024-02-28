@@ -70,7 +70,7 @@ public abstract class Poisson {
 	//méthodes concrètes
 	public boolean Vieillir() {
 		if(this.pointsVie > 0 && this.age < 20) {
-			this.pointsVie += 1;
+			this.pointsVie -= 1;
 			this.age += 1;
 			//this.DonnerlaVie();
 			return true;

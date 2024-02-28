@@ -39,6 +39,8 @@ public class Aquarium {
 		String saisieNom = "";
 		int saisieSexe = 0;
 		int saisieRace = 0;
+		boolean selection = false;
+		int index = 0;
 		
 		System.out.println("Saisir le nom du poisson : ");
 		saisieNom = sc.next();
@@ -57,51 +59,98 @@ public class Aquarium {
 		//hermaphrodite opportuniste 4 -> 	 sole || poisson-clown
 		switch(saisieSexe) {
 		case 1:
-			boolean selection = saisieRace == 1 || saisieRace == 2 || saisieRace == 3 || saisieRace == 4;
-			do {
+			do{
 				System.out.println("Saisir la race du poisson : "
 						+ "\n\t1 -> BAR"
 						+ "\n\t2 -> CARPE"
 						+ "\n\t3 -> MEROU"
 						+ "\n\t4 -> THON\n");
 				saisieRace = sc.nextInt();
+				selection = saisieRace == 1 || saisieRace == 2 || saisieRace == 3 || saisieRace == 4;
 			}while(!selection);
-			this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, Race.BAR);
+			index = saisieRace;
+			Race poisson = Race.values()[index];
+			if(index < 4) {
+				this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, poisson));
+			}else {
+				this.poisson.add(new PoissonCarnivore(saisieNom, saisieSexe, poisson));
+			}
+			
 			break;
 		case 2:
-			selection = saisieRace.equals("CARPE") || saisieRace.equals("THON");
 			do {
 				System.out.println("Saisir la race du poisson : "
 						+ "\n\t1 -> CARPE"
 						+ "\n\t2 -> THON\n");
-				saisieRace = sc.next();
+				saisieRace = sc.nextInt();
+				selection = saisieRace == 1 || saisieRace == 2;
 			}while(!selection);
-			this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, Race.valueOf(saisieRace)));
+			index = saisieRace*2;
+			poisson = Race.values()[index];
+			if(index < 4) {
+				this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, poisson));
+			}else {
+				this.poisson.add(new PoissonCarnivore(saisieNom, saisieSexe, poisson));
+			}
 			break;
 		case 3:
-			selection = saisieRace.equals("BAR") || saisieRace.equals("MEROU");
 			do {
 				System.out.println("Saisir la race du poisson : "
 						+ "\n\t1 -> BAR"
-						+ "\n\t3 -> MEROU\n");
-				saisieRace = sc.next();
+						+ "\n\t2 -> MEROU\n");
+				saisieRace = sc.nextInt();
+				selection = saisieRace == 1 || saisieRace == 2;
 			}while(!selection);
-			this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, Race.valueOf(saisieRace)));
+			index = saisieRace+(saisieRace-1);
+			poisson = Race.values()[index];
+			if(index < 4) {
+				this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, poisson));
+			}else {
+				this.poisson.add(new PoissonCarnivore(saisieNom, saisieSexe, poisson));
+			}
 			break;
 		case 4:
-			selection = saisieRace.equals("SOLE") || saisieRace.equals("POISSON_CLOWN");
 			do {
 				System.out.println("Saisir la race du poisson : "
 						+ "\n\t1 -> SOLE"
 						+ "\n\t2 -> POISSON_CLOWN\n");
-				saisieRace = sc.next();
+				saisieRace = sc.nextInt();
+				selection = saisieRace == 1 || saisieRace == 2;
 			}while(!selection);
-			this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, Race.valueOf(saisieRace)));
+			index = saisieRace=5*saisieRace-5;
+			poisson = Race.values()[index];
+			if(index < 4) {
+				this.poisson.add(new PoissonHerbivore(saisieNom, saisieSexe, poisson));
+			}else {
+				this.poisson.add(new PoissonCarnivore(saisieNom, saisieSexe, poisson));
+			}
 			break;
 		}
+		selection = false;
 	}
 	
 	public void PasserTemps() {
+		//init
+		this.algue.add(new Algue());
+		this.algue.add(new Algue());
+		this.algue.add(new Algue());
+		this.algue.add(new Algue());
+		this.algue.add(new Algue());
+		this.algue.add(new Algue());
+		this.poisson.add(new PoissonHerbivore("Maurice", 1, Race.CARPE));
+		this.poisson.add(new PoissonHerbivore("Josette", 2, Race.CARPE));
+		this.poisson.add(new PoissonCarnivore("Edouard", 1, Race.THON));
+		this.poisson.add(new PoissonCarnivore("Pauline", 2, Race.THON));
+		this.poisson.add(new PoissonHerbivore("Prisca", 3, Race.BAR));
+		this.poisson.add(new PoissonHerbivore("Alix", 3, Race.BAR));
+		this.poisson.add(new PoissonCarnivore("Gilbert", 3, Race.MEROU));
+		this.poisson.add(new PoissonCarnivore("Appoline", 3, Race.MEROU));
+		this.poisson.add(new PoissonHerbivore("Brigitte", 4, Race.SOLE));
+		this.poisson.add(new PoissonHerbivore("Donald", 4, Race.SOLE));
+		this.poisson.add(new PoissonCarnivore("Odette", 4, Race.POISSON_CLOWN));
+		this.poisson.add(new PoissonCarnivore("Igor", 4, Race.POISSON_CLOWN));
+		
+		//gameloop
 		boolean quitterAquarium = false;	
 		do {
 			char choix = ' ';
@@ -126,7 +175,6 @@ public class Aquarium {
 				case 'Q':
 					quitterMenu = true;
 					quitterAquarium = true;
-					//quitter le programme de l'aquarium
 					break;
 				default:
 					System.out.println("Ce choix n'existe pas.");
@@ -139,21 +187,29 @@ public class Aquarium {
 			//Afficher situation
 			if(this.algue.size() > 0) {
 				for(int i = 0; i <= this.algue.size()-1; i++) {
-					System.out.println(this.algue.get(i).toString());
-					this.algue.get(i).Vieillir();
+					if(!this.algue.get(i).Vieillir()) {
+						this.algue.remove(i);
+					}else {
+						System.out.println(this.algue.get(i).toString());
+					}
 				}
 			}else {
-				System.out.println("Il n'y a pas d'algue dans l'aquarium\n");
+				System.out.println("Il n'y a pas d'algues dans l'aquarium\n");
 			}
+			System.out.println(this.algue.size());
 			
 			if(this.poisson.size() > 0) {
 				for(int i = 0; i <= this.poisson.size()-1; i++) {
-					System.out.println(this.poisson.get(i).toString());
-					this.poisson.get(i).Vieillir();
+					if(!this.poisson.get(i).Vieillir()) {
+						this.poisson.remove(i);
+					}else {
+						System.out.println(this.poisson.get(i).toString());
+					}
 				}
 			}else {
 				System.out.println("Il n'y a pas de poissons dans l'aquarium\n");
 			}
+			System.out.println(this.poisson.size());
 			
 		}while(!quitterAquarium);
 		this.sc.close();

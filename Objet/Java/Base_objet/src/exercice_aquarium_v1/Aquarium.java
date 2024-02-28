@@ -149,7 +149,7 @@ public class Aquarium {
 		this.poisson.add(new PoissonHerbivore("Donald", 4, Race.SOLE));
 		this.poisson.add(new PoissonCarnivore("Odette", 4, Race.POISSON_CLOWN));
 		this.poisson.add(new PoissonCarnivore("Igor", 4, Race.POISSON_CLOWN));
-		
+
 		//gameloop
 		boolean quitterAquarium = false;	
 		do {
@@ -188,7 +188,7 @@ public class Aquarium {
 			if(this.algue.size() > 0) {
 				for(int i = 0; i <= this.algue.size()-1; i++) {
 					if(!this.algue.get(i).Vieillir()) {
-						this.algue.remove(i);
+						//this.algue.remove(i);
 					}else {
 						System.out.println(this.algue.get(i).toString());
 					}
@@ -199,11 +199,20 @@ public class Aquarium {
 			System.out.println(this.algue.size());
 			
 			if(this.poisson.size() > 0) {
+				ArrayList<String> poissonMort = new ArrayList<>();
 				for(int i = 0; i <= this.poisson.size()-1; i++) {
 					if(!this.poisson.get(i).Vieillir()) {
-						this.poisson.remove(i);
+						poissonMort.add(this.poisson.get(i).toString());
+						//this.poisson.remove(i);
 					}else {
 						System.out.println(this.poisson.get(i).toString());
+					}
+				}
+				for(int i = 0; i <= poissonMort.size()-1; i++) {
+					for(int j = 0; j <= this.poisson.size()-1; j++) {
+						if(poissonMort.get(i).toString() == this.poisson.get(j).toString()) {
+							this.poisson.remove(j);
+						}
 					}
 				}
 			}else {

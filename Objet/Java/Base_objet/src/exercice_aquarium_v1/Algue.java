@@ -36,8 +36,6 @@ public class Algue {
 		if(this.pointsVie > 0 && this.age < 20) {
 			this.pointsVie += 1;
 			this.age += 1;
-			System.out.println("Age algue : "+this.getAge());
-			System.out.println("Points de Vie : "+this.getPointsVie()+ "\n");
 			//this.DonnerlaVie();
 			return true;
 		}else {
@@ -59,5 +57,10 @@ public class Algue {
 			System.out.println("Algue trop jeune pour se reproduire\n");
 			return false;
 		}
+	}
+	
+	@Override
+	public String toString() {
+		return "Algue, age=" + this.getAge() + ", pointsVie=" + this.getPointsVie()+"\n";
 	}
 }

@@ -4,12 +4,12 @@ public abstract class Poisson {
 
 	//attributs
 	private String nom;
-	private String sexe;
+	private int sexe;
 	private int age;
 	private int pointsVie;
 	
 	//constructeur
-	public Poisson(String _nom, String _sexe) {
+	public Poisson(String _nom, int _sexe) {
 		this.nom = _nom;
 		this.sexe = _sexe;
 		this.age = 0;
@@ -26,10 +26,25 @@ public abstract class Poisson {
 	}
 
 	public String getSexe() {
-		return this.sexe;
+		String sexePoisson = "";
+		switch(this.sexe) {
+		case 1:
+			sexePoisson = "mâle";
+			break;
+		case 2:
+			sexePoisson = "femelle";
+			break;
+		case 3:
+			sexePoisson = "hermaphrodite avec l'âge";
+			break;
+		case 4:
+			sexePoisson = "hermaphrodite opportuniste";
+			break;
+		}
+		return sexePoisson;
 	}
 
-	public void setSexe(String _sexe) {
+	public void setSexe(int _sexe) {
 		this.sexe = _sexe;
 	}
 

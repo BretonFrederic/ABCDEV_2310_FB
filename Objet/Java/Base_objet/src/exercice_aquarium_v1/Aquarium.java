@@ -58,8 +58,6 @@ public class Aquarium {
 					this.AjouterAlgue();
 					break;
 				case 'C':
-					//vieillir <- manger+reproduction
-					//passer à l'affichage de la situation
 					quitterMenu = true;
 					break;
 				case 'Q':
@@ -72,11 +70,14 @@ public class Aquarium {
 					break;
 				}
 			}while(!quitterMenu);
+			
+			//reproduction + nourrir
+			
 			//Afficher situation
 			if(this.poisson.size() > 0) {
 				for(int i = 0; i <= this.poisson.size()-1; i++) {
-					this.poisson.get(i).Vieillir();
 					System.out.println(this.poisson.get(i).toString());
+					this.poisson.get(i).Vieillir();
 				}
 			}
 			

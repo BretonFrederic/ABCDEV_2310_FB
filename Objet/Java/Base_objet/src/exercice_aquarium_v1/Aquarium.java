@@ -44,12 +44,15 @@ public class Aquarium {
 		
 		System.out.println("Saisir le nom du poisson : ");
 		saisieNom = sc.next();
-		System.out.println("Saisir le sexe du poisson : "
-				+ "\n\t1 -> mâle"
-				+ "\n\t2 -> femelle"
-				+ "\n\t3 -> hermaphrodite avec l'âge"
-				+ "\n\t4 -> hermaphrodite opportuniste\n");
-		saisieSexe = sc.nextInt();
+		do {
+			System.out.println("Saisir le sexe du poisson : "
+					+ "\n\t1 -> mâle"
+					+ "\n\t2 -> femelle"
+					+ "\n\t3 -> hermaphrodite avec l'âge"
+					+ "\n\t4 -> hermaphrodite opportuniste\n");
+			saisieSexe = sc.nextInt();
+		}while(saisieSexe < 1 || saisieSexe > 4);
+		
 		//choix de race fonction du sexe
 		//mâle 1 ----------------------->	carpe || thon ||
 		//									  bar || mérou
@@ -153,26 +156,26 @@ public class Aquarium {
 		//gameloop
 		boolean quitterAquarium = false;	
 		do {
-			char choix = ' ';
+			int choix = 0;
 			boolean quitterMenu = false;
 			do {
-				System.out.println("MENU\n\tP -> Ajouter poisson"
-						+ "\n\tA -> Ajouter algue"
-						+ "\n\tC -> continuer"
-						+ "\n\tQ -> quitter\n");
-				choix = this.sc.next().charAt(0);
+				System.out.println("MENU\n\t1 -> Ajouter poisson"
+						+ "\n\t2 -> Ajouter algue"
+						+ "\n\t3 -> continuer"
+						+ "\n\t4 -> quitter\n");
+				choix = this.sc.nextInt();
 				
 				switch(choix) {
-				case 'P':
+				case 1:
 					this.AjouterPoisson();
 					break;
-				case 'A':
+				case 2:
 					this.AjouterAlgue();
 					break;
-				case 'C':
+				case 3:
 					quitterMenu = true;
 					break;
-				case 'Q':
+				case 4:
 					quitterMenu = true;
 					quitterAquarium = true;
 					break;

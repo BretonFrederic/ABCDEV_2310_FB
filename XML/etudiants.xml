@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formation intitule="Développeur web/web mobile" duree="16 mois" debut="09/09/2024" fin="05/01/2025">
+    <listeEtudiants>
+        <etudiant id="01">
+            <nom>Neymar<nom/>
+            <prenom>Jean<prenom/>
+            <dateNaissance>1985<dateNaissance/>
+            <eMail adresse="jneymar@crampon.fr"/>
+        <etudiant/>
+        <etudiant id="02">
+            <nom>Bridou<nom/>
+            <prenom>Justine<prenom/>
+            <dateNaissance>1992<dateNaissance/>
+            <eMail adresse="jbridou@apero.fr"/>
+        <etudiant/>
+        <etudiant id="03">
+            <nom>Rimbeau<nom/>
+            <prenom>John<prenom/>
+            <Naissance date="1988"/>
+            <eMail adresse="jrimbeau@delicat.fr"/>
+        <etudiant/>
+    <listeEtudiants/>
+<formation/>

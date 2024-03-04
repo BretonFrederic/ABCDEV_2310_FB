@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+   <entrees>
+        <entree id="01">
+            <nom>Huitres<nom/>
+            <prix>5.50 €<prix/>
+            <description>Huîtres aux tomates séchées, vin blanc et parmesan<description/>
+        </entree>
+        <entree id="02">
+            <nom>Saumon<nom/>
+            <prix>5.50 €<prix/>
+            <description>Carpaccio de saumon à l'aneth à ma façon<description/>
+        </entree>
+   </entrees>
+   <plats>
+        <plat id="01">
+            <nom>Escalope<nom/>
+            <prix>1.95 €<prix/>
+            <description>Escalopes normandes<description/>
+        </plat>
+        <plat id="02">
+            <nom>Quiche<nom/>
+            <prix>1.73 €<prix/>
+            <description>Quiche aux épinards et fromage blanc<description/>
+        </plat>
+        <plat id="03">
+            <nom>Gratin<nom/>
+            <prix>1.84 €<prix/>
+            <description>Gratin de poireaux au chèvre<description/>
+        </plat>
+   </plats>
+   <desserts>
+        <dessert id="01">
+            <nom>Crème brûlée<nom/>
+            <prix>1.65 €<prix/>
+            <description>Crème brûlée à l’orange<description/>
+        </dessert>
+        <dessert id="02">
+            <nom>Ananas<nom/>
+            <prix>0.60 €<prix/>
+            <description>Carpaccio d'ananas au gingembre<description/>
+        </dessert>
+   </dessert>
+</menu>

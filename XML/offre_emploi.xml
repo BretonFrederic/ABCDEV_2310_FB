@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<offresEmploi>
+    <emploi id="01">
+        <intitule>Développeur PHP<intitule/>
+        <ville>Paris<ville/>
+        <description> Une description du poste (tâches, avantages, profil recherché)<description/>
+        <competences>
+            <competence numero="01">ma compétence numéro 1<competence/>
+            <competence numero="02">ma compétence numéro 2<competence/>
+            <competence numero="03">ma compétence numéro 3<competence/>
+            <competence numero="04">ma compétence numéro 4<competence/>
+            <competence numero="05">ma compétence numéro 5<competence/>
+        <competences/>
+        <debut><debut/>
+        <salaireAnnuel><salaireAnnuel/>
+        <email><eMail/>
+    <emploi/>
+    <emploi id="02">
+        <intitule>Développeur JAVA<intitule/>
+        <ville>Mulhouse<ville/>
+        <description> Une description du poste (tâches, avantages, profil recherché)<description/>
+        <competences>
+            <competence numero="01">ma compétence numéro 1<competence/>
+            <competence numero="02">ma compétence numéro 2<competence/>
+            <competence numero="03">ma compétence numéro 3<competence/>
+            <competence numero="04">ma compétence numéro 4<competence/>
+            <competence numero="05">ma compétence numéro 5<competence/>
+        <competences/>
+        <debut><debut/>
+        <salaireAnnuel><salaireAnnuel/>
+        <email><eMail/>
+    <emploi/>
+    <emploi id="03">
+        <intitule>Développeur NodeJS<intitule/>
+        <ville>Toulouse<ville/>
+        <description> Une description du poste (tâches, avantages, profil recherché)<description/>
+        <competences>
+            <competence numero="01">ma compétence numéro 1<competence/>
+            <competence numero="02">ma compétence numéro 2<competence/>
+            <competence numero="03">ma compétence numéro 3<competence/>
+            <competence numero="04">ma compétence numéro 4<competence/>
+            <competence numero="05">ma compétence numéro 5<competence/>
+        <competences/>
+        <debut><debut/>
+        <salaireAnnuel><salaireAnnuel/>
+        <email><eMail/>
+    <emploi/>
+<offresEmploi/>

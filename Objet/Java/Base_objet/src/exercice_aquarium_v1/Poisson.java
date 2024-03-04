@@ -65,7 +65,7 @@ public abstract class Poisson {
 	}
 	
 	//méthodes abstraites
-	
+	public abstract boolean Manger(Aquarium _aquarium);
 	
 	//méthodes concrètes
 	public boolean Vieillir() {

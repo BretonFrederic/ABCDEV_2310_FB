@@ -21,7 +21,13 @@ public class Aquarium {
 	}
 			
 	//getters et setters
-			
+	public ArrayList<Algue> getAlgue() {
+		return this.algue;
+	}
+	
+	public ArrayList<Poisson> getPoisson() {
+		return this.poisson;
+	}
 			
 	//méthodes
 	public void AjouterAlgue() {
@@ -64,10 +70,10 @@ public class Aquarium {
 		case 1:
 			do{
 				System.out.println("Saisir la race du poisson : "
-						+ "\n\t1 -> BAR"
-						+ "\n\t2 -> CARPE"
-						+ "\n\t3 -> MEROU"
-						+ "\n\t4 -> THON\n");
+						+ "\n\t1 -> BAR(herbivore)"
+						+ "\n\t2 -> CARPE(herbivore)"
+						+ "\n\t3 -> MEROU(carnivore)"
+						+ "\n\t4 -> THON(carnivore)\n");
 				saisieRace = sc.nextInt();
 				selection = saisieRace == 1 || saisieRace == 2 || saisieRace == 3 || saisieRace == 4;
 			}while(!selection);
@@ -83,8 +89,8 @@ public class Aquarium {
 		case 2:
 			do {
 				System.out.println("Saisir la race du poisson : "
-						+ "\n\t1 -> CARPE"
-						+ "\n\t2 -> THON\n");
+						+ "\n\t1 -> CARPE(herbivore)"
+						+ "\n\t2 -> THON(carnivore)\n");
 				saisieRace = sc.nextInt();
 				selection = saisieRace == 1 || saisieRace == 2;
 			}while(!selection);
@@ -99,8 +105,8 @@ public class Aquarium {
 		case 3:
 			do {
 				System.out.println("Saisir la race du poisson : "
-						+ "\n\t1 -> BAR"
-						+ "\n\t2 -> MEROU\n");
+						+ "\n\t1 -> BAR(herbivore)"
+						+ "\n\t2 -> MEROU(carnivore)\n");
 				saisieRace = sc.nextInt();
 				selection = saisieRace == 1 || saisieRace == 2;
 			}while(!selection);
@@ -115,8 +121,8 @@ public class Aquarium {
 		case 4:
 			do {
 				System.out.println("Saisir la race du poisson : "
-						+ "\n\t1 -> SOLE"
-						+ "\n\t2 -> POISSON_CLOWN\n");
+						+ "\n\t1 -> SOLE(herbivore)"
+						+ "\n\t2 -> POISSON_CLOWN(carnivore)\n");
 				saisieRace = sc.nextInt();
 				selection = saisieRace == 1 || saisieRace == 2;
 			}while(!selection);
@@ -186,6 +192,13 @@ public class Aquarium {
 			}while(!quitterMenu);
 			
 			//reproduction + nourrir
+			if(this.poisson.size() > 0) {
+				for(int i = 0; i <= this.poisson.size()-1; i++) {
+					if(this.poisson.get(i).getPointsVie() <=5) {
+						this.poisson.get(i).Manger(this);
+					}
+				}
+			}
 			
 			//Afficher situation
 			

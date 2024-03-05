@@ -1,8 +1,8 @@
-<?xml version="1.0" changelog="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <semaine numero="10">
     <films>
-        <film nom="Dune, deuxième partie">
-            <projection jour="05/03/2024">
+        <projection jour="05/03/2024">
+            <film nom="Dune, deuxième partie">
                 <horaire seance="01">10:25</horaire>
                 <horaire seance="02">13:40</horaire>
                 <horaire seance="03">16:00</horaire>
@@ -12,35 +12,27 @@
                 <horaire seance="07">20:00</horaire>
                 <horaire seance="08">20:20</horaire>
                 <horaire seance="09">21:50</horaire>
-            </projection>
-        </film>
-        <film nom="Bob Marley: One Love">
-            <projection jour="05/03/2024">
+            </film>
+            <film nom="Bob Marley: One Love">
                 <horaire seance="01">11:00</horaire>
                 <horaire seance="02">13:40</horaire>
                 <horaire seance="03">16:30</horaire>
                 <horaire seance="04">18:00</horaire>
                 <horaire seance="05">19:30</horaire>
                 <horaire seance="06">22:30</horaire>
-            </projection>
-        </film>
-         <film nom="Le Dernier Jaguar">
-            <projection jour="05/03/2024">
+            </film>
+            <film nom="Le Dernier Jaguar">
                 <horaire seance="01">10:40</horaire>
                 <horaire seance="02">13:30</horaire>
                 <horaire seance="03">15:45</horaire>
                 <horaire seance="04">18:10</horaire>
-            </projection>
-        </film>
-        <film nom="Astérix : Le Domaine des dieux">
-            <projection jour="05/03/2024">
+            </film>
+            <film nom="Astérix : Le Domaine des dieux">
                 <horaire seance="01">14:00</horaire>
-            </projection>
-        </film>
-        <film nom="Opération Portugal 2 : La Vie de château">
-            <projection jour="05/03/2024">
+            </film>
+            <film nom="Opération Portugal 2 : La Vie de château">
                 <horaire seance="01">16:00</horaire>
-            </projection>
-        </film>
+            </film>
+        </projection>
     </films>
 </semaine>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maraicher nom="Eric et Caroline">
+    <legume id="01">Betterave</legume>
+    <legume id="02">Pomme de terre</legume>
+    <legume id="03">Chou-fleur</legume>
+    <legume id="04">Epinard</legume>
+    <legume id="05">Courge</legume>
+    <legume id="06">Endive</legume>
+</maraicher>

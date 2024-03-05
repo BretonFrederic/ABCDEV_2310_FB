@@ -1,48 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <offresEmploi>
     <emploi id="01">
-        <intitule>Développeur PHP<intitule/>
-        <ville>Paris<ville/>
-        <description> Une description du poste (tâches, avantages, profil recherché)<description/>
+        <intitule>Développeur PHP</intitule>
+        <ville>Paris</ville>
+        <description>
+            Nous recherchons pour le compte de notre partenaire, spécialisé dans la vente de produits pharma en ligne un développeur back end PHP.
+
+            Vos missions incluront :
+            - Le développement et la maintenance de notre application backend en PHP avec Symfony,
+            - L'administration et l'optimisation de serveurs Linux
+            - L'implémentation de pratiques SEO pour améliorer le référencement du site
+            - L'écriture de tests unitaires et fonctionnels
+            - Et la collaboration avec l'équipe technique pour améliorer la qualité du code et architecture.
+        </description>
         <competences>
-            <competence numero="01">ma compétence numéro 1<competence/>
-            <competence numero="02">ma compétence numéro 2<competence/>
-            <competence numero="03">ma compétence numéro 3<competence/>
-            <competence numero="04">ma compétence numéro 4<competence/>
-            <competence numero="05">ma compétence numéro 5<competence/>
-        <competences/>
-        <debut><debut/>
-        <salaireAnnuel><salaireAnnuel/>
-        <email><eMail/>
-    <emploi/>
+            <competence numero="01">expérience solide en PHP et Symfony</competence>
+            <competence numero="02">administration de serveurs Linux</competence>
+            <competence numero="03">compréhension des principes de SEO</competence>
+            <competence numero="04">Une maîtrise des bases de données SQL et NoSQL</competence>
+            <competence numero="05">Git, des compétences en sécurité des systèmes</competence>
+        </competences>
+        <debut>11/03/2024</debut>
+        <salaireAnnuel>35 000 - 40 000 EUR par an</salaireAnnuel>
+        <eMail>postephp@developpeur.fr</eMail>
+    </emploi>
     <emploi id="02">
-        <intitule>Développeur JAVA<intitule/>
-        <ville>Mulhouse<ville/>
-        <description> Une description du poste (tâches, avantages, profil recherché)<description/>
+        <intitule>Développeur JAVA</intitule>
+        <ville>Mulhouse</ville>
+        <description>
+            Vos missions seront :
+
+            Prendre en charge une partie des développements fullstack en JAVA/JAVASCRIPT – STRUTS,
+            D’analyser et de corriger et/ou de faire évoluer une application informatique,
+            Participer aux différentes phases de tests et rédiger la documentation projet associée,
+            Travailler au sein d’une équipe et sous assurance qualité normes ISO 9001
+        </description>
         <competences>
-            <competence numero="01">ma compétence numéro 1<competence/>
-            <competence numero="02">ma compétence numéro 2<competence/>
-            <competence numero="03">ma compétence numéro 3<competence/>
-            <competence numero="04">ma compétence numéro 4<competence/>
-            <competence numero="05">ma compétence numéro 5<competence/>
-        <competences/>
-        <debut><debut/>
-        <salaireAnnuel><salaireAnnuel/>
-        <email><eMail/>
-    <emploi/>
+            <competence numero="01">Maîtrise des développements en JAVA/JAVASCRIPT – STRUTS</competence>
+            <competence numero="02">Maitrise du PL-SQL/SQL (procédures/fonctions stockées)</competence>
+            <competence numero="03">Maitrise des web services REST</competence>
+            <competence numero="04">Esprit d'équipe</competence>
+            <competence numero="05">Sens de l'organisation</competence>
+        </competences>
+        <debut>dès que possible</debut>
+        <salaireAnnuel>35 - 45 k€ brut annuel</salaireAnnuel>
+        <eMail>postejava@developpeur.fr</eMail>
+    </emploi>
     <emploi id="03">
-        <intitule>Développeur NodeJS<intitule/>
-        <ville>Toulouse<ville/>
-        <description> Une description du poste (tâches, avantages, profil recherché)<description/>
+        <intitule>Développeur NodeJS</intitule>
+        <ville>Toulouse</ville>
+        <description>
+            Intégré à nos équipes sur notre Factory ou chez nos clients, vous interviendrez sur un projet de développement Fullstack.
+
+            En tant que Développeur NodeJS (H/F), vous :
+
+            Développer et effectué la maintenance d'un Back Office
+            Participer à l'ensemble du cycle de vie des applications (le codage et le décodage)
+            Ecrire du code pour développer des applications Web fonctionnelles
+            Développer de nouveaux services et améliorer les services existants
+            Fournir une formation et un soutien aux équipes internes
+        </description>
         <competences>
-            <competence numero="01">ma compétence numéro 1<competence/>
-            <competence numero="02">ma compétence numéro 2<competence/>
-            <competence numero="03">ma compétence numéro 3<competence/>
-            <competence numero="04">ma compétence numéro 4<competence/>
-            <competence numero="05">ma compétence numéro 5<competence/>
-        <competences/>
-        <debut><debut/>
-        <salaireAnnuel><salaireAnnuel/>
-        <email><eMail/>
-    <emploi/>
-<offresEmploi/>
+            <competence numero="01">Node JS</competence>
+            <competence numero="02">Docker Elastic Search</competence>
+            <competence numero="03">Postgres</competence>
+            <competence numero="04">Application Web</competence>
+            <competence numero="05">Back office</competence>
+        </competences>
+        <debut>25/03/2024</debut>
+        <salaireAnnuel>25 - 38 k€ brut annuel</salaireAnnuel>
+        <eMail>postenodejs@amiltone.fr</eMail>
+    </emploi>
+</offresEmploi>

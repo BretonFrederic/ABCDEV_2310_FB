@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concessionnaire nom="CONCEPT CAR 68">
+    <vehicules>
+        <neuf>aucunes</neuf>
+        <occasion>
+            <voiture nom="Passat 2.0 TDI" marque="Volkswagen" puissanceCV="7" kms="116440" carburant="diesel" année="2013" prix="12900"/>
+            <voiture nom="Polo 1.6 TDI" marque="Volkswagen" puissanceCV="5" kms="156756" carburant="diesel" année="2013" prix="8300"/>
+            <voiture nom="118d xDrive" marque="bmw" puissanceCV="8" kms="166361" carburant="diesel" année="2015" prix="13990"/>
+            <voiture nom="Golf VII 1.6 TDI" marque="Volkswagen" puissanceCV="5" kms="96446" carburant="diesel" année="2013" prix="11900"/>
+        </occasion>
+    </vehicules>
+</concessionnaire>

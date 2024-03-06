@@ -1,0 +1,5 @@
+passer en superUser
+
+fbreton@CRM-UC-3925:~/documents$ sudo su -
+[sudo] password for fbreton:
+root@CRM-UC-3925:~# ls

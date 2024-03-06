@@ -1,0 +1,19 @@
+securisé les fichiers dans un dossier tant que la session est en cours
+
+alias ll="ls | less"
+ll
+
+App.class
+App.java
+addition2.class
+addition2.java
+alanTuring.txt
+myfamily.sh
+pokemon.sh
+test
+toto.txt
+trouve-ma-ville.sh
+(END)
+
+// q pour quitter
+

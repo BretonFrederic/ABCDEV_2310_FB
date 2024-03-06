@@ -158,6 +158,7 @@ public class Aquarium {
 		this.algue.add(new Algue());
 		this.algue.add(new Algue());
 		this.algue.add(new Algue());
+		/*
 		this.poisson.add(new PoissonHerbivore("Maurice", 1, Race.CARPE));
 		this.poisson.add(new PoissonHerbivore("Josette", 2, Race.CARPE));
 		this.poisson.add(new PoissonCarnivore("Edouard", 1, Race.THON));
@@ -170,6 +171,7 @@ public class Aquarium {
 		this.poisson.add(new PoissonHerbivore("Donald", 4, Race.SOLE));
 		this.poisson.add(new PoissonCarnivore("Odette", 4, Race.POISSON_CLOWN));
 		this.poisson.add(new PoissonCarnivore("Igor", 4, Race.POISSON_CLOWN));
+		*/
 
 		//gameloop
 		boolean quitterAquarium = false;	

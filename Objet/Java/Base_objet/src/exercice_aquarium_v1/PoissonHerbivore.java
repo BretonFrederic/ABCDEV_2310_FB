@@ -18,6 +18,7 @@ public class PoissonHerbivore extends Poisson {
 		return this.race;
 	}
 
+	//méthode toString
 	@Override
 	public String toString() {
 		return "Poisson="+this.regimeAlimentaire+", race=" + this.race.getRace() + ", nom=" + super.getNom() + ", sexe=" + super.getSexe() + ", age=" + super.getAge() + ", pointsVie=" + super.getPointsVie()+"\n";

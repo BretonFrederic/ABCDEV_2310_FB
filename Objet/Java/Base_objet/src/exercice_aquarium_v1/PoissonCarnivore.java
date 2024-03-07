@@ -14,6 +14,7 @@ public class PoissonCarnivore extends Poisson {
 	}
 	
 	//getters et setters
+	@Override
 	public Race getRace() {
 		return this.race;
 	}
@@ -25,6 +26,43 @@ public class PoissonCarnivore extends Poisson {
 	}
 	
 	//méthodes
+	@Override
+	public boolean DonnerlaVie(Aquarium _aquarium) {
+		if(_aquarium.getPoisson().size() > 1 && this.getPointsVie() > 5 && !this.getParent()) {
+			int poissonAleatoire;
+			int poissonPV;
+			Race racePoisson = this.getRace();
+				//choix d'une poisson à rencontrer
+				poissonAleatoire = (int)(Math.random()*_aquarium.getPoisson().size());
+				//poisson partenaire potentiel
+				poissonPV = _aquarium.getPoisson().get(poissonAleatoire).getPointsVie();
+				if(_aquarium.getPoisson().get(poissonAleatoire).getRace().equals(this.getRace())) {
+					switch(racePoisson) {
+					case THON:
+					case MEROU:
+						if(_aquarium.getPoisson().get(poissonAleatoire).getSexe() != this.getSexe()) {
+							//reproduction
+							System.out.println(this.toString()+" se reproduit avec "+_aquarium.getPoisson().get(poissonAleatoire).toString());
+							this.setParent(true);
+						}
+						break;
+					case POISSON_CLOWN:
+						//reproduction
+						System.out.println(this.toString()+" se reproduit avec "+_aquarium.getPoisson().get(poissonAleatoire).toString());
+						this.setParent(true);
+						this.setSexe(1);
+						_aquarium.getPoisson().get(poissonAleatoire).setSexe(2);
+						break;
+					default:
+						break;
+					}
+				}
+				return true;
+		}else {
+			return false;
+		}
+	}
+	
 	@Override
 	public boolean Manger(Aquarium _aquarium) {
 		boolean nourri = false;

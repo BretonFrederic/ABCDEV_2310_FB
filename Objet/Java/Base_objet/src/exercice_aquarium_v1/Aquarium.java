@@ -39,73 +39,74 @@ public class Aquarium {
 	
 	private int ChoisirSexePoisson() {
 		int saisieSexe = 0;
+		String sexePoisson="";
 		do {
 			System.out.println("Saisir le sexe du poisson : "
 					+ "\n\t1 -> mâle"
-					+ "\n\t2 -> femelle"
-					+ "\n\t3 -> hermaphrodite avec l'âge"
-					+ "\n\t4 -> hermaphrodite opportuniste\n");
+					+ "\n\t2 -> femelle\n");
 			saisieSexe = sc.nextInt();
-		}while(saisieSexe < 1 || saisieSexe > 4);
-		return saisieSexe;
+			
+		}while(saisieSexe < 1 || saisieSexe > 2);
+
+		switch(saisieSexe) {
+		case 1:
+			sexePoisson = Race.;
+		break;
+		case 2:
+			sexePoisson = Race.BAR;
+			break;
+		return sexePoisson;
 	}
 	
-	private int ChoisirRacePoisson(int _sexePoisson) {
+	private Race ChoisirRacePoisson() {
 		int saisieRace = 0;
 		int choixRace = 0;
+		Race racePoisson = null;
 		boolean selection = false;
-		switch(_sexePoisson) {
-		case 1:
+
 			do{
 				System.out.println("Saisir la race du poisson : "
-						+ "\n\t1 -> BAR(herbivore)"
-						+ "\n\t2 -> CARPE(herbivore)"
-						+ "\n\t3 -> MEROU(carnivore)"
-						+ "\n\t4 -> THON(carnivore)\n");
-				saisieRace = sc.nextInt();
-				selection = saisieRace == 1 || saisieRace == 2 || saisieRace == 3 || saisieRace == 4;
-			}while(!selection);
-			choixRace = saisieRace;
-			break;
-		case 2:
-			do {
-				System.out.println("Saisir la race du poisson : "
 						+ "\n\t1 -> CARPE(herbivore)"
-						+ "\n\t2 -> THON(carnivore)\n");
+						+ "\n\t2 -> BAR(herbivore)"
+						+ "\n\t3 -> SOLE(herbivore)"
+						+ "\n\t4 -> THON(carnivore)"
+						+ "\n\t5 -> MEROU(carnivore)"
+						+ "\n\t6 -> POISSON_CLOWN(carnivore)\n");
 				saisieRace = sc.nextInt();
-				selection = saisieRace == 1 || saisieRace == 2;
+				selection = saisieRace == 1 || saisieRace == 2 || saisieRace == 3 || saisieRace == 4  || saisieRace == 5  || saisieRace == 6;
 			}while(!selection);
-			choixRace = saisieRace*2;
+			
+			choixRace = saisieRace;
+			switch(choixRace) {
+			case 1:
+				racePoisson = Race.CARPE;
 			break;
-		case 3:
-			do {
-				System.out.println("Saisir la race du poisson : "
-						+ "\n\t1 -> BAR(herbivore)"
-						+ "\n\t2 -> MEROU(carnivore)\n");
-				saisieRace = sc.nextInt();
-				selection = saisieRace == 1 || saisieRace == 2;
-			}while(!selection);
-			choixRace = saisieRace+(saisieRace-1);
-			break;
-		case 4:
-			do {
-				System.out.println("Saisir la race du poisson : "
-						+ "\n\t1 -> SOLE(herbivore)"
-						+ "\n\t2 -> POISSON_CLOWN(carnivore)\n");
-				saisieRace = sc.nextInt();
-				selection = saisieRace == 1 || saisieRace == 2;
-			}while(!selection);
-			choixRace = saisieRace=5*saisieRace-5;
-			break;
-		}
-		return choixRace;
+			case 2:
+				racePoisson = Race.BAR;
+				break;
+			case 3:
+				racePoisson = Race.SOLE;
+				break;
+			case 4:
+				racePoisson = Race.THON;
+				break;
+			case 5:
+				racePoisson = Race.MEROU;
+				break;
+			case 6:
+				racePoisson = Race.POISSON_CLOWN;
+				break;
+			}
+		return racePoisson;
 	}
 	
 	private int ChoisirAgePoisson() {
 		int saisieAge = 0;
+		do {
 		System.out.println("saisir l'âge du poisson : ");
 		saisieAge = sc.nextInt();
 		return saisieAge;
+		}while(saisieAge < 0 || saisieAge > 20);
 	}
 	
 	public void AjouterAlgue() {
@@ -122,32 +123,22 @@ public class Aquarium {
 	public void AjouterPoisson() {
 		String nomPoisson = ChoisirNomPoisson();
 		int sexePoisson = ChoisirSexePoisson();
-		int racePoisson = ChoisirRacePoisson(sexePoisson);
-		int index = racePoisson;
-		Race poisson = Race.values()[index];
+		Race racePoisson = ChoisirRacePoisson();
 		int agePoisson = ChoisirAgePoisson();
 		
-		//choix de race fonction du sexe
-		//mâle 1 ----------------------->	carpe || thon ||
-		//									  bar || mérou
-		//
-		//femelle 2 --------------------> 	carpe || thon
-		//hermaphrodite age 3 ----------> 	 bar  || mérou
-		//hermaphrodite opportuniste 4 -> 	 sole || poisson-clown
-			
-			int poissonVieilli = 0;
-			if(index < 4) {
-				PoissonHerbivore poissonAjouter = new PoissonHerbivore(nomPoisson, sexePoisson, poisson);
-				do {
-					poissonAjouter.Vieillir();
-					poissonAjouter.setPointsVie(poissonAjouter.getPointsVie()+1);
-					poissonVieilli +=1;
-				}while(poissonVieilli < agePoisson);
-				this.poisson.add(poissonAjouter);
-				
+		if(racePoisson.getSexualite().equals("Hermaphrodite avec l'âge")) {
+			if(agePoisson < 10) {
+				sexePoisson = 1;
 			}else {
-				this.poisson.add(new PoissonCarnivore(nomPoisson, sexePoisson, poisson));
+				sexePoisson = 2;
 			}
+		}
+		
+		if(racePoisson.getRegimeAlimentaire().equals("herbivore")) {
+			this.poisson.add(new PoissonHerbivore(nomPoisson, sexePoisson, racePoisson));
+		}else if(racePoisson.getRegimeAlimentaire().equals("carnivore")) {
+			this.poisson.add(new PoissonCarnivore(nomPoisson, sexePoisson, racePoisson));
+		}		
 	}
 	
 	public void PasserTemps() {
@@ -205,7 +196,7 @@ public class Aquarium {
 				}
 			}while(!quitterMenu);
 			
-			//reproduction + nourrir
+			//Poissons mangent
 			if(this.poisson.size() > 0) {
 				for(int i = 0; i <= this.poisson.size()-1; i++) {
 					if(this.poisson.get(i).getPointsVie() <=5) {
@@ -213,6 +204,7 @@ public class Aquarium {
 					}
 				}
 			}
+			
 			
 			//Afficher situation
 			
@@ -245,7 +237,7 @@ public class Aquarium {
 				ArrayList<String> poissonMort = new ArrayList<>();
 				
 				for(int i = 0; i <= this.poisson.size()-1; i++) {
-					if(!this.poisson.get(i).Vieillir()) {
+					if(!this.poisson.get(i).Vieillir(this)) {
 						poissonMort.add(this.poisson.get(i).toString());
 					}else {
 						System.out.println(this.poisson.get(i).toString());

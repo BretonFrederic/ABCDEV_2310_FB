@@ -7,6 +7,7 @@ public abstract class Poisson {
 	private int sexe;
 	private int age;
 	private int pointsVie;
+	private boolean parent;
 	
 	//constructeur
 	public Poisson(String _nom, int _sexe) {
@@ -14,6 +15,7 @@ public abstract class Poisson {
 		this.sexe = _sexe;
 		this.age = 0;
 		this.pointsVie = 10;
+		this.parent = false;
 	}
 
 	//getters et setters
@@ -34,12 +36,6 @@ public abstract class Poisson {
 		case 2:
 			sexePoisson = "femelle";
 			break;
-		case 3:
-			sexePoisson = "hermaphrodite avec l'âge";
-			break;
-		case 4:
-			sexePoisson = "hermaphrodite opportuniste";
-			break;
 		}
 		return sexePoisson;
 	}
@@ -59,6 +55,17 @@ public abstract class Poisson {
 	public int getPointsVie() {
 		return this.pointsVie;
 	}
+	
+	public boolean getParent() {
+		return this.parent;
+	}
+	
+	public void setParent(boolean _parent) {
+		this.parent = _parent;
+	}
+	
+	public abstract Race getRace();
+
 
 	public void setPointsVie(int _pointsVie) {
 		this.pointsVie = _pointsVie;
@@ -66,9 +73,10 @@ public abstract class Poisson {
 	
 	//méthodes abstraites
 	public abstract boolean Manger(Aquarium _aquarium);
+	public abstract boolean DonnerlaVie(Aquarium _aquarium);
 
 	//méthodes concrètes
-	public boolean Vieillir() {
+	public boolean Vieillir(Aquarium _aquarium) {
 		if(this.pointsVie > 0 && this.age < 20) {
 			this.pointsVie -= 1;
 			if((this.toString().contains("bar") || this.toString().contains("mérou")) && this.getAge() < 10) {
@@ -77,7 +85,7 @@ public abstract class Poisson {
 				this.setSexe(2);
 			}
 			this.age += 1;
-			//this.DonnerlaVie();
+			this.DonnerlaVie(_aquarium);
 			return true;
 		}else {
 			System.out.println("Poisson mort ! ");

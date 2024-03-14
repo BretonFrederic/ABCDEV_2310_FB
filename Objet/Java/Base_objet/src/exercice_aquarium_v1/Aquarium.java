@@ -39,7 +39,6 @@ public class Aquarium {
 	
 	private int ChoisirSexePoisson() {
 		int saisieSexe = 0;
-		String sexePoisson="";
 		do {
 			System.out.println("Saisir le sexe du poisson : "
 					+ "\n\t1 -> mâle"
@@ -48,14 +47,7 @@ public class Aquarium {
 			
 		}while(saisieSexe < 1 || saisieSexe > 2);
 
-		switch(saisieSexe) {
-		case 1:
-			sexePoisson = Race.;
-		break;
-		case 2:
-			sexePoisson = Race.BAR;
-			break;
-		return sexePoisson;
+		return saisieSexe;
 	}
 	
 	private Race ChoisirRacePoisson() {

@@ -88,6 +88,7 @@ public class Aquarium {
 			for(int i = 0; i <= this.poisson.size()-1; i++) {
 				System.out.println(this.poisson.get(i).toString());
 			}
+			System.out.println("");
 		}else {
 			System.out.println("L'aquarium est vide.");
 		}
@@ -95,28 +96,40 @@ public class Aquarium {
 	}
 	
 	public void PasserTemps() {
-		int saisieChoix = 0;
-
+		
+		boolean quitter = false;
 		do {
-			System.out.println("Menu\n\t1 -> Ajouter poisson\n\t2 -> Ajouter algue\n\t3 -> Passer le temps\n\t4 -> quitter");
-			saisieChoix = sc.nextInt();
-			switch(saisieChoix) {
-			case 1:
-				this.AjouterPoisson();
-				break;
-			case 2:
-				this.AjouterAlgue();
-				break;
-			case 3:
-				this.Afficher();
-				break;
-			case 4:
-				System.out.println("Fin du programme.");
-				break;
-			default:
-				System.out.println("Ce choix n'existe pas.");
-				break;
+			int saisieChoix = 0;
+			boolean quitterMenu = false;
+			do {
+				System.out.println("Menu\n\t1 -> Ajouter poisson\n\t2 -> Ajouter algue\n\t3 -> Passer le temps\n\t4 -> quitter");
+				saisieChoix = sc.nextInt();
+				switch(saisieChoix) {
+				case 1:
+					this.AjouterPoisson();
+					break;
+				case 2:
+					this.AjouterAlgue();
+					break;
+				case 3:
+					quitterMenu = true;
+					break;
+				case 4:
+					System.out.println("Fin du programme.");
+					quitterMenu = true;
+					quitter = true;
+					break;
+				default:
+					System.out.println("Ce choix n'existe pas.");
+					break;
+				}
+			}while(!quitterMenu);
+			
+			//actions du tour
+			for(int i = 0; i <= this.poisson.size()-1; i++) {
+				this.poisson.get(i).Manger(this);
 			}
-		}while(saisieChoix < 1 || saisieChoix > 4 || saisieChoix != 4);	
+			this.Afficher();
+		}while(!quitter);	
 	}
 }

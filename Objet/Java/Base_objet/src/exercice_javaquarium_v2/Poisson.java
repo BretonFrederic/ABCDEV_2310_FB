@@ -47,11 +47,35 @@ public class Poisson {
 		return this.getNom()+" "+this.getSexe()+" "+this.race.getRace()+" "+this.race.getRegime();
 	}
 	
-	public void Manger(Aquarium _aquarium) {
-		if(this.race.getRegime().equals("carnivore")) {
-			//s’il est carnivore, il mange un autre poisson (paramètre : un poisson quel qu'il soit).
-		}else if(this.race.getRegime().equals("herbivore")) {
+	public boolean Manger(Aquarium _aquarium) {
+		boolean poissonNourri = false;
+		if(this.race.getRegime().equals("herbivore")) {
 			//s'il est herbivore, il mange une algue (paramètre : une algue).
+			if(_aquarium.algue.size() > 0) {
+				_aquarium.algue.remove(0);
+				poissonNourri = true;
+			}else {
+				poissonNourri = false;
+			}
+			
+		}else if(this.race.getRegime().equals("carnivore")) {
+			//s’il est carnivore, il mange un autre poisson (paramètre : un poisson quel qu'il soit).
+			if(_aquarium.poisson.size() > 1) {
+				int index = 0;
+				do {
+					if(_aquarium.poisson.get(index).equals(this)) {
+						index++;
+					}else {
+						_aquarium.poisson.remove(index);
+						index = -1;
+					}
+				}while(index >= 0);
+
+				poissonNourri = true;
+			}else {
+				poissonNourri = false;
+			}
 		}
+		return poissonNourri;
 	}
 }

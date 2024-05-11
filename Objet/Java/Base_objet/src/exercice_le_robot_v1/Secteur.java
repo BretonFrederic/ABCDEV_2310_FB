@@ -2,9 +2,9 @@ package exercice_le_robot_v1;
 
 public class Secteur {
 	//attributs
-		private String nom;
-		private Rectangle taille;
-		private int[][] rocheLunaire;
+	private String nom;
+	private Rectangle taille;
+	private int[][] rocheLunaire;
 		
 	//constructeur
 	public Secteur() {

@@ -46,6 +46,7 @@ public class Robot {
 					this.batterie -= 2;
 					this.position.setPositionY(this.position.getPositionY()-1);
 				}
+				break;
 			case GAUCHE:
 				if(this.position.getPositionX() > 0) {
 					this.batterie -= 2;

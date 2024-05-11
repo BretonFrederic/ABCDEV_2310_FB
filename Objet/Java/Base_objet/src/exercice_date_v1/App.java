@@ -4,7 +4,7 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Date date1 = new Date(3,5,2024);
+		Date date1 = new Date(2,1,2024);
 		date1.Afficher(date1);
 		Date date2 = new Date(3,5,2024);
 		date1.Afficher(date2);

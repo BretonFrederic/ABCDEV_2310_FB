@@ -9,7 +9,7 @@ public class Secteur {
 	//constructeur
 	public Secteur() {
 		nom = "Mer de tranquillité";
-		taille = new Rectangle(20, 20);
+		taille = new Rectangle(21, 21);
 		rocheLunaire = new int[][] {{3, 1, 500},
 									{2, 5, 300},
 									{17, 10, 700},

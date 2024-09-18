@@ -12,7 +12,7 @@ public class Robot {
 	//Constructeurs
 	public Robot(String _nom) {
 		this.nom = _nom;
-		this.position = new Position(10, 10);
+		this.position = new Position(11, 11);
 		this.stockage = 0;
 		this.batterie = 100;
 		this.rayonDetection = 2;
@@ -36,13 +36,13 @@ public class Robot {
 		if(batterie > 0) {
 			switch(_direction) {
 			case HAUT:
-				if(this.position.getPositionY() > 0) {
+				if(this.position.getPositionY() < 21) {
 					this.batterie -= 2;
 					this.position.setPositionY(this.position.getPositionY()+1);
 				}
 				break;
 			case BAS:
-				if(this.position.getPositionY() < 20) {
+				if(this.position.getPositionY() > 0) {
 					this.batterie -= 2;
 					this.position.setPositionY(this.position.getPositionY()-1);
 				}
@@ -54,7 +54,7 @@ public class Robot {
 				}
 				break;
 			case DROITE:
-				if(this.position.getPositionX() < 20) {
+				if(this.position.getPositionX() < 21) {
 					this.batterie -= 2;
 					this.position.setPositionX(this.position.getPositionX()+1);
 				}

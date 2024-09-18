@@ -45,13 +45,13 @@ public class App {
 						direction = Direction.HAUT;
 						break;
 					case 's':
-						direction = Direction.BAS;
+						direction = Direction.DROITE;
 						break;
 					case 'q':
-						direction = Direction.GAUCHE;
+						direction = Direction.BAS;
 						break;
 					case 'd':
-						direction = Direction.DROITE;
+						direction = Direction.GAUCHE;
 						break;
 					default:
 						System.out.println("mauvaise touche.");
